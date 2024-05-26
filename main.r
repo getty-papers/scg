@@ -1,0 +1,5 @@
+source("./scripts/get_wid_data.r")
+source("./scripts/make_excel_appendix.r")
+source("./scripts/make_plots.r")
+source("./scripts/make_tables.r")
+source("./scripts/load_libraries.r")
