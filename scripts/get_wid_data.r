@@ -28,6 +28,11 @@ clean_wid_data <- raw_wid_data %>%
     select(-percentile) %>%
     pivot_wider(names_from = variable, values_from = value) %>%
     mutate(country = countrycode::countrycode(iso2c, origin = "iso2c", destination = "country.name")) %>%
+    mutate(country = case_match(country,
+        "Hong Kong SAR China" ~ "Hong Kong",
+        "United States" ~ "USA",
+        .default = country
+    )) %>%  # recode country names
     drop_na(country) |>
     arrange(country, year) %>%
     mutate(
