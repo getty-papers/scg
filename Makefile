@@ -8,4 +8,8 @@ clean:
 analysis:
 	Rscript main.r
 
+commit:
+	git add -A
+	git commit -m "update"
+	git push
 

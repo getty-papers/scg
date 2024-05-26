@@ -58,7 +58,7 @@ phi_table <- scg_data %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
         booktabs = TRUE,
-        col.names = c("Country", "Period", "$\\overline{\\varphi_{s,}}$", "$\\overline{\\varphi_{c,i}}$"), escape = FALSE
+        col.names = c("Country", "Period", "$\\overline{\\varphi_{s,i}}$", "$\\overline{\\varphi_{c,i}}$"), escape = FALSE
     ))
 
 
