@@ -1,0 +1,866 @@
+\input{./scripts/preamble.tex}
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{Sources of capital growth}
+
+% Short author
+\shortauthors{Gordon Getty}
+
+% Main title of the paper
+\title [mode = title]{Sources of capital growth}                      
+% Title footnote mark
+% eg: \tnotemark[1]
+% \tnotemark[1,2]
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+% \tnotetext[<tnote number>]{<tnote text>} 
+% \tnotetext[1]{This document is the results of the research
+%   project funded by the National Science Foundation.}
+
+% \tnotetext[2]{The second title footnote which is a longer text matter
+%   to fill through the whole text width and overflow into
+%   another line in the footnotes area of the first page.}
+
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+\author[1]{Gordon Getty}[
+                        type=editor,
+                       % auid=000,bioid=1,
+                       % prefix=Sir,
+                        role=Researcher,
+                        orcid=0000-0002-0939-6932
+                        ]
+
+\ead{ggetty@LeakeyFoundation.org}
+
+\author[2]{Nikita Tkachenko}[
+                        type=editor,
+                       % auid=000,bioid=1,
+                       % prefix=Sir,
+                        role=Assistant,
+                        orcid=0009-0003-8681-3335
+                        ]
+
+% Corresponding author indication
+\cormark[1]
+
+\ead{natkachenko@usfca.edu}
+% Footnote of the first author
+% \fnmark[1]
+
+% Email id of the first author
+
+% URL of the first author
+% \ead[url]{www.cvr.cc, cvr@sayahna.org}
+
+%  Credit authorship
+% \credit{Conceptualization of this study, Methodology, Software}
+
+% Address/affiliation
+\affiliation[1]{organization={Fellow, UCB},
+            addressline={University Avenue and, Oxford St}, 
+            city={Berkeley},
+            postcode={94720}, 
+            state={California},
+            country={United States}}
+            
+\affiliation[2]{organization={Graduate Student, University of San Francisco},
+            addressline={2130 Fulton St}, 
+            city={San Francisco},
+            postcode={94117}, 
+            state={California},
+            country={United States}}
+
+% Second author
+% \author[2,4]{Han Theh Thanh}[style=chinese]
+
+% Third author
+%\author[2,3]{CV Rajagopal}[%
+%   role=Co-ordinator,
+%   suffix=Jr,
+%   ]
+%\fnmark[2]
+%\ead{cvr3@sayahna.org}
+%\ead[URL]{www.sayahna.org}
+
+%\credit{Data curation, Writing - Original draft preparation}
+
+% Address/affiliation
+% \affiliation[2]{organization={Sayahna Foundation},
+%    % addressline={}, 
+%    city={Jagathy},
+%    % citysep={}, % Uncomment if no comma needed between city and postcode
+%    postcode={695014}, 
+%    state={Trivandrum},
+%    country={India}}
+
+% Corresponding author text
+\cortext[cor1]{Corresponding author}
+% \cortext[cor2]{Principal corresponding author}
+
+% Footnote text
+%\fntext[fn1]{This is the first author footnote. but is common to third
+%  author as well.}
+%\fntext[fn2]{Another author footnote, this is a very long footnote and
+%  it should be a really long footnote. But this footnote is not yet
+%  sufficiently long enough to make two lines of footnote text.}
+
+% For a title note without a number/mark
+%\nonumnote{This note has no numbers. In this work we demonstrate $a_b$
+%  the formation Y\_1 of a new type of polariton on the interface
+%  between a cuprous oxide slab and a polystyrene micro-sphere placed
+%  on the slab.
+%  }
+
+% Here goes the abstract
+\begin{abstract}
+Data from national accounts show no effect of change in net saving
+or consumption, in ratio to market-value capital, on change in growth
+rate of market-value capital (capital acceleration). Thus it appears
+that capital growth and acceleration arrive without help from net
+saving or consumption restraint. We explore ways in which this is
+possible, and discuss implications for economic teaching and public
+policy.     
+\\ % So keywords fit
+\end{abstract}
+
+% Use if graphical abstract is present
+% \begin{graphicalabstract}
+% \includegraphics{figs/grabs.pdf}
+% \end{graphicalabstract}
+
+% Research highlights
+%\begin{highlights}
+%\item Research highlights item 1
+%\item Research highlights item 2
+%\item Research highlights item 3
+%\end{highlights}
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+National accounts \sep Net
+saving \sep Consumption \sep Market-value capital \sep Capital
+growth \sep 
+Capital acceleration
+
+\end{keywords}
+
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction and overview}\label{introduction}}
+
+Many economists over the centuries have reasoned that net saving, or equivalently net investment\footnote{As reported in national accounts; they differ only by statistical discrepancy. Also see Appendix \hyperref[appendix-a]{A}.}, should tend to give equal capital growth. Economists since the early
+nineteenth century have added the proviso that net saving cannot
+safely outpace innovation; more capital must mean capital redesigned for
+greater productivity if economies are to escape risk of capital glut and
+diminishing returns
+(\citet{westEssayApplicationCapital1815, ricardoEssayProfitsVol1815, malthusEnquiryNatureProgress1815}).
+Roy \citet{harrodEssayDynamicTheory1939}
+described that limit for safe net saving, meaning the rate of
+imagining and developing new ideas for more productive forms of capital,
+as the ``warranted rate''. Harrod, and many other economists of his time
+and since, have focused on growth of output rather than of capital, but
+have modeled growth of output by first assuming the equivalence of net
+saving and capital growth, within the warranted rate, and then
+looking for effects of that capital growth on later output growth.
+
+Some other economists, including John  \citet{raeNewPrinciplesPolitical1834} and John Stuart 
+\citet{millPrinciplesPoliticalEconomy1848} (see Appendix \hyperref[appendix-c]{C}), argued that capital growth might also be explained
+by a rise in productivity of capital and labor already extant. Ways
+might found for existing factors to produce more, that is, and so to
+allow more consumption, or more capital growth, or any mix of the two,
+without inputs of net saving. Robert
+\citet{solowTECHNICALCHANGEAGGREGATE1957} allowed that possibility for
+``disembodied'' growth, where plant and products already existing are
+repurposed or redeployed in more productive ways.
+
+We test between those two explanations of capital growth, by net
+saving or by increase in productivity of capital and labor already
+in existence, by comparing net saving to concurrent change in
+market-value capital in 86 countries. As changes in net saving
+are expected to be associated with opposite changes in consumption, we
+also compare change in consumption to concurrent change in capital
+growth (capital acceleration). All data are drawn from national accounts
+of those countries as collated on the free website \href{https://wid.world/}{World Inequality Database}.
+
+Tests show no effect of net saving or of change in consumption on
+growth or acceleration of market-value capital. These findings support
+the views of Rae and Mill, and of Solow as to disembodied growth. They
+suggest that capital growth, even in acceleration, arrives without help
+from net saving or consumption restraint. Net saving, if so,
+raises the physical quantity of capital, but not the aggregate value,
+and so reduces the value per unit.
+
+Our findings are most easily explained by the present value principle,
+and by production efficiencies enabled through innovation. Value is
+created in the mind of the market at the moment when prospective cash
+flows are discounted. It is created only if the market sees a path, step
+by step, from the start, to practical realization of those prospective
+cash flows. Then capital growth arrives when the market first evaluates
+prospective cash flows, and is realized eventually in physical outcomes
+insofar as the market has predicted correctly. Meanwhile the innovator
+acquires materials and plant capacity and labor skills at market prices
+determined by their uses in current technology, but applies them more
+productively until competition catches up. It is that temporary market
+advantage to the innovator which explains capital growth without net
+saving in a practical and mechanical sense, while the present value
+principle gives the explanation in terms of market valuation. This idea
+will be called ``free growth theory'' for easy reference.
+
+It predicts only at the largest scales, and only for the private sector.
+Individuals and groups and even small economies can grow through
+investment from outside. That possibility is foreclosed only at the
+scale of all capital and all economies together. The public sector,
+meanwhile, responds to political rather than market choices, and grows
+or shrinks accordingly.
+
+If free growth theory is right, tax policy and other policy to encourage
+saving over consumption should be reviewed. These policies
+include the higher tax on ordinary income than on capital gains, and the
+double tax on corporate dividends.
+
+Inferences for economic teaching include the obvious ones for growth
+theory and for net saving in general. They include others as well.
+One of the central doctrines of the marginalist revolution has held that
+market realization converges to producer cost, when that cost includes
+imputed interest on assets owned. Net saving gives producer cost,
+and falls short of market realization in the presence of technological
+growth from new ideas. Meanwhile the doctrine that net income equals
+consumption plus net saving is put into question by evidence offered
+here suggesting that net saving increases the physical quantity of
+capital, but not the aggregate value. In general, economics might
+consider relying less on book value and net investment, and more on market value and on the
+power of ideas.
+
+\hypertarget{net-saving-and-capital-growth}{%
+\section{Net saving, capital growth and capital acceleration}\label{net-saving-and-capital-growth}}
+
+This study compares net saving \(S_{net}\) to concurrent growth in
+market-value capital \(K\) from data in national accounts. Capital
+growth \({\Delta K}_{i}\) in each year \(i\) for each reporting country
+is found as \(K_{i} - K_{i - 1},\) and compared to \(S_{net,i}\)
+reported for that year and country. As we will be testing for
+differences between \(\Delta K\) and \(S_{net,i}\), we begin by writing
+%
+\begin{equation}
+\Delta K_{i} =S_{net,i} + Q_{s,i}\ .\label{eq-1}
+\end{equation}
+%
+Here \(Q\) means the sum of market noise, which may prove
+positive or negative or zero, plus any part of capital growth explained
+by concurrent productivity gain as described by Rae and Mill, and by
+Solow as to disembodied growth. We call this sum of noise and
+productivity gain ``free growth'' in that it costs no net saving.
+\(Q_{s,i}\) means its value as measured from data for saving in the \(i^{th}\) year.
+
+The object of testing is to find effects of \(S_{net}\) on concurrent
+\(\Delta K\), and so to help evaluate historic and current teachings as
+to those effects. We submitted above that most teaching, with exceptions
+noted as to Rae, Mill, and Solow, and within the warranted rate,
+predicts net saving to differ from concurrent growth in market-value
+capital only by market noise which tends to balance out over scale and
+time. Free growth \(Q\) in Eq.~\eqref{eq-1}, in that case, will give
+the market noise converging to zero. That consensus prediction, which we
+will challenge, will here be called ``thrift theory''; \(S_{net}\), in
+thrift theory, is expected to converge to \(\Delta K\) if held within
+the warranted rate. That is,
+%
+\begin{equation}
+E(\Delta K) = S_{net} \quad \text{or equivalently} \quad E(Q_{s}) = 0, \quad \text{if} \quad
+\frac{\Sigma S_{net}}{\Sigma K} \leq u\ ,\quad \text{in thrift theory,}
+\label{eq-2}
+\end{equation}
+%
+where:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\Sigma S_{net}\) is collective net saving over the economy
+\item
+  \(\Sigma K\) is collective capital over the economy before current
+  \(\Sigma S_{net},\) and
+\item
+  \(u\) is the warranted rate.
+\end{enumerate}
+
+\(E(\Delta K)\) and \(E(Q_{s})\) here give the expected values of \(\Delta K\)
+and \(Q_{s}\) respectively. Expected value means predicted average of outcomes
+over all observations.
+We will test those predictions against data for saving and capital growth taken from national accounts.
+As secular economic growth has tended to make
+later stocks and flows larger than earlier ones, we first divide by
+\(K\) (normalize) to avoid overweighting of more recent years in finding
+that average. Division of Eq.~\eqref{eq-1} by \(K_{i - 1}\) gives
+%
+\begin{equation}
+    \frac{{\Delta K}_{i}}{K_{i - 1}} = \frac{S_{net,i}}{K_{i - 1}} + \frac{Q_{s,i}}{K_{i - 1}} \ .\label{eq-3}
+\end{equation}
+%
+The first term in Eq.~\eqref{eq-3} gives capital growth rate \(g(K)\). The second term is a
+variant of the Keynesian net saving rate \(s_{net}\) where capital
+rather than output becomes the denominator. This flow will show 
+as \(s^{*}\), with the subscript ``net''
+left implicit, and with the understanding that the denominator shows
+market-value capital rather than output.
+The third term in Eq.~\eqref{eq-3} will be called free growth rate and
+shown as \(q_s\). Then
+%
+\[g{(K)}_{i} = \frac{\Delta K_{i}}{K_{i - 1}} \ , \quad
+s^{*}_{i} = \frac{S_{net,i}}{K_{i - 1}} \ , \quad \text{and} \quad
+q_{i} = \frac{Q_{s,i}}{K_{i - 1}} \ ,\]
+%
+so that Eq.~\eqref{eq-3} can be shown more compactly as
+%
+\begin{equation}
+g(K)_{i} = s^{*}_{i} + q_{s,i} \ .\label{eq-3a}
+\end{equation}
+%
+By the definition \(q_s = \frac{Q_{s}}{K}\), an expected value \(E(q_s) = 0\)
+implies \(E\left( q_s\right) = 0\). Application of Eq.~\eqref{eq-2} to
+Eq.~\eqref{eq-3a} now gives
+%
+\begin{equation}
+E\left( g(K) \right) = s^{*} \quad \text{and} \quad E(q_s) = 0 \ , \quad \text{under thrift assumptions,}\label{eq-4}
+\end{equation}
+%
+where ``thrift assumptions'' are that thrift theory is correct and that
+the warranted rate is not exceeded. We will test Eq.~\eqref{eq-4} directly in Section 5 below. Meanwhile we will test it indirectly by testing its implications for changes in capital growth, which we call capital acceleration and show as $\Delta g(K)$. First note that Eq.~\eqref{eq-3a} allows
+%
+\begin{equation}
+\Delta g{(K)}_{i} = \Delta s^{*}_{i} + \Delta q_{s,i}\ , \quad \text{where}\label{eq-5}
+\end{equation}
+%
+\[\Delta g{(K)}_{i} = g{(K)}_{i} - g(K)_{i - 1} \ , \quad
+\Delta s^{*}_{i} = s^{*}_{i} - s^{*}_{i - 1} \ , \quad \text{and} \quad
+\Delta q_{s,i} = q_{s,i} - q_{s,i - 1} \ .\]
+%
+For any variables \(a\) and \(b\), we may reason
+\(E(a - b) = E(a) - E(b)\). By this and by Eqs. \eqref{eq-4} and
+\eqref{eq-5}, then,
+%
+\begin{equation}
+E\left( \Delta g(K) \right) =  \Delta s^{*} \quad  \text{and} \quad E(\Delta q_s) = 0 \ , \quad \text{under thrift assumptions.}\label{eq-6}
+\end{equation}
+%
+Division of Eq.~\eqref{eq-5} by capital acceleration, and rearrangement,
+gives
+%
+\begin{equation}
+\frac{\Delta s^{*}_{i}}{\Delta g{(K)}_{i}} + \frac{\Delta q_{s,i}}{\Delta g{(K)}_{i}} = 1 \ .\label{eq-7}
+\end{equation}
+%
+Define \(\theta_{s,i} = \frac{\Delta s^{*}_{i}}{\Delta g{(K)}_{i}}\)
+and \(\varphi_{s,i} = \frac{\Delta q_{s,i}}{\Delta g{(K)}_{i}}\) to
+restate Eq.~\eqref{eq-7} as
+%
+\begin{equation}
+\theta_{s,i} + \varphi_{s,i} = 1 \ .\label{eq-7a}
+\end{equation}
+%
+Next define \(\theta_s = E(\theta_{s,i})\) and \(\varphi_s = E(\varphi_{s,i})\). By Eq. \eqref{eq-7a}, then,
+%
+\begin{equation}%
+    \theta_s + \varphi_s = 1 \ . \quad \text{Eq. \eqref{eq-6} now implies}%
+    \label{eq-new-1}%
+\end{equation}%
+%
+\vspace{-5ex}%
+%
+\begin{equation}%
+    \theta_s = 1 \quad \text{and} \quad \varphi_s = 0 \ , \quad \text{under thrift assumptions.}%
+    \label{eq-new-2}%
+\end{equation}%
+%
+\(\theta\) and \(\varphi\) will be called the ``thrift index'' and
+``free growth index'' respectively. \(\theta_{s}\) and
+\(\varphi_{s}\) give their values as found from data for change in net
+saving. 
+%
+Expected values, again, are predicted averages of outcomes. Thus Eq. \eqref{eq-new-2} and thrift theory can be tested by finding average values of \(\theta_{s,i}\) and comparing findings to the expected value \(\theta = 1\). First we find
+%
+%
+\[\overline{\theta_{s,i}} = \frac{1}{m} \sum^{m} \theta_{s,i} \quad \text{and} \quad
+\overline{\varphi_{s,i}} = \frac{1}{m} \sum^{m} \varphi_{s,i}\ ,\]
+%
+where \(m\) is the number of observed values of \(\theta_{s,i}\) and
+\(\varphi_{s,i}\), and test the predictions
+\[
+\overline{\theta_{s,i}} \cong 1 \quad \text{and} \quad \overline{\varphi_{s,i}} \cong 0\ , \quad \text{under thrift assumptions.}
+\]
+%
+Calculations of \(\overline{\theta_{s,i}}\) and
+\(\overline{\varphi_{s,i}}\) are not expected to show 1 and 0 exactly,
+under thrift assumptions, so that \(\overline{\theta_{s,i}}\) and \(\overline{\varphi_{s,i}}\) are not exactly equal to \(\theta_s\) and \(\varphi_s\), because the number of samples \(m\) is finite.
+
+Fig.~\ref{fig-si_plots} shows average values of \(\theta_{s,i}\) and
+\(\varphi_{s,i}\) for 86 countries, both unweighted and weighted to GDP,
+over the period 1980-2022. To control distortions brought by small
+absolute denominators, years were screened out where \(|\Delta g(K)|\)
+was found at less than 0.01 (see Section~\ref{sec-displays}). Results
+show \(\overline{\varphi_{s,i}} \cong 1\) and \(\overline{\theta_{s,i}} \cong 0\). These findings
+appear to refute thrift theory, and to support free growth theory as
+defined earlier. \(Q_s\), predicted in thrift theory to describe effects
+of market noise converging to zero, is revealed to include also the
+effects of productivity gain as described by Rae, Mill and Solow. We
+will now test thrift theory from a different approach.
+%
+\FloatBarrier
+\begin{figure}[pos=H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-si_plots-1.pdf}
+        \label{fig-si_plots-1}
+    }
+    \quad % This adds some space between the two subfigures
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-si_plots-2.pdf}
+        \label{fig-si_plots-2}
+    }
+    \captionsetup{justification=centering}
+    \caption{Thrift and free growth indexes derived from net saving (86 countries).}
+    \label{fig-si_plots}
+\end{figure}
+%
+\input{./tables/tbl-wid_si_table.tex}
+\FloatBarrier
+%
+\hypertarget{consumption-and-capital-growth}{%
+\section{Consumption and capital growth}\label{consumption-and-capital-growth}}
+
+In national accounts and most of the literature, saving equals consumption forgone in that a fixed source of spending is spent on the sum of the two. Replacement saving to offset depreciation costs an equal potential gain in consumption while making up for losses in capital, that is, and net saving costs an equal actual decrease in consumption. We accept these meanings as definitions of saving, while disputing only the doctrine that investment of net saving brings actual increase in capital. \cite{keynesGeneralTheoryEmployment1936} expressed this definition in the equation \(c + s = 1\), where \(c\) and \(s\) are the ratios of consumption and gross saving to gross output, or consumption and net saving to net output. We have been dividing by capital, rather than output, and will let \(c^*\) show the ratio of consumption to capital. We then adapt the Keynesian equation to show
+\begin{equation*}
+    s^*_i + c^*_i = 1\ , \quad \text{from which}\ s^*_i = 1 - c^*_i\ ,\quad \text{where}\ c^*_i = \frac{C_i}{K_{i-1}}\ .
+\end{equation*}
+%
+We now define \(q_c\) as free growth rate \(q\) found from data for consumption rather than from saving. By analogy to Eqs. \eqref{eq-3a} and \eqref{eq-4}, then,
+%
+\begin{equation}
+    g(K)_i = 1 - c_{i}^{*} + q_{c,i} \ , \quad \text{and} \label{eq-new-12}
+\end{equation}
+%
+\vspace{-5ex}
+%
+\begin{equation}
+    E(g(K)) = 1 - c^* \quad \text{and} \quad E(q_c) = 0 \quad \text{under thrift assumptions.} \label{eq-new-13}
+\end{equation}
+%
+Meanwhile Eq. \eqref{eq-new-12} allows
+\begin{equation}
+    \Delta g(K)_i = \Delta ( 1 - c^*_i + q_{c,i} ) = \Delta q_{c,i} - \Delta c^*_i \ . \quad \text{By Eq. \eqref{eq-new-13}, then,} \label{eq-new-14a}
+\end{equation}
+%
+\vspace{-5ex}
+%
+\begin{equation}
+    E(\Delta g(K)) = -\Delta c^* \quad \text{and} \quad E(\Delta q_{c}) = 0 \quad \text{under thrift assumptions.} \label{eq-new-14}
+\end{equation}
+%
+As with Eqs. \eqref{eq-4} and \eqref{eq-6}, we will put off direct tests of Eq. \eqref{eq-new-13} until Section 5, and meanwhile test it indirectly by testing its implications from Eq. \eqref{eq-new-14a} forward. As with Eq. \eqref{eq-5}, we first divide Eq. \eqref{eq-new-14a} by capital acceleration \(\Delta g(K)\) to find
+%
+\begin{equation}
+\frac{ \Delta q_{c}}{ \Delta g(K)_{i}} + \frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}} = 1\ .\label{eq-14}
+\end{equation}
+%
+Define \(\theta_{c,i} = \frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}}\)
+and \(\varphi_{c,i} = \frac{ \Delta q_{c,i}}{ \Delta g(K)_{i}}\) to
+re-express Eq.~\eqref{eq-14} as
+%
+\begin{equation}
+\theta_{c,i} + \varphi_{c,i} = 1\ .\label{eq-14a}
+\end{equation}
+%
+By Eqs. \eqref{eq-new-12} through \eqref{eq-new-14}, further,
+%
+\begin{equation}
+E\left( \theta_{c,i} \right) = 1 \quad \text{and} \quad E\left( \varphi_{c,i} \right) = 0 \ , \quad \text{under thrift assumptions.}\label{eq-15}
+\end{equation}
+%
+Define \(\theta_{c} = E\left( \theta_{c,i} \right)\) and
+\(\varphi_{c} = E\left( \varphi_{c,i} \right)\) to re-express
+Eqs. \eqref{eq-14a} and \eqref{eq-15} respectively as
+\begin{equation}
+    \theta_c + \varphi_c = 1 \ , \quad \text{and}
+    \label{eq-new-4}
+\end{equation}
+\vspace{-5ex}
+\begin{equation}
+    \theta_c = 1 \quad \text{and} \quad \varphi_c = 0 \ , \quad \text{under thrift assumptions.}
+    \label{eq-23}
+\end{equation}
+We infer \(\theta_c \cong \overline{\theta_{c,i}}\) and \(\varphi_c \cong \overline{\varphi_{c,i}}\) as before, and test thrift theory by comparing average yearly values of $\theta_{c,i}$ and $\varphi_{c,i}$ to its predictions $\overline{\theta_{c,i}} \cong 1$ and $\overline{\varphi_{c,i}} \cong 0$.
+
+Fig.~\ref{fig-c_plots} shows results of tests of these predictions from
+data for consumption reported in national accounts. Consumption was
+measured as the sum of personal consumption expenditure PCE and
+government consumption expenditure GCE. Capital K was again measured at
+market value. Again, years showing \(|\Delta g(K)| < .01\) were screened
+out to control small denominator effects. Test results show
+\(\varphi_{c} \cong 1\) and \(\theta_{c} \cong 0\), as with tests for
+\(\varphi_{s}\) and \(\theta_{s}\) from net saving. Table \ref{tbl-indicator_table}, which shows $\varphi_s$ and $\varphi_{c}$ for the same 86 countries separately, likewise finds $\varphi_s \cong 1$ and $\varphi_c \cong 1$. Thus it appears
+that capital acceleration arrives without help from either net
+saving or consumption restraint. Next we will see how
+these findings for \(\varphi_{s}\) and \(\varphi_{c}\) might be
+explained.
+  
+\FloatBarrier
+\input{./tables/tbl-indicator_table.tex}
+\FloatBarrier
+
+\begin{figure}[pos=H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-c_plots-1.pdf}
+        \label{fig-c_plots-1}
+    }
+    \quad % This adds some space between the two subfigures
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-c_plots-2.pdf}
+        \label{fig-c_plots-2}
+    }
+    \captionsetup{justification=centering}
+    \caption{Thrift and free growth indexes derived from consumption (86 countries).}
+    \label{fig-c_plots}
+\end{figure}
+%
+\input{tables/tbl-wid_c_table.tex}
+
+\hypertarget{mechanics-of-free-growth}{%
+\section{Mechanics of free growth}\label{mechanics-of-free-growth}}
+
+Some growth is capital widening, where structures and implements
+increase in number but do not change in design. Capital widening,
+however, is practical only so far before glut and diminishing returns
+set in. Further growth from that point must come from capital deepening,
+meaning improvements in the design of capital.
+\citet{solowContributionTheoryEconomic1956a} noted a kind of middle
+ground between capital widening and capital deepening in the disembodied
+growth mentioned earlier; ships carrying coals to Newcastle can raise
+prospective cash flows, and hence present value, by reversing the
+business plan. But Solow, who came to conclusions similar to ours from
+different evidence, puzzled as to how capital growth without net
+saving could be possible for capital deepening through ``embodied''
+growth, where products of new design are made from plant of new
+design.\footnote{The terms capital deepening, capital widening, embodied
+  growth and disembodied growth are all Solow's.}
+
+
+The solution, we suggest, is that embodied growth is disembodied growth
+on a finer scale. At each step toward realization of the new plant and
+products, raw materials and products and labor skills and plant capacity
+currently available on the market are adapted to new uses. The innovator
+pays for these inputs at a market price determined by their value in
+established productive uses, but applies them innovatively to realize
+higher prospective cash flows, and hence higher present values, to the
+innovator
+(\citet{marshallPrinciplesEconomics1890, schumpeterTheoryEconomicDevelopment1934}).
+This difference in present value realized less price paid will here be
+called the ``innovator's reserve'', meaning reserve price for inputs of
+capital and labor.\footnote{i.e., capital and labor inputs are worth
+  more to the innovator in that the innovator applies them in ways to
+  realize greater returns. The present value of additional cash flow
+  enabled by this advantage in return quantifies the innovator's reserve
+  and equivalently the non-random component of free growth.} The innovator's reserve quantifies the
+part of free growth explained by productivity gain as distinct from
+random market noise. As such, it is the quantity added to depreciation
+saving to enable embodied growth, so that net saving is never
+needed.
+
+Our findings support those of \cite{picketyCapitalIsBack2014} and \cite{kurz2023market} as to the market power of innovators to explain capital growth beyond net saving. Again, we go farther by questioning the assumption that net saving contributes even a part of capital growth. Data shown in the Tables and Figures here suggest that it does not. Hence we attribute all capital growth and acceleration to the innovator's reserve, aside from market noise, and none to net saving.
+
+\section{Testing directly from capital growth}
+
+The essential tenet of thrift theory shows in Eq. \eqref{eq-4}, which expects capital growth to equal net investment within the authorized rate. We have first tested it, and its counterpart in Eq. \eqref{eq-new-13}, from their implications for capital acceleration, rather than directly, because causalities connecting variables tend to be most clearly revealed in simultaneous changes in those variables. In this case, causalities connected to \(g(K)\) are likeliest to be revealed in changes to \(g(K)\), meaning capital acceleration \(\Delta g(K)\).
+
+Results of those tests were vivid. Tables and figures above seem to show that change in net investment, expected in thrift theory to explain all of capital acceleration, explains none of it. We will now test Eqs. \eqref{eq-4} and \eqref{eq-new-13} directly, but we cannot expect equal clarity in test results. Free growth theory predicts that capital growth is explained by the innovator's reserve alone, and is not a function of \(s^*\) or \(c^*\). For this reason, it makes no predictions as to the relationships among \(g(K), s^*\) and \(c^*\) at any time. It expects rather that Eq. \eqref{eq-new-13} might predict correctly in occasional coincidence, but not in general.
+%
+By Eq. \eqref{eq-new-12}, versions of the thrift index applying to capital growth directly may be given as
+%
+\begin{equation*}
+   \theta^*_{s,i} = \frac{s^*_i}{g(K)_i}\ , \quad \theta^*_{c,i} = \frac{(1-c^*)_i}{g(K)_i}\ , \quad \theta^*_s = E(\theta^*_{s,i}) \quad \text{and} \quad \theta^*_{c} = E(\theta^*_{c,i})
+\end{equation*}
+%
+Eq. \eqref{eq-new-13} now implies
+%
+\begin{equation}
+    E(\theta^*_s) = E(\theta^*_c) = 1 \quad \text{under thrift assumptions.} \label{eq-22}
+\end{equation}
+%
+Again, free growth theory makes no prediction as to the relationship of capital growth to net saving or to consumption.
+
+Fig. \ref{fig-s_c_theta_plots} plots average \(\theta^*_s\) and \(\theta^*_c\), GDP-weighted, for 86 countries over the period 1980-2022.
+Table \ref{tbl-4} shows associated regressions.
+Table \ref{tbl-5} shows \(\theta^*_s\) and \(\theta^*_c\) for each of these 86 countries for which data were reported.
+As with tests from capital acceleration, these findings do not seem to support thrift theory.
+%
+
+
+\hypertarget{optimum-investment-policy}{%
+\section{Optimum investment policy}\label{optimum-investment-policy}}
+
+Data and arguments adduced suggest that the optimum amount of
+saving, at the global scale, is replacement saving to offset depreciation, and nothing
+more. That would not mean book depreciation, as this study has stressed
+differences between book and market values. Up to a point, it should be
+possible to analyze the composition of market capital, and to model
+depreciation of the whole. A better plan, as
+\citet{solowContributionTheoryEconomic1956a} wrote in response to
+Harrod's knife edge argument (Harrod, \citeyear{harrodEssayDynamicTheory1939}), is to
+trust the market to maximize rate of return, and to sense the point
+where glut begins and returns fall.\footnote{Harrod had argued that
+saving must hit the warranted rate exactly or risk positive
+feedback through the operation of the output/capital ratio
+(accelerator).}
+%
+\FloatBarrier
+\begin{figure}[pos=H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-1.pdf}
+        \label{fig-s_c_theta_plots-1}
+    }
+    \quad % This adds some space between the two subfigures
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-2.pdf}
+        \label{fig-s_c_theta_plots-2}
+    }
+    \captionsetup{justification=centering}
+    \caption{\(\theta^*_{s}\) and \(\theta^*_c\) (86 countries)}
+    \label{fig-s_c_theta_plots}
+\end{figure}
+%
+\input{./tables/tbl-4.tex}
+%
+Markets do so imperfectly when tax and other public policy reward
+saving over distributions and consumption. Findings in this paper
+suggest review of such policies. These include the double tax on
+dividends, and the greater tax rate on ordinary income than on capital
+gains. Effects of removing the double tax, and removing the difference
+between tax rates on ordinary income and on capital gains, could be
+revenue-neutral and non-partisan if the corporate tax were raised to
+match, if the tax rates on ordinary income and on capital gains met
+somewhere between, and if thoughtful grandfathering eased the
+transition.
+%
+\hypertarget{net-output}{
+\section{Net output}\label{net-output}
+}
+The concept of net output is found in our discussions, but not in our equations. Net output means value added. Appendix B will show an argument that to equate value added to the sum of consumption and capital growth, and neither less nor more, would miss two components, one negative and one positive, in value added to human capital, and that both of these components are unmeasurable by known means. Since we work here from measurable data for consumption and net saving and market value capital, we did our best to reason from those three quantities alone.
+%
+\FloatBarrier
+\input{./tables/tbl-5.tex}
+\FloatBarrier
+
+
+
+\hypertarget{data-sources}{%
+\section{Data sources}\label{data-sources}}
+
+All our data are drawn from \href{https://wid.world/document/distributional-national-accounts-guidelines-2020-concepts-and-methods-used-in-the-world-inequality-database/}{Distributional National Accounts (DINA)} from the free online database \href{wid.world.com}{World
+Inequality Database (WID)}. This source collates data from national accounts and tax data
+of 105 countries in constant currency units, and adjusts them where needed to conform to current standards of the System of National Accounts
+(SNA) published by the United Nations. We show results for the 86 of
+those countries which report all three of the factors, namely net
+saving, consumption and market-value capital, needed for deriving
+the thrift and free growth indexes. WID's source for these data is national accounts.
+
+Consumption $C$ in our text and equations is reproduced from the sum of Government Final Consumption Expenditure (mcongo)\footnote{\label{widnote}WID code} and Private Expenditures of Households and NPISH (mconhn). This sums government expenditure GCE and personal consumption expenditure PCE. Net saving $S_{net}$ and market-value $K$ are taken from net national saving (msavin) and market-value Capital Wealth (mnweal) respectively. GDP, which we use only for weighting purposes in Figs. 1 and 2, is reproduced from GDP (mgdpro).
+
+\hypertarget{accessing-our-results-and-methods}{%
+\section{Accessing our results and
+methods}\label{accessing-our-results-and-methods}}
+
+Tables and other displays of our findings for each country, and showing
+our methods of calculation, can be accessed at the
+\href{https://web-appendix.shinyapps.io/Sources\_of\_Capital\_Growth/}{web appendix (https://web-appendix.shinyapps.io/Sources\_of\_Capital\_Growth)}.
+
+\hypertarget{sec-displays}{%
+\section{Displays}\label{sec-displays}}
+
+Eqs. \eqref{eq-new-1} and \eqref{eq-new-4} show
+\(\theta_s + \varphi_s = 1\) and \(\theta_c + \varphi_c = 1\). Some
+displays here and in the
+\href{https://web-appendix.shinyapps.io/Sources\_of\_Capital\_Growth/}{web appendix}
+save space by showing \(\varphi_s\) and \(\varphi_c\) only, leaving
+\(\theta_s\) and \(\theta_c\) implicit as their complements to unity.
+The \href{https://web-appendix.shinyapps.io/Sources\_of\_Capital\_Growth/}{web
+appendix} includes displays of \(\varphi_s\) and \(\varphi_c\) for
+each year in each country over the report period. These tend to show
+upward and downward spikes in values of \(\varphi_s\) and \(\varphi_c\)
+in some years. Those spikes tend to be associated with small absolute
+values of denominators, in these cases \(\Delta g(K)\), in those
+countries and years. Small denominators magnify errors in measurements
+of numerators. Worse, when denominators are small, small mismeasurements in them might reverse the term in sign.
+
+To maximize reliability of test results, we apply a range of screens to
+omit years where absolute denominators fall below a given
+threshold. Some displays show data for all years, regardless of denominator size.
+Others screen out all years where
+absolute denominators are less then .01, then .025, then continuing upward in
+increments of .025 to a maximum screen of .15. \(\varphi_s\) and
+\(\varphi_c\) are plotted for each country unscreened and at each of the
+seven successive levels of screening. All displays applied a screen of .01. 
+The denominator whose absolute value is screened is capital acceleration
+$\Delta g(K)$ or capital growth rate \(g(K)\) in all displays. 
+
+Screening out years where absolute \(\Delta g(K)\) or $g(K)$ is small would cost
+little in informative value even if measurements were exact. In those
+years, there is little capital acceleration or capital growth, positive or negative, for
+either thrift theory or free growth theory to explain. Market noise
+alone might account for \(\Delta g(K)\) or $g(K)$ in such years. Screening reduces
+the number of observations, but increases the reliability and
+informative value of each.
+
+\hypertarget{disclaimers}{%
+\section{Disclaimers}\label{disclaimers}}
+
+We accept that capital growth is impossible without capital replacement first, to make up losses to depreciation, and that the only source of capital replacement is replacement investment. Thus we accept the necessity and efficacy of replacement investment. We dispute only the efficacy of net investment in realizing capital growth after replacement investment has made up for depreciation.
+
+\hypertarget{discussion-and-conclusions}{%
+\section{Discussion and conclusions}\label{discussion-and-conclusions}}
+
+Capital glut is the condition warned against by West, Ricardo, Malthus
+and Harrod. It is loosely defined as oversupply of capital at the
+current state of technology. We will not attempt a more exact definition
+here. Findings shown in our displays, anyhow, suggest that net
+saving raises the physical quantity of capital, say in number of
+shops, manufacturing plants or finished goods of similar design, without
+raising aggregate value of capital, and so contributes to capital glut.
+
+These findings challenge the teachings that capital growth is effected
+by net saving enabled by consumption restraint, and that producer
+cost, including imputed interest as the opportunity cost of capital,
+converges to market realization. Evidence showing \(\overline{\varphi_{s,i}} \cong 1\)
+and \(\overline{\varphi_{c,i}} \cong 1\) suggests that all capital growth is free, and
+consequently that market realization, in the presence of innovation,
+exceeds producer cost by the entirety of capital growth. Meanwhile the same evidence, which indicates that net saving adds no capital value, suggests a review of the teachings that consumption plus net saving gives net income, and that consumption plus net investment gives net output. Appendix B will also question the latter teachings.
+
+Embodied growth is disembodied growth on a finer scale. It redeploys or
+repurposes existing labor skills, raw materials, and plant capacity, as
+well as existing finished goods, to achieve higher returns than
+available from the customary uses which determine their prices. The
+present value of yields from this advantage in return, or equivalently
+the innovator's reserve, defines the non-random component in free growth.
+
+\appendix
+\renewcommand{\theequation}{A.\arabic{equation}}
+\setcounter{equation}{0}
+
+\hypertarget{appendix-a}{
+\section*{Appendix A. \hspace{0.5em}Equivalence of saving and investment}\label{appendix-a}
+}
+
+Any usage which treats saving and investment as equal must deal with the fact that saving held in cash is not investment in the usual sense of spending on productive capital, and contributes nothing to output. \cite{keynesGeneralTheoryEmployment1936} defined that unspent saving as intended saving, and actual saving as the part so spent.
+
+We suggest that investors seek to maximize return, within risk tolerance, and will sometimes hold saving in cash or equivalents at zero return in recessions and depressions when positive returns cannot be found, and so when investing in the usual sense would tend to reduce capital and output rather than increase them. Thus investment could have the usual meaning in usual times, when prospective returns bring animal spirits, and could include saving in cash when not. It is in this sense that we equate saving to investment.
+
+\renewcommand{\theequation}{B.\arabic{equation}}
+\setcounter{equation}{0}
+
+\hypertarget{appendix}{%
+\section*{Appendix B.\hspace{0.5em}Net output with human
+capital}\label{appendix}}
+
+Human capital is impractical to measure, as it leaves little market
+record other than for its rental income in pay and investment cost in schooling. Thus national accounts
+leave it implicit, and allow us to infer what we can from data for pay and schooling. Those
+accounts are founded on the principle, sound when terms are appropriately redefined, that net output,
+or value added, is expressed in the sum of capital growth and net
+outflow from the value-added chain. In national accounts, then, where
+physical capital is the whole of capital while net outflow of the chain
+is the whole of consumption, the reasoning is
+%
+\begin{equation}
+Y = \Delta K + C \ , \quad \text{neglecting human capital\footnotemark.}\label{eq-a1}
+\end{equation}
+\footnotetext{Where $\Delta K$, mistakenly, we argue, is measured as $S_{net}$.}
+%
+It is possible in principle to model a value-added chain which includes human
+capital, and to compare findings with those shown in Eq.~\eqref{eq-a1}.
+Let human capital $H$, in that new model, stand as the last link in the
+value-added chain. Adapting the classic illustration of the value added
+principle, say that farms produce wheat, mills convert the wheat to
+flour, bakeries convert the flour into bread, and humans convert some of
+the bread, called invested consumption, into human capital. The net
+outflow from this extended value-added chain is not all of consumption,
+but only pure consumption, meaning the part remaining after the part invested in human capital (invested consumption) is
+subtracted\footnote{The concepts of invested consumption, pure consumption, self-invested work and human depreciation were introduced in \cite{schultzInvestmentHumanCapital1961}.}. By this reasoning, the principle
+that net output is expressed in capital growth plus net outflow gives
+%
+\begin{equation} 
+Y = \Delta K + \Delta H + C_{p}\ , \quad \text{allowing human capital,}\label{eq-a2} 
+\end{equation}
+%
+where \(C_{p}\) gives pure consumption.
+
+Yoram \citet{ben-porathProductionHumanCapital1967} reasoned
+that growth in human capital equals invested consumption plus
+self-invested work less human depreciation\footnote{Equation 4 in
+  Ben-Porath's paper, summarizing his first three equations. His terms and
+  notation differ from ours. The concepts of invested consumption were
+  also introduced by \citet{schultzInvestmentHumanCapital1961}.}.
+Let \(C_{s},\ W_{s}\) and \(D(H)\) show these flows respectively.
+Thus the combined arguments of Schultz and Ben-Porath arrive at
+%
+\begin{equation}
+C = C_{s} + C_{p} \quad \text{and}
+\quad \Delta H = C_{s} + W_{s} - D(H)\ , \quad \text{allowing human capital.}\label{eq-a3}
+\end{equation}
+%
+Substitution of these equations into Eq.~\eqref{eq-a2} finds
+%
+\[Y = \Delta K + C_{s} + W_{s} - D(H) + C_{p} \quad \text{and consequently}\]
+%
+\vspace{-5ex}
+\begin{equation}
+    Y = \Delta K + C + W_{s} - D(H)\ , \quad \text{allowing human capital,}\label{eq-a4}
+\end{equation}
+%
+if Schultz and Ben-Porath and the reasoning here are right.
+
+\renewcommand{\theequation}{C.\arabic{equation}}
+\setcounter{equation}{0}
+
+\hypertarget{appendix-c}{%
+\section*{Appendix C.\hspace{0.5em}Mill's statement of the free growth idea}\label{appendix-c}}
+
+\cite{millPrinciplesPoliticalEconomy1848}, book 1, chapter 5, section 4, includes:
+\begin{quote}
+If it were said, for instance, that the only way to accelerate the increase of capital is by increase of saving, the idea would probably be suggested of greater abstinence, and increased privation. But it is obvious that whatever increases the productive power of labour creates an additional fund to make savings from, and enables capital to be enlarged not only without additional privation, but concurrently with an increase of personal consumption. 
+\end{quote}
+
+This passage may be the first clear statement of what we call free growth theory. His use of the words "accelerate" and "concurrently" suggest that his path of reasoning was something like ours, and that he meant what we call free growth rather than the alternating phases of higher and lower saving rates pictured in thrift theory.
+
+
+
+\printcredits
+
+%% Loading bibliography style file
+% \bibliographystyle{model1-num-names}
+\bibliographystyle{cas-model2-names}
+
+% Loading bibliography database
+\bibliography{cas-refs}
+
+
+\end{document}
+
