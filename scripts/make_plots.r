@@ -10,7 +10,7 @@ make_plot <- function(p) {
         geom_hline(yintercept = 0, color = "black", size = 1) +
         geom_hline(yintercept = 1, color = "black", size = 1) +
         geom_smooth(aes(weight = weight, group = NA),
-            se = F,
+            se = FALSE,
             color = "#386cb0",
             size = 1.5,
             method = "loess",
@@ -19,10 +19,10 @@ make_plot <- function(p) {
         geom_smooth(
             method = "loess", span = 0.7,
             #  formula = y ~ x + I(x^2),
-            show.legend = F,
+            show.legend = FALSE,
             aes(group = NULL),
             color = "#ef3b2c",
-            se = F,
+            se = FALSE,
             size = 1.5
         ) +
         coord_cartesian(ylim = c(-3, 3), ) +
