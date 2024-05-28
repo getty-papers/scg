@@ -149,7 +149,7 @@ tex_wid_si_table <- reg_table(
 write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
 
 `tex_wid_s*_c*_table` <- reg_table(
-    "Regression of \\(s^*\\) and \\(1-c^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) \\cong s^*\\) and \\(g(K) = 1 - c^*\\).",
+    "Regression of \\(s^*\\) and \\(1-c^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) \\cong s^*\\) and \\(g(K) \\cong 1 - c^*\\).",
     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
     label = "tbl-4"
 )
