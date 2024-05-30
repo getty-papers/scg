@@ -17,7 +17,7 @@
 
 %% $Id: cas-sc.cls 66 2021-05-11 14:17:42Z rishi $
 
- \def\RCSfile{./latex_styles/cas-sc}%
+ \def\RCSfile{latex_styles/cas-sc}%
  \def\RCSversion{2.3}%
  \def\RCSdate{2021/05/11}%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
