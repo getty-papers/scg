@@ -13,3 +13,7 @@ commit:
 	git commit -m "update"
 	git push origin main
 
+prepare:
+	make render
+	mv tmp/main.bbl .
+	zip -r arxiv.zip latex_styles/ figure-pdf/ tables/ main.tex main.bbl

@@ -1,0 +1,113 @@
+\begin{thebibliography}{15}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Ben-Porath(1967)}]{ben-porathProductionHumanCapital1967}
+\bibinfo{author}{Ben-Porath, Y.}, \bibinfo{year}{1967}.
+\newblock \bibinfo{title}{The production of human capital and the life cycle of
+  earnings}.
+\newblock \bibinfo{journal}{Journal of Political Economy} \bibinfo{volume}{75},
+  \bibinfo{pages}{352--365}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/1828596}.
+  \bibinfo{note}{publisher: University of Chicago Press}.
+%Type = Article
+\bibitem[{Harrod(1939)}]{harrodEssayDynamicTheory1939}
+\bibinfo{author}{Harrod, R.}, \bibinfo{year}{1939}.
+\newblock \bibinfo{title}{An essay on dynamic theory, the economie journal}.
+\newblock \bibinfo{journal}{An essay in dynamic theory Economic Journal}
+  \bibinfo{volume}{149}, \bibinfo{pages}{563--601}.
+%Type = Article
+\bibitem[{Keynes(1936)}]{keynesGeneralTheoryEmployment1936}
+\bibinfo{author}{Keynes, J.M.}, \bibinfo{year}{1936}.
+\newblock \bibinfo{title}{The general theory of employment, interest and
+  money}.
+\newblock \bibinfo{journal}{The quarterly journal of economics}
+  \bibinfo{volume}{51}, \bibinfo{pages}{209--223}.
+%Type = Book
+\bibitem[{Kurz(2023)}]{kurz2023market}
+\bibinfo{author}{Kurz, M.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{The Market Power of Technology: Understanding the
+  Second Gilded Age}.
+\newblock \bibinfo{publisher}{Columbia University Press}.
+\newblock \URLprefix \url{https://books.google.com/books?id=EHVnEAAAQBAJ}.
+%Type = Article
+\bibitem[{Malthus(1815)}]{malthusEnquiryNatureProgress1815}
+\bibinfo{author}{Malthus, T.R.}, \bibinfo{year}{1815}.
+\newblock \bibinfo{title}{An enquiry into the nature and progress of rent} .
+%Type = Book
+\bibitem[{Marshall(1890)}]{marshallPrinciplesEconomics1890}
+\bibinfo{author}{Marshall, A.}, \bibinfo{year}{1890}.
+\newblock \bibinfo{title}{Principles of {{Economics}}}.
+\newblock Number \bibinfo{number}{v. 1} in \bibinfo{series}{Principles of
+  {{Economics}}}, \bibinfo{publisher}{{Macmillan and Company}}.
+%Type = Book
+\bibitem[{Mill(1848)}]{millPrinciplesPoliticalEconomy1848}
+\bibinfo{author}{Mill, J.S.}, \bibinfo{year}{1848}.
+\newblock \bibinfo{title}{Principles of Political Economy, ed}.
+%Type = Article
+\bibitem[{Piketty and Zucman(2014)}]{picketyCapitalIsBack2014}
+\bibinfo{author}{Piketty, T.}, \bibinfo{author}{Zucman, G.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Capital is back: Wealth-income ratios in rich
+  countries 1700–2010 *}.
+\newblock \bibinfo{journal}{The Quarterly Journal of Economics}
+  \bibinfo{volume}{129}, \bibinfo{pages}{1255--1310}.
+\newblock \DOIprefix\doi{10.1093/qje/qju018}.
+%Type = Book
+\bibitem[{Rae(1834)}]{raeNewPrinciplesPolitical1834}
+\bibinfo{author}{Rae, J.}, \bibinfo{year}{1834}.
+\newblock \bibinfo{title}{New Principles of Political Economy}.
+%Type = Article
+\bibitem[{Ricardo(1815)}]{ricardoEssayProfitsVol1815}
+\bibinfo{author}{Ricardo, D.}, \bibinfo{year}{1815}.
+\newblock \bibinfo{title}{Essay on profits} .
+%Type = Article
+\bibitem[{Schultz(1961)}]{schultzInvestmentHumanCapital1961}
+\bibinfo{author}{Schultz, T.W.}, \bibinfo{year}{1961}.
+\newblock \bibinfo{title}{Investment in human capital} .
+%Type = Book
+\bibitem[{Schumpeter and Opie(1934)}]{schumpeterTheoryEconomicDevelopment1934}
+\bibinfo{author}{Schumpeter, J.}, \bibinfo{author}{Opie, R.},
+  \bibinfo{year}{1934}.
+\newblock \bibinfo{title}{The {{Theory}} of {{Economic Development}}: {{An
+  Inquiry Into Profits}}, {{Capital}}, {{Credit}}, {{Interest}}, and the
+  {{Business Cycle}}}.
+\newblock Harvard {{University}}. {{Dept}}. of {{Economics}}. {{Economic}}
+  Studies, \bibinfo{publisher}{{Harvard University Press}}.
+%Type = Article
+\bibitem[{Solow(1956)}]{solowContributionTheoryEconomic1956a}
+\bibinfo{author}{Solow, R.M.}, \bibinfo{year}{1956}.
+\newblock \bibinfo{title}{A contribution to the theory of economic growth}.
+\newblock \bibinfo{journal}{The Quarterly Journal of Economics}
+  \bibinfo{volume}{70}, \bibinfo{pages}{65}.
+\newblock \URLprefix
+  \url{https://academic.oup.com/qje/article-lookup/doi/10.2307/1884513},
+  \DOIprefix\doi{10.2307/1884513}.
+%Type = Article
+\bibitem[{Solow(1957)}]{solowTECHNICALCHANGEAGGREGATE1957}
+\bibinfo{author}{Solow, R.M.}, \bibinfo{year}{1957}.
+\newblock \bibinfo{title}{Technical change and the aggregate production
+  function}.
+\newblock \bibinfo{journal}{The Review of Economics and Statistics}
+  \bibinfo{volume}{39}, \bibinfo{pages}{312--320}.
+\newblock \DOIprefix\doi{10.2307/1926047}.
+%Type = Book
+\bibitem[{West(1815)}]{westEssayApplicationCapital1815}
+\bibinfo{author}{West, E.}, \bibinfo{year}{1815}.
+\newblock \bibinfo{title}{Essay on the Application of Capital to Land: With
+  Observations Showing the Impolicy of Any Great Restriction of the Importation
+  of Corn, and that the Bounty of 1688 Did Not Lower the Price of it}.
+\newblock \bibinfo{publisher}{T. Underwood}.
+\newblock \bibinfo{note}{Issue: 21145}.
+
+\end{thebibliography}
