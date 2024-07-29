@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{16}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -22,6 +22,12 @@
 \bibinfo{author}{Harrod, R.}, \bibinfo{year}{1939}.
 \newblock \bibinfo{title}{An essay on dynamic theory, the economie journal}.
 \newblock \bibinfo{journal}{An essay in dynamic theory Economic Journal} \bibinfo{volume}{149}, \bibinfo{pages}{563--601}.
+%Type = Article
+\bibitem[{Jordà et~al.(2019)Jordà, Knoll, Kuvshinov, Schularick and Taylor}]{jorda2019}
+\bibinfo{author}{Jordà, O.}, \bibinfo{author}{Knoll, K.}, \bibinfo{author}{Kuvshinov, D.}, \bibinfo{author}{Schularick, M.}, \bibinfo{author}{Taylor, A.M.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{{The rate of return on everything, 1870–2015}}.
+\newblock \bibinfo{journal}{The Quarterly Journal of Economics} \bibinfo{volume}{134}, \bibinfo{pages}{1225--1298}.
+\newblock \DOIprefix\doi{10.1093/qje/qjz012}.
 %Type = Article
 \bibitem[{Keynes(1936)}]{keynesGeneralTheoryEmployment1936}
 \bibinfo{author}{Keynes, J.M.}, \bibinfo{year}{1936}.

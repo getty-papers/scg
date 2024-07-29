@@ -263,7 +263,7 @@ reported for that year and country. As we will be testing for
 differences between \(\Delta K\) and \(S_{net,i}\), we begin by writing
 %
 \begin{equation}
-\Delta K_{i} = k S_{net,i} + Q_{s,i}\ .\label{eq-1}
+\Delta K_{i} = k S_{net,i} + Q_{i}\ .\label{eq-1}
 \end{equation}
 %
 Here \(k\) is the fraction of \(S_{net}\) actually realized in growth of capital value \(K\). \(Q\) means the sum of market noise, which may prove
@@ -271,7 +271,6 @@ positive or negative or zero, plus any part of capital growth explained
 by concurrent productivity gain as described by Rae and Mill, and by
 Solow as to disembodied growth. We call this sum of noise and
 productivity gain ``free growth'' in that it costs no net saving.
-\(Q_{s,i}\) means its value as measured from data for saving in the \(i^{th}\) year.
 
 The object of testing is to find effects of \(S_{net}\) on concurrent
 \(\Delta K\), and so to help evaluate historic and current teachings as
@@ -286,7 +285,7 @@ thrift theory, is expected to converge to \(\Delta K\) if held within
 the warranted rate. That is,
 %
 \begin{equation}
-    E(k) = 1\ , \quad E(\Delta K)_{i} = S_{net, i} \quad \text{and} \quad E(Q_s)_i = 0,
+    E(k) = 1\ , \quad E(\Delta K)_{i} = S_{net, i} \quad \text{and} \quad E(Q)_i = 0,
 \quad \text{if} \quad
 \frac{\Sigma S_{net}}{\Sigma K} \leq u\ ,\quad \text{in thrift theory,}
 \label{eq-2}
@@ -305,14 +304,14 @@ where:
   \(u\) is the warranted rate.
 \end{enumerate}
 
-Free growth theory makes the opposite prediction that net saving adds no capital value, and that capital growth, at the largest scales in the private sector, is explained wholly by increased productivity of \textbf{?shells?} and materials already present. Thus, referring to Eq.~\eqref{eq-1}, it predicts:
+Free growth theory makes the opposite prediction that net saving adds no capital value, and that capital growth, at the largest scales in the private sector, is explained wholly by increased productivity of skills and materials already present. Thus, referring to Eq.~\eqref{eq-1}, it predicts:
 %
 \begin{equation}
     E(k) = 0 \quad \text{and} \quad E(\Delta K)_i = Q_{s,i} \quad \text{in free growth theory.} \label{eq-3}
 \end{equation}
 %
-\(E(k)\), \(E(\Delta K)\) and \(E(Q_{s})\) here give the expected values of \(k\), \(\Delta K\)
-and \(Q_{s}\) respectively. Expected value means predicted average of outcomes
+\(E(k)\), \(E(\Delta K)\) and \(E(Q)\) here give the expected values of \(k\), \(\Delta K\)
+and \(Q\) respectively. Expected value means predicted average of outcomes
 over all observations.
 We will test those predictions against data for saving and capital growth taken from national accounts.
 As secular economic growth has tended to make
@@ -321,7 +320,7 @@ later stocks and flows larger than earlier ones, we first divide by
 that average. Division of Eq.~\eqref{eq-1} by \(K_{i - 1}\) gives
 %
 \begin{equation}
-    \frac{{\Delta K}_{i}}{K_{i - 1}} = \frac{k S_{net,i}}{K_{i - 1}} + \frac{Q_{s,i}}{K_{i - 1}} \ .\label{eq-4}
+    \frac{{\Delta K}_{i}}{K_{i - 1}} = \frac{k S_{net,i}}{K_{i - 1}} + \frac{Q_{i}}{K_{i - 1}} \ .\label{eq-4}
 \end{equation}
 %
 The first term in Eq.~\eqref{eq-3} gives capital growth rate \(g(K)\). The fraction in the second term is a
@@ -335,27 +334,27 @@ shown as \(q_s\). Then
 %
 \[g{(K)}_{i} = \frac{\Delta K_{i}}{K_{i - 1}} \ , \quad
 s^{*}_{i} = \frac{S_{net,i}}{K_{i - 1}} \ , \quad \text{and} \quad
-q_{s,i} = \frac{Q_{s,i}}{K_{i - 1}} \ ,\]
+q_{i} = \frac{Q_{i}}{K_{i - 1}} \ ,\]
 %
 so that Eq.~\eqref{eq-3} can be shown more compactly as
 %
 \begin{equation}
-g(K)_{i} = k s^{*}_{i} + q_{s,i} \ .\label{eq-5}
+g(K)_{i} = k s^{*}_{i} + q_{i} \ .\label{eq-5}
 \end{equation}
 %
-By the definition \(q_s = \frac{Q_{s}}{K}\), an expected value \(E(q_s) = 0\)
-implies \(E\left( q_s\right) = 0\). Application of Eq.~\eqref{eq-2} to
+By the definition \(q = \frac{Q}{K}\), an expected value \(E(q) = 0\)
+implies \(E(q) = 0\). Application of Eq.~\eqref{eq-2} to
 Eq.~\eqref{eq-5} now gives
 %
 \begin{equation}
-    E(g(K)_i) = s^*_i \quad \text{and} \quad E(q_s)_i\ , \quad \text{under thrift assumptions,}\label{eq-6}
+    E(g(K)_i) = s^*_i \quad \text{and} \quad E(q)_i\ , \quad \text{under thrift assumptions,}\label{eq-6}
 \end{equation}
 %
 where ``thrift assumptions'' are that thrift theory is correct and that
 the warranted rate is not exceeded. Eqs. \eqref{eq-2} and \eqref{eq-4}, meanwhile, give
 %
 \begin{equation}
-    E(g(K)_i) = q_{s,i} \quad \text{in free growth theory.}\label{eq-7}
+    E(g(K)_i) = q_{i} \quad \text{in free growth theory.}\label{eq-7}
 \end{equation}
 %
 Note here that thrift theory makes no prediction as to the quantity \(s^*_i\). Rather it predicts \(k=0\) in Eq. \eqref{eq-5}, so that \(s^*_i\) takes no part in calculation of \(\Delta g(K)_i\).
@@ -364,30 +363,30 @@ The concepts of correlation, covariance and regression are founded on the princi
 implications for changes in capital growth, which we call capital acceleration and show as $\Delta g(K)$. First note that Eq.~\eqref{eq-5} allows
 %
 \begin{equation}
-\Delta g{(K)}_{i} = \Delta k s^{*}_{i} + \Delta q_{s,i}\ , \quad \text{where}\label{eq-8}
+\Delta g{(K)}_{i} = \Delta k s^{*}_{i} + \Delta q_{i}\ , \quad \text{where}\label{eq-8}
 \end{equation}
 %
 \[\Delta g{(K)}_{i} = g{(K)}_{i} - g(K)_{i - 1} \ , \quad
 \Delta s^{*}_{i} = s^{*}_{i} - s^{*}_{i - 1} \ , \quad \text{and} \quad
-\Delta q_{s,i} = q_{s,i} - q_{s,i - 1} \ .\]
+\Delta q_{i} = q_{i} - q_{i - 1} \ .\]
 %
 For any variables \(a\) and \(b\), we may reason
 \(E(a - b) = E(a) - E(b)\). By this and by Eqs. \eqref{eq-7} and
 \eqref{eq-8}, then,
 %
 \begin{equation}
-    E(g(K)_i) = \Delta s^*_i \quad \text{and} \quad E(q_s)_i = 0\ , \quad \text{under thrift assumptions.}\label{eq-9}
+    E(g(K)_i) = \Delta s^*_i \quad \text{and} \quad E(q)_i = 0\ , \quad \text{under thrift assumptions.}\label{eq-9}
 \end{equation}
 %
 Division of Eq.~\eqref{eq-8} by capital acceleration, and rearrangement,
 gives
 %
 \begin{equation}
-\frac{\Delta k s^{*}_{i}}{\Delta g{(K)}_{i}} + \frac{\Delta q_{s,i}}{\Delta g{(K)}_{i}} = 1 \ .\label{eq-10}
+\frac{\Delta k s^{*}_{i}}{\Delta g{(K)}_{i}} + \frac{\Delta q_{i}}{\Delta g{(K)}_{i}} = 1 \ .\label{eq-10}
 \end{equation}
 %
 Define \(\theta_{s,i} = \frac{\Delta k s^{*}_{i}}{\Delta g{(K)}_{i}}\)
-and \(\varphi_{s,i} = \frac{\Delta q_{s,i}}{\Delta g{(K)}_{i}}\) to
+and \(\varphi_{s,i} = \frac{\Delta q_{i}}{\Delta g{(K)}_{i}}\) to
 restate Eq.~\eqref{eq-10} as
 %
 \begin{equation}
@@ -464,51 +463,77 @@ will now test thrift theory from a different approach.
 \hypertarget{consumption-and-capital-growth}{%
 \section{Consumption and capital growth}\label{consumption-and-capital-growth}}
 %
-Expenditure \(E\), in national accounts, equals pay plus gross profit by sources, and equals consumption \(C\) plus gross saving by disposition\footnotemark. Let expenditure net of depreciation show as "net expenditure" \(E_{net}\). Then \(E_{net} = C + S_{net} = \Pi + P\), where \(\Pi\) shows pay and \(P\) shows net profit. Let \(Q_c\) notate the flow of free growth found from data for consumption rather than net saving. This equation gives \(S_{net} = \Pi + P - C\). By analogy to Eq. \eqref{eq-1}, then,
-%
-\footnotetext{It is more common to sum \(C\) and 5 as income/output \(Y\). We prefer to argue from \(E\) for reasons shown in Appendix B, and to make the logic easier to follow. Economic dictionaries show a range of definitions for output. It is reasonably clear that the only sources of spending are pay and gross profit, while its only dispositions are in consumption and gross saving/investment.}
+The concept of cash flow is little used in economics, aside from finance and in present value calculations. It is defined implicitly in the equation
 %
 \begin{equation}
-    \Delta K_i = k S_{net,i} + Q_{c,i} = k (\Pi_i + P_i - C_i) - Q_{c,i}\ .\label{eq-14}
+    P = \Delta K + F\ ,\label{eq-14}
 \end{equation}
 %
-Given the definitions
+where \(P\) and \(F\) mean net profit and cash flow respectively\footnote{We have found no standard notation for cash flow.}. Cash flow means the net outflow of value, in cash or kind, from an asset to its owner for consumption \(C\) or reinvested in other assets. This flow of spending is augmented by pay \(\Pi\)\footnote{Compensation of employees plus a share of mixed income. We avoid the standard notation \(W\), which is also used for work, as we prefer to distinguish pay from work.}. At the scale of the closed economy, meaning of all assets together, reinvestment cancels to zero. At this scale, then, the sum of spending \(F + \Pi\) is spent on consumption alone. That is,
+%
+\begin{equation}
+    \Pi + F = C\ .\label{eq-15}
+\end{equation}
+%
+Eq. \eqref{eq-14} may be arranged as \(F = P - \Delta K\). Substitution of this in Eq. \eqref{eq-15} gives \(\Pi + P - \Delta K = C\), or equivalently
+%
+\begin{equation}
+   \Pi + P = C + \Delta K\ .\label{eq-16b}
+\end{equation}
+%
+Thrift theory, which expects \(\Delta K = S_{net}\), writes this as
+%
+\begin{equation}
+    \Pi + P = C + S_{net}\ ,\quad \text{from which}\label{eq-17b}
+\end{equation}
+\vspace{-5ex}
+\begin{equation}
+    S_{net} = \Pi + P - C\ ,\quad \text{under thrift assumptions.}\label{eq-18b}
+\end{equation}
+%
+Pay, net profit\footnote{\cite{jorda2019}, The rate of return on everything.} and consumption can all be measured, to an extent, as can market-value capital, so that this prediction of thrift theory could be measured directly. Comparison between Eqs. \eqref{eq-16b} and \eqref{eq-18b}, however, shows that such a test would only repeat that of Eq. \eqref{eq-6}. As before, the two theories are tested most revealingly in capital acceleration. 
+%
+Given the definitions\footnote{The notation \(c^*\), as with \(s^*\), shows an asterisk to distinguish its meaning \(c^* = \frac{C}{K}\) from the Keynesean \(c = \frac{C}{K}\)}
 %
 \begin{equation*}
-    q_{c,i} = \frac{Q_{c,i}}{K_{i - 1}}\ , \quad \pi_i = \frac{\Pi_i}{K_{i - 1}} \ , \quad p_i = \frac{P_i}{K_{i-1}} \quad \text{and} \quad c^*_i = \frac{C_i}{K_i - 1}\ ,
+\pi_i = \frac{\Pi_i}{K_{i - 1}} \ , \quad p_i = \frac{P_i}{K_{i-1}} \quad \text{and} \quad c^*_i = \frac{C_i}{K_{i-1}}\ ,
 \end{equation*}
 %
-Eq. \eqref{eq-14} can be divided by capital to reach
+Eq. \eqref{eq-18} can be divided by capital to reach
 %
 \begin{equation}
-    g(K)_i = k (\pi_i + p_i - c^*_i) + q_{c,i} \ . \label{eq-15}
+    s^*_i = \pi_i + p_i - c^*_i\ ,\quad \text{under thrift assumptions. Then}\label{eq-16}
+\end{equation}
+\vspace{-5ex}
+\begin{equation}
+    \Delta s^*_i = \Delta \pi_i + \Delta p_i - \Delta c^*_i\ ,\quad \text{where}\label{eq-17a}
+\end{equation}
+\begin{equation*}
+    \Delta \pi_i = \pi_i - \pi_{i - 1} \ , \quad \Delta p_i = p_i - p_{i - 1} \quad \text{and} \quad \Delta c^*_i = c^*_i - c^*_{i - 1}\ ,
+\end{equation*}
+%
+as before. Thrift theory expects \(\Delta g(K) = \Delta s^* = \Delta \pi - \Delta p - \Delta c\) by Eqs. \eqref{eq-9}, \eqref{eq-16} and \eqref{eq-17a}.
+    It further expects changes in capital productivity, as realized in the pay/capital and profit/capital ratios \(\pi\) and \(p\), to converge to zero as market noise. Thus
+%
+\begin{equation}
+    E(\Delta g(k)_i) = - \Delta c^*_i \quad \text{and} \quad E(\Delta \pi_i) = E(\Delta p_i) = 0, \quad \text{under thrift assumptions.}\label{eq-18a}
 \end{equation}
 %
-By analogy to Eq. \eqref{eq-8}, then, Eq. \eqref{eq-15} gives
-%
+As in Eq. \eqref{eq-10}, we prepare to test this prediction by first dividing Eq. \eqref{eq-18a} by capital acceleration to reach
+% 
 \begin{equation}
-    E(g(K)_i) = \pi_i + p_i - c^*_i \ , \quad \text{under thrift assumptions.} \label{eq-16}
-\end{equation}
-%
-As pay, net profit, consumption and market-value capital growth can all be measured, to an extent, the prediction of theory could be tested directly. National accounts, in any case, are constructed so that \(s^*_i\) differs from the quantity \(\pi_i + p_i - c^*_i\) only by statistical discrepancy, so that such a test would essentially repeat that of Eq. \eqref{eq-6}.
-%
-Again, the most revealing tests of the two theories come in capital acceleration.
-%
-As with Eq. \eqref{eq-8}, we first divide Eq. \eqref{eq-15} by capital acceleration \(\Delta g(K)\) to find
-%
-\begin{equation}
-\frac{k \Delta q_{c}}{ \Delta g(K)_{i}} + \frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}} = 1\ .\label{eq-17}
+    E(\frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}}) = 1\ ,\quad \text{under thrift assumptions.}\label{eq-17}
 \end{equation}
 %
 Define \(\theta_{c,i} = \frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}}\)
-and \(\varphi_{c,i} = \frac{ \Delta q_{c,i}}{ \Delta g(K)_{i}}\) to
+and \(\varphi_{c,i} = 1 - \theta_{c,i}\) to
 re-express Eq.~\eqref{eq-17} as
 %
 \begin{equation}
 \theta_{c,i} + \varphi_{c,i} = 1\ .\label{eq-18}
 \end{equation}
 %
-By Eqs. \eqref{eq-12} through \eqref{eq-15}, further,
+By Eqs. \eqref{eq-18a} through \eqref{eq-18}, further,
 %
 \begin{equation}
     E\left( \theta_{c,i} \right) = 1 \quad \text{and} \quad E\left( \varphi_{c,i} \right) = 0 \ , \quad \text{under thrift assumptions.}\label{eq-19}
@@ -516,7 +541,7 @@ By Eqs. \eqref{eq-12} through \eqref{eq-15}, further,
 %
 Define \(\theta_{c} = E\left( \theta_{c,i} \right)\) and
 \(\varphi_{c} = E\left( \varphi_{c,i} \right)\) to re-express
-Eqs. \eqref{eq-18} and \eqref{eq-19} respectively as
+Eqs. \eqref{eq-18} and \eqref{eq-20} respectively as
 \begin{equation}
     \theta_c + \varphi_c = 1 \ , \quad \text{and}
     \label{eq-20}
