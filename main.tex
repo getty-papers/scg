@@ -218,7 +218,11 @@ flows are discounted. It is created only if the market sees a path, step
 by step, from the start, to practical realization of those prospective
 cash flows. Then capital growth arrives when the market first evaluates
 prospective cash flows, and is realized eventually in physical outcomes
-insofar as the market has predicted correctly. Meanwhile the innovator
+insofar as the market has predicted correctly. That is to say that capital
+growth, in the mind of the market, precedes and pays for any needed investment
+in new plant and equipment.
+
+Meanwhile the innovator
 acquires materials and plant capacity and labor skills at market prices
 determined by their uses in current technology, but applies them more
 productively until competition catches up. It is that temporary market
@@ -263,10 +267,10 @@ reported for that year and country. As we will be testing for
 differences between \(\Delta K\) and \(S_{net,i}\), we begin by writing
 %
 \begin{equation}
-\Delta K_{i} = k S_{net,i} + Q_{i}\ .\label{eq-1}
+    \Delta K_{i} = z_{i} S_{net,i} + Q_{i}\ .\label{eq-1}
 \end{equation}
 %
-Here \(k\) is the fraction of \(S_{net}\) actually realized in growth of capital value \(K\). \(Q\) means the sum of market noise, which may prove
+Here "net saving efficiency" \(z\) is the fraction of \(S_{net}\) actually realized in growth of capital value \(K\). \(Q\) means the sum of market noise, which may prove
 positive or negative or zero, plus any part of capital growth explained
 by concurrent productivity gain as described by Rae and Mill, and by
 Solow as to disembodied growth. We call this sum of noise and
@@ -285,7 +289,7 @@ thrift theory, is expected to converge to \(\Delta K\) if held within
 the warranted rate. That is,
 %
 \begin{equation}
-    E(k) = 1\ , \quad E(\Delta K)_{i} = S_{net, i} \quad \text{and} \quad E(Q)_i = 0,
+    E(z) = 1\ , \quad E(\Delta K) = S_{net} \quad \text{and} \quad E(Q) = 0,
 \quad \text{if} \quad
 \frac{\Sigma S_{net}}{\Sigma K} \leq u\ ,\quad \text{in thrift theory,}
 \label{eq-2}
@@ -307,10 +311,10 @@ where:
 Free growth theory makes the opposite prediction that net saving adds no capital value, and that capital growth, at the largest scales in the private sector, is explained wholly by increased productivity of skills and materials already present. Thus, referring to Eq.~\eqref{eq-1}, it predicts:
 %
 \begin{equation}
-    E(k) = 0 \quad \text{and} \quad E(\Delta K)_i = Q_{s,i} \quad \text{in free growth theory.} \label{eq-3}
+    E(z) = 0 \quad \text{and} \quad E(\Delta K) = Q \quad \text{in free growth theory.} \label{eq-3}
 \end{equation}
 %
-\(E(k)\), \(E(\Delta K)\) and \(E(Q)\) here give the expected values of \(k\), \(\Delta K\)
+\(E(z)\), \(E(\Delta K)\) and \(E(Q)\) here give the expected values of \(z\), \(\Delta K\)
 and \(Q\) respectively. Expected value means predicted average of outcomes
 over all observations.
 We will test those predictions against data for saving and capital growth taken from national accounts.
@@ -320,7 +324,7 @@ later stocks and flows larger than earlier ones, we first divide by
 that average. Division of Eq.~\eqref{eq-1} by \(K_{i - 1}\) gives
 %
 \begin{equation}
-    \frac{{\Delta K}_{i}}{K_{i - 1}} = \frac{k S_{net,i}}{K_{i - 1}} + \frac{Q_{i}}{K_{i - 1}} \ .\label{eq-4}
+    \frac{(\Delta K)_{i}}{K_{i - 1}} = \frac{z_i S_{net,i}}{K_{i - 1}} + \frac{Q_{i}}{K_{i - 1}} \ .\label{eq-4}
 \end{equation}
 %
 The first term in Eq.~\eqref{eq-3} gives capital growth rate \(g(K)\). The fraction in the second term is a
@@ -332,14 +336,14 @@ market-value capital rather than output.
 The third term in Eq.~\eqref{eq-3} will be called free growth rate and
 shown as \(q_s\). Then
 %
-\[g{(K)}_{i} = \frac{\Delta K_{i}}{K_{i - 1}} \ , \quad
+\[g{(K)}_{i} = \frac{(\Delta K)_{i}}{K_{i - 1}} \ , \quad
 s^{*}_{i} = \frac{S_{net,i}}{K_{i - 1}} \ , \quad \text{and} \quad
 q_{i} = \frac{Q_{i}}{K_{i - 1}} \ ,\]
 %
 so that Eq.~\eqref{eq-3} can be shown more compactly as
 %
 \begin{equation}
-g(K)_{i} = k s^{*}_{i} + q_{i} \ .\label{eq-5}
+g(K)_{i} = z_i s^{*}_{i} + q_{i} \ .\label{eq-5}
 \end{equation}
 %
 By the definition \(q = \frac{Q}{K}\), an expected value \(E(q) = 0\)
@@ -347,46 +351,84 @@ implies \(E(q) = 0\). Application of Eq.~\eqref{eq-2} to
 Eq.~\eqref{eq-5} now gives
 %
 \begin{equation}
-    E(g(K)_i) = s^*_i \quad \text{and} \quad E(q)_i\ , \quad \text{under thrift assumptions,}\label{eq-6}
+    E(g(K)) = s^* \quad \text{and} \quad E(q)\ , \quad \text{under thrift assumptions,}\label{eq-6}
 \end{equation}
 %
 where ``thrift assumptions'' are that thrift theory is correct and that
 the warranted rate is not exceeded. Eqs. \eqref{eq-2} and \eqref{eq-4}, meanwhile, give
 %
 \begin{equation}
-    E(g(K)_i) = q_{i} \quad \text{in free growth theory.}\label{eq-7}
+    E(g(K)) = q \quad \text{in free growth theory.}\label{eq-7}
 \end{equation}
 %
-Note here that thrift theory makes no prediction as to the quantity \(s^*_i\). Rather it predicts \(k=0\) in Eq. \eqref{eq-5}, so that \(s^*_i\) takes no part in calculation of \(\Delta g(K)_i\).
+Note here that free growth theory makes no prediction as to the quantity \(s^*_i\). Rather it predicts \(E(z)=0\) in Eq. \eqref{eq-5}, so that \(s^*_i\) takes no part in calculation of \(\Delta g(K)_i\). 
+
+The prediction in Eq. \eqref{eq-6} can be tested directly from data for market-value capital and net saving in national accounts. We define the "auxiliary thrift index" by 
+%
+\begin{equation*}
+    \theta^* = \frac{s^*}{g(K)}\ , \quad \text{that is, and test the prediction} \\
+\end{equation*}
+%
+\begin{equation*}
+    E(\theta^*) = 1 \quad \text{under thrift assumptions.}
+\end{equation*}
+%
+Results show in Fig. \ref{fig-s_c_theta_plots} and Tables \ref{tbl-4} and \ref{tbl-5}. They show \(\theta^*\) as averaging something near \(\frac{1}{2}\), and with wide variance from country to country and from year to year.
+Regression of \(s^*\) on \(g(K)\) is found at 0.2103.
+Free growth theory, again, makes no prediction as to relationships between net saving and capital growth.
 
 The concepts of correlation, covariance and regression are founded on the principle that causal relationships among variables tend to be revealed in simultaneous changes. Thus the two theories are best tested in their
 implications for changes in capital growth, which we call capital acceleration and show as $\Delta g(K)$. First note that Eq.~\eqref{eq-5} allows
 %
 \begin{equation}
-\Delta g{(K)}_{i} = \Delta k s^{*}_{i} + \Delta q_{i}\ , \quad \text{where}\label{eq-8}
+    (\Delta g (K))_{i} = (\Delta(z s^*))_{i} + (\Delta g)_{i}\ , \quad \text{where}\label{eq-8}
 \end{equation}
 %
-\[\Delta g{(K)}_{i} = g{(K)}_{i} - g(K)_{i - 1} \ , \quad
-\Delta s^{*}_{i} = s^{*}_{i} - s^{*}_{i - 1} \ , \quad \text{and} \quad
-\Delta q_{i} = q_{i} - q_{i - 1} \ .\]
+\[(\Delta g{(K)})_{i} = (g{(K)})_{i} - (g(K))_{i - 1} \ , \quad
+     (\Delta (z s^{*}))_{i} = z_i s^{*}_{i} - z_{i-1} s^{*}_{i - 1} \ , \quad \text{and} \quad
+(\Delta q)_{i} = q_{i} - q_{i - 1} \ .\]
 %
 For any variables \(a\) and \(b\), we may reason
 \(E(a - b) = E(a) - E(b)\). By this and by Eqs. \eqref{eq-7} and
 \eqref{eq-8}, then,
 %
 \begin{equation}
-    E(g(K)_i) = \Delta s^*_i \quad \text{and} \quad E(q)_i = 0\ , \quad \text{under thrift assumptions.}\label{eq-9}
+    E(g(K)) = \Delta s^* \quad \text{and} \quad E(q) = 0\ , \quad \text{under thrift assumptions.}\label{eq-9}
 \end{equation}
 %
 Division of Eq.~\eqref{eq-8} by capital acceleration, and rearrangement,
 gives
 %
 \begin{equation}
-\frac{\Delta k s^{*}_{i}}{\Delta g{(K)}_{i}} + \frac{\Delta q_{i}}{\Delta g{(K)}_{i}} = 1 \ .\label{eq-10}
+\frac{(\Delta(z s^{*}))_{i}}{(\Delta g{(K)})_{i}} + \frac{(\Delta q)_{i}}{(\Delta g{(K)})_{i}} = 1 \ .\label{eq-10}
 \end{equation}
 %
-Define \(\theta_{s,i} = \frac{\Delta k s^{*}_{i}}{\Delta g{(K)}_{i}}\)
-and \(\varphi_{s,i} = \frac{\Delta q_{i}}{\Delta g{(K)}_{i}}\) to
+\FloatBarrier
+\begin{figure}[pos=H]
+    \centering
+    \subfigure{
+        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-1.pdf}
+        \label{fig-s_c_theta_plots-1-new}
+    }
+    % \quad % This adds some space between the two subfigures
+    % \subfigure{
+    %     \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-2.pdf}
+    %     \label{fig-s_c_theta_plots-2}
+    % }
+    \captionsetup{justification=centering}
+    \caption{\(\theta^*\) (86 countries)} % and \(\theta^*_c\)
+    \label{fig-s_c_theta_plots}
+\end{figure}
+%
+\input{./tables/tbl-4.tex}
+%
+\FloatBarrier
+\input{./tables/tbl-5.tex}
+\FloatBarrier
+%
+%
+Define \(\theta_{s,i} = \frac{(\Delta s^{*})_{i}}{(\Delta g{(K)})_{i}}\)
+and \(\varphi_{s,i} = \frac{(\Delta q)_{i}}{(\Delta g{(K)})_{i}}\) to
 restate Eq.~\eqref{eq-10} as
 %
 \begin{equation}
@@ -430,15 +472,11 @@ under thrift assumptions, so that \(\overline{\theta_{s,i}}\) and \(\overline{\v
 
 Fig.~\ref{fig-si_plots} shows average values of \(\theta_{s,i}\) and
 \(\varphi_{s,i}\) for 86 countries, both unweighted and weighted to GDP,
-over the period 1980-2022. To control distortions brought by small
+over the period 1980-2022.
+Table~\ref{tbl-wid_si_table} shows associated regressions of \(\Delta s^*\) and \(\Delta g_s\) respectively on \(\Delta g (K)\) at 0.1000 and 0.9000. Average values of \(\varphi_s\) for the 86 individual countries show in Table~\ref{tbl-indicator_table}.
+To control distortions brought by small
 absolute denominators, years were screened out where \(|\Delta g(K)|\)
-was found at less than 0.01 (see Section~\ref{sec-displays}). Results
-show \(\overline{\varphi_{s,i}} \cong 1\) and \(\overline{\theta_{s,i}} \cong 0\). These findings
-appear to refute thrift theory, and to support free growth theory as
-defined earlier. \(Q_s\), predicted in thrift theory to describe effects
-of market noise converging to zero, is revealed to include also the
-effects of productivity gain as described by Rae, Mill and Solow. We
-will now test thrift theory from a different approach.
+was found at less than 0.01 (see Section~\ref{sec-displays}). Results show \(\overline{\varphi_{s,i}} = 0.936\) and \(\overline{\theta_{s,i}} = 0.064\) for data weighted to GDP. These findings largely support free growth theory, but could suggest a small role for thrift as well. This possibility will be discussed in Section~\ref{sec-relscg}. We will first test thrift theory from a different approach.
 %
 \FloatBarrier
 \begin{figure}[pos=H]
@@ -469,60 +507,63 @@ The concept of cash flow is little used in economics, aside from finance and in 
     P = \Delta K + F\ ,\label{eq-14}
 \end{equation}
 %
-where \(P\) and \(F\) mean net profit and cash flow respectively\footnote{We have found no standard notation for cash flow.}. Cash flow means the net outflow of value, in cash or kind, from an asset to its owner for consumption \(C\) or reinvested in other assets. This flow of spending is augmented by pay \(\Pi\)\footnote{Compensation of employees plus a share of mixed income. We avoid the standard notation \(W\), which is also used for work, as we prefer to distinguish pay from work.}. At the scale of the closed economy, meaning of all assets together, reinvestment cancels to zero. At this scale, then, the sum of spending \(F + \Pi\) is spent on consumption alone. That is,
+where \(P\) and \(F\) mean net profit and cash flow respectively\footnote{We have found no standard notation for cash flow.}. Cash flow means the net outflow of value, in cash or kind, from an asset to its owner for consumption \(C\) or for reinvestment in other assets. This flow of spending is augmented by pay \(\Pi\)\footnote{Compensation of employees plus a share of mixed income. We avoid the standard notation \(W\), which is also used for work, as we prefer to distinguish pay from work.}. At the scale of the closed economy, meaning of all assets together, reinvestment cancels to zero. At this scale, then, the sum of spending \(F + \Pi\) is spent on consumption alone. That is,
 %
 \begin{equation}
-    \Pi + F = C\ .\label{eq-15}
+    \Pi + F = C \label{eq-15}
 \end{equation}
 %
-Eq. \eqref{eq-14} may be arranged as \(F = P - \Delta K\). Substitution of this in Eq. \eqref{eq-15} gives \(\Pi + P - \Delta K = C\), or equivalently
+at the collective scale.
+Eq. \eqref{eq-14}, meanwhile, may be arranged as \(F = P - \Delta K\). Substitution of this in Eq. \eqref{eq-15}, with rearrangement, gives 
 %
 \begin{equation}
-   \Pi + P = C + \Delta K\ .\label{eq-16b}
+\Delta K = \Pi + P - C \ . \label{eq-16b}
 \end{equation}
 %
 Thrift theory, which expects \(\Delta K = S_{net}\), writes this as
 %
 \begin{equation}
-    \Pi + P = C + S_{net}\ ,\quad \text{from which}\label{eq-17b}
-\end{equation}
-\vspace{-5ex}
-\begin{equation}
-    S_{net} = \Pi + P - C\ ,\quad \text{under thrift assumptions.}\label{eq-18b}
+    S_{net} = \Pi + P - C\ ,\quad \text{under thrift assumptions.}\label{eq-17b}
 \end{equation}
 %
-Pay, net profit\footnote{\cite{jorda2019}, The rate of return on everything.} and consumption can all be measured, to an extent, as can market-value capital, so that this prediction of thrift theory could be measured directly. Comparison between Eqs. \eqref{eq-16b} and \eqref{eq-18b}, however, shows that such a test would only repeat that of Eq. \eqref{eq-6}. As before, the two theories are tested most revealingly in capital acceleration. 
+Pay, net profit\footnote{\cite{jorda2019}, The rate of return on everything.} and consumption can all be measured, to an extent, as can market-value capital, so that this prediction of thrift theory could be measured directly. Comparison between Eqs. \eqref{eq-16b} and \eqref{eq-17b}, however, shows that such a test, given perfect data in national accounts, would only repeat that of Eq. \eqref{eq-6}. As before, the two theories are tested most revealingly in capital acceleration. 
 %
-Given the definitions\footnote{The notation \(c^*\), as with \(s^*\), shows an asterisk to distinguish its meaning \(c^* = \frac{C}{K}\) from the Keynesean \(c = \frac{C}{K}\)}
+Given the definitions\footnote{The notation \(c^*\), as with \(s^*\), shows an asterisk to distinguish its meaning \(c^* = \frac{C}{K}\) from the Keynesean \(c = \frac{C}{Y}\)}
 %
 \begin{equation*}
 \pi_i = \frac{\Pi_i}{K_{i - 1}} \ , \quad p_i = \frac{P_i}{K_{i-1}} \quad \text{and} \quad c^*_i = \frac{C_i}{K_{i-1}}\ ,
 \end{equation*}
 %
-Eq. \eqref{eq-18} can be divided by capital to reach
+Eq. \eqref{eq-16b} can be divided by capital to reach
 %
 \begin{equation}
-    s^*_i = \pi_i + p_i - c^*_i\ ,\quad \text{under thrift assumptions. Then}\label{eq-16}
+    g(K)_i = \pi_i + p_i - c^*_i\ , \quad \text{implying} \label{eq-16}
 \end{equation}
 \vspace{-5ex}
 \begin{equation}
-    \Delta s^*_i = \Delta \pi_i + \Delta p_i - \Delta c^*_i\ ,\quad \text{where}\label{eq-17a}
+    (\Delta g(K))_i = \Delta \pi_i + \Delta p_i - \Delta c^*_i\ ,\quad \text{where}\label{eq-17a}
 \end{equation}
 \begin{equation*}
     \Delta \pi_i = \pi_i - \pi_{i - 1} \ , \quad \Delta p_i = p_i - p_{i - 1} \quad \text{and} \quad \Delta c^*_i = c^*_i - c^*_{i - 1}\ ,
 \end{equation*}
 %
-as before. Thrift theory expects \(\Delta g(K) = \Delta s^* = \Delta \pi - \Delta p - \Delta c\) by Eqs. \eqref{eq-9}, \eqref{eq-16} and \eqref{eq-17a}.
-    It further expects changes in capital productivity, as realized in the pay/capital and profit/capital ratios \(\pi\) and \(p\), to converge to zero as market noise. Thus
+as before. Thrift theory expects \(\Delta g(K) = \Delta s^* = \Delta \pi + \Delta p - \Delta c\) by Eqs. \eqref{eq-9} and \eqref{eq-17b}.
+    It further expects changes in productivity, as realized in the pay/capital and profit/capital ratios \(\pi\) and \(p\), to converge to zero as market noise, so that the only source of net saving is in consumption restraint \(- \Delta c^*\). Thus
 %
 \begin{equation}
-    E(\Delta g(k)_i) = - \Delta c^*_i \quad \text{and} \quad E(\Delta \pi_i) = E(\Delta p_i) = 0, \quad \text{under thrift assumptions.}\label{eq-18a}
+    E(\Delta g(k)) = - \Delta c^* \quad \text{and} \quad E(\Delta \pi) = E(\Delta p) = 0\ , \quad \text{under thrift assumptions.}\label{eq-18a}
 \end{equation}
 %
-As in Eq. \eqref{eq-10}, we prepare to test this prediction by first dividing Eq. \eqref{eq-18a} by capital acceleration to reach
+Free growth theory, conversely, predicts that net saving contributes nothing to capital growth, and hence that net saving through consumption restraint, at the collective scale and in the private sector, is sacrifice with nothing in return. Free growth theory expects rather that costless increases in the ratios of pay and net profit to capital, enabled by greater productivity of human and physical capital already present, account for all capital growth and acceleration. Thus, it predicts
+%
+\begin{equation}
+    E(\Delta g(k)) = \Delta \pi + \Delta p \quad \text{and} \quad E(\Delta c^*) = 0 \ , \quad \text{in free growth theory.} \label{eq-19b}
+\end{equation}
+%
+As in Eq. \eqref{eq-10}, we prepare to test between these predictions by first dividing Eq. \eqref{eq-18a} by capital acceleration to reach
 % 
 \begin{equation}
-    E(\frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}}) = 1\ ,\quad \text{under thrift assumptions.}\label{eq-17}
+    E(\frac{- \Delta c^{*}}{ \Delta g(K)}) = 1\ ,\quad \text{under thrift assumptions.}\label{eq-17}
 \end{equation}
 %
 Define \(\theta_{c,i} = \frac{- \Delta c^{*}_{i}}{ \Delta g(K)_{i}}\)
@@ -536,12 +577,12 @@ re-express Eq.~\eqref{eq-17} as
 By Eqs. \eqref{eq-18a} through \eqref{eq-18}, further,
 %
 \begin{equation}
-    E\left( \theta_{c,i} \right) = 1 \quad \text{and} \quad E\left( \varphi_{c,i} \right) = 0 \ , \quad \text{under thrift assumptions.}\label{eq-19}
+    E\left( \theta_{c} \right) = 1 \quad \text{and} \quad E\left( \varphi_{c} \right) = 0 \ , \quad \text{under thrift assumptions.}\label{eq-19}
 \end{equation}
 %
-Define \(\theta_{c} = E\left( \theta_{c,i} \right)\) and
-\(\varphi_{c} = E\left( \varphi_{c,i} \right)\) to re-express
-Eqs. \eqref{eq-18} and \eqref{eq-20} respectively as
+Define \(\theta_{c} = E\left( \theta_{c} \right)\) and
+\(\varphi_{c} = E\left( \varphi_{c} \right)\) to re-express
+Eqs. \eqref{eq-18} and \eqref{eq-19} respectively as
 \begin{equation}
     \theta_c + \varphi_c = 1 \ , \quad \text{and}
     \label{eq-20}
@@ -558,14 +599,9 @@ data for consumption reported in national accounts. Consumption was
 measured as the sum of personal consumption expenditure PCE and
 government consumption expenditure GCE. Capital K was again measured at
 market value. Again, years showing \(|\Delta g(K)| < .01\) were screened
-out to control small denominator effects. Test results show
-\(\varphi_{c} \cong 1\) and \(\theta_{c} \cong 0\), as with tests for
-\(\varphi_{s}\) and \(\theta_{s}\) from net saving. Table \ref{tbl-indicator_table}, which shows $\varphi_s$ and $\varphi_{c}$ for the same 86 countries separately, likewise finds $\varphi_s \cong 1$ and $\varphi_c \cong 1$. Thus it appears
-that capital acceleration arrives without help from either net
-saving or consumption restraint. Next we will see how
-these findings for \(\varphi_{s}\) and \(\varphi_{c}\) might be
-explained.
-  
+out to control small denominator effects. 
+The generally higher values of \(\varphi_c\) (1.142) then \(\varphi_s\) (0.936) shown in the data in national accounts need more explanation.  
+
 \FloatBarrier
 \input{./tables/tbl-indicator_table.tex}
 \FloatBarrier
@@ -631,6 +667,13 @@ needed.
 
 Our findings support those of \cite{picketyCapitalIsBack2014} and \cite{kurz2023market} as to the market power of innovators to explain capital growth beyond net saving. Again, we go farther by questioning the assumption that net saving contributes even a part of capital growth. Data shown in the Tables and Figures here suggest that it does not. Hence we attribute all capital growth and acceleration to the innovator's reserve, aside from market noise, and none to net saving.
 
+\section{Relationships among \(\Delta s^*\), \(\Delta c^*\) and \(\Delta g(K)\)\label{sec-relscg}}
+
+Table \ref{tbl-wid_si_table} showed some regression of \(\Delta s^*\) on \(\Delta g(K)\), and Fig.~\ref{fig-si_plots} showed \(\theta_s\) to average 0.064 for data weighted to GDP. Those data could suggest some role for thrift in explaining capital acceleration. We suggest two other explanations. First, free growth theory predicts only for the private sector and the collective scale. Smaller countries can grow in capital through investment by larger countries.
+More importantly, we propose that wars and slumps may motivate individuals to restrict saving in order to maintain consumption, and that a return to peace and prosperity may motivate them to restore old balances. In this interpretation, changes in the ratios of net saving and consumption to capital arise as effects of capital growth rather than causes.
+
+Table~\ref{tbl-wid_c_table}, conversely, showed negative regression of \(-\Delta c^*\) on \(\Delta g(K)\), while Fig.~\ref{fig-c_plots} showed \(\theta_c\) to average -0.142
+from GDP-weighted data. Results \(\varphi > 1\) and \(\theta < 0\) are possible in principle when gain in productivity allows growth in capital and consumption at the same time. (see the quote from Mill in Appendix C.) We welcome further study to resolve these uncertainties.
 
 \hypertarget{optimum-investment-policy}{%
 \section{Optimum investment policy}\label{optimum-investment-policy}}
@@ -649,25 +692,6 @@ saving must hit the warranted rate exactly or risk positive
 feedback through the operation of the output/capital ratio
 (accelerator).}
 %
-\FloatBarrier
-\begin{figure}[pos=H]
-    \centering
-    \subfigure{
-        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-1.pdf}
-        \label{fig-s_c_theta_plots-1}
-    }
-    \quad % This adds some space between the two subfigures
-    \subfigure{
-        \includegraphics[width=0.45\textwidth]{./figure-pdf/fig-s_c_theta_plots-2.pdf}
-        \label{fig-s_c_theta_plots-2}
-    }
-    \captionsetup{justification=centering}
-    \caption{\(\theta^*_{s}\) and \(\theta^*_c\) (86 countries)}
-    \label{fig-s_c_theta_plots}
-\end{figure}
-%
-\input{./tables/tbl-4.tex}
-%
 Markets do so imperfectly when tax and other public policy reward
 saving over distributions and consumption. Findings in this paper
 suggest review of such policies. These include the double tax on
@@ -678,15 +702,22 @@ revenue-neutral and non-partisan if the corporate tax were raised to
 match, if the tax rates on ordinary income and on capital gains met
 somewhere between, and if thoughtful grandfathering eased the
 transition.
-%
+
+\section{Inferences for national accounts}
+
+Eq.~\eqref{eq-16b} was presented as a tautology or logical certainty. Cash flow \(F\) from all physical capital \(K\) together at the collective scale, that is, means outflow of value from \(K\) net of any inflow into \(K\) from any source, meaning from pay \(\Pi\) as well as plowback of cash flow. Thus the sum \(F+\Pi\) is spent on consumption \(C\) alone by exhaust of alternatives. Meanwhile cash flow is net profit \(P\) less capital growth \(\Delta K\).\footnote{Or equivalently gross profit less capital growth less depreciation.} This reasoning gave \(F+\Pi = C\), \(F = P - \Delta K\), and consequently \(\Pi + P = C + \Delta K\) (Eq. \eqref{eq-16b}).
+
+    Kuznets and the other founders of national accounts, under the influence of Keynes, seem to have reasoned alike. National accounts are double-entry \(T\) accounts where net product \(C + \Delta K\) is equated to net "factor payments" \(\Pi + P\). National accounts, however, equate capital growth to net saving/investment, and effectively write Eq. \eqref{eq-16b} as \(\Pi + P = C + S_{net}\). We have attempted to show that net saving does not tend to equate to capital growth, and indeed contributes no part of capital growth. If our argument proves correct, then national accounts, and the teachings of macroeconomics (macro) which they express, are constructed on a fundamental misperception. We would therefore welcome any critiques of our findings as a matter of academic and public interest.
+
+\section{Inferences for inflation}
+
+If free growth theory is correct, then net investment adds a superfluous cost to capital growth, while decreasing market value per unit through capital glut. Both effects would tend to contribute directly to capital inflation, and indirectly to inflation of consumer goods by adding depreciation costs. This consideration adds to the case for urgent attention to our argument, and for more study to confirm or refute it.
+
 \hypertarget{net-output}{
 \section{Net output}\label{net-output}
 }
 The concept of net output is found in our discussions, but not in our equations. Net output means value added. Appendix B will show an argument that to equate value added to the sum of consumption and capital growth, and neither less nor more, would miss two components, one negative and one positive, in value added to human capital, and that both of these components are unmeasurable by known means. Since we work here from measurable data for consumption and net saving and market value capital, we did our best to reason from those three quantities alone.
 %
-\FloatBarrier
-\input{./tables/tbl-5.tex}
-\FloatBarrier
 
 
 
@@ -808,7 +839,7 @@ physical capital is the whole of capital while net outflow of the chain
 is the whole of consumption, the reasoning is
 %
 \begin{equation}
-Y = \Delta K + C \ , \quad \text{neglecting human capital\footnotemark.}\label{eq-a1}
+Y = \Delta K + C \ , \quad \text{neglecting human capital.\footnotemark}\label{eq-a1}
 \end{equation}
 \footnotetext{Where $\Delta K$, mistakenly, we argue, is measured as $S_{net}$.}
 %

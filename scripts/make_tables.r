@@ -6,7 +6,7 @@ setFixest_dict(c(
     # "I(`𝚫s*`)" = "$\\theta_s$",
     # "I(`𝚫qs`)" = "$\\varphi_s$",
     "`𝚫g(K)`" = "Regression of value shown on $\\Delta g(K)$",
-    "`g(K)`" = "Regression of value shown on \\(g(K)\\)",
+    "`g(K)`" = "Regression of $s^*$ on \\(g(K)\\)",
     "-I(`𝚫c*`)" = "$\\theta_c$",
     "I(`𝚫qc`)" = "$\\varphi_c$"
 ))
@@ -34,14 +34,14 @@ wid_c_table <- scg_data %>%
 `wid_s*_c*_table` <- scg_data %>%
     filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
-    fixest::feols(list(I(`s*`), I(`1-c*`)) ~ `g(K)` | year + country,
+    fixest::feols(I(`s*`) ~ `g(K)` | year + country,
         vcov = "HC1"
     ) %>%
     etable(
         tex = TRUE,
         depvar = FALSE,
         style.tex = style.tex("aer"),
-        headers = c("$s^*$", "$1-c^*$")
+        headers = c("$s^*$")
     )
 
 
@@ -79,13 +79,17 @@ theta_table <- scg_data %>%
     reframe(
         years = paste0(min(year), " - ", max(year), " (", length(year), ")"),
         `θ*s` = round(mean(`θ*s`, na.rm = TRUE), 2),
-        `θ*c` = round(mean(`θ*c`, na.rm = TRUE), 2),
+#        `θ*c` = round(mean(`θ*c`, na.rm = TRUE), 2),
     ) %>%
     mutate(split = row_number() >= max(row_number() / 2) + 1) %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
         booktabs = TRUE,
-        col.names = c("Country", "Period", "$\\overline{\\theta^*_{s,i}}$", "$\\overline{\\theta^*_{c,i}}$"), escape = FALSE
+        col.names = c("Country", "Period",
+                      "$\\overline{\\theta^*}$"
+                     # "$\\overline{\\theta^*_{c,i}}$"
+                      ),
+        escape = FALSE
     ))
 
 get_content <- function(table) {
@@ -149,7 +153,7 @@ tex_wid_si_table <- reg_table(
 write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
 
 `tex_wid_s*_c*_table` <- reg_table(
-    "Regression of \\(s^*\\) and \\(1-c^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) \\cong s^*\\) and \\(g(K) \\cong 1 - c^*\\).",
+    "Regression of \\(s^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) \\cong s^*\\) \\& \\(\\overline{\\theta^*} \\cong 1\\).",
     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
     label = "tbl-4"
 )
@@ -174,7 +178,7 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
-\\caption{\\(\\theta^*_s\\) and \\(\\theta^*_c\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\caption{Average \\(\\theta^*\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -191,7 +195,7 @@ tex_tbl5 <- paste(
 }
 }
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\theta^*_{s,i}} \\cong 1\\) and \\(\\overline{\\theta^*_{c,i}} \\cong 1\\). Free growth theory  makes no prediction for these data.
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\theta^*} \\cong 1\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
 \\end{table}"
 )

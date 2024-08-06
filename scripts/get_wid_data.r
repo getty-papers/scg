@@ -1,6 +1,8 @@
 source("./scripts/load_libraries.r")
 
-raw_wid_data <- wid::download_wid(
+body(download_wid)[[2]][[2]] <-  substitute(all(indicators == 'all') && areas == "all")
+    
+raw_wid_data <- download_wid(
     indicators = c(
         "final_consumption" = "mcongo", "collective_consumption" = "mcolgo",
         "individual_consumption" = "mindgo", "labor_share" = "wlabsh",
