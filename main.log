@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  6 AUG 2024 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  19 AUG 2024 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -948,12 +948,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) [6
 
  <./figure-pdf/fig-si_plots-1.pdf> <./figure-pdf/fig-si_plots-2.pdf>] [7] (./tables/tbl-indicator_table.tex) [8] [9]
-<./figure-pdf/fig-c_plots-1.pdf, id=226, 361.35pt x 361.35pt>
+<./figure-pdf/fig-c_plots-1.pdf, id=227, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-c_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-c_plots-1.pdf>
 Package pdftex.def Info: ./figure-pdf/fig-c_plots-1.pdf  used on input line 614.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
-<./figure-pdf/fig-c_plots-2.pdf, id=227, 361.35pt x 361.35pt>
+<./figure-pdf/fig-c_plots-2.pdf, id=228, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-c_plots-2.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-c_plots-2.pdf>
 Package pdftex.def Info: ./figure-pdf/fig-c_plots-2.pdf  used on input line 619.
@@ -970,18 +970,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20796 strings out of 476025
- 329881 string characters out of 5790018
+ 20797 strings out of 476025
+ 329893 string characters out of 5790018
  1892388 words of memory out of 5000000
  40734 multiletter control sequences out of 15000+600000
  623937 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,90p,832b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,90p,864b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb>
-Output written on main.pdf (15 pages, 787113 bytes).
+Output written on main.pdf (15 pages, 791527 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 123 named destinations out of 1000 (max. 500000)
+ 471 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
