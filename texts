@@ -1,0 +1,48 @@
+Thrift theory will mean the combined ideas that all net saving \(S_{net}\) is realized in equal growth of capital \(K\), if \(S_{net}\) holds within the warranted rate, and that there is no other source of capital growth except market noise regressing to zero. "Thrift assumptions" will mean those two plus the assumptions that current \(S_{net}\) holds within the warranted rate. The acronym uta will mean "under thrift assumptions." Then 
+%
+\begin{equation}
+    \Delta K = S_{net}\ ,\quad \text{uta}. \label{eq-1}
+\end{equation}
+%
+Define "thrift" \(s^*\) by \(s^* = \frac{S_{net}}{K}\), and divide Eq. \eqref{eq-1} by capital to predict capital growth rate \(g(K)\) as
+%
+\begin{equation}
+g(K) = s^* \ , \quad \text{uta}, \text{where} s^* = \frac{S_{net}}{K}. \text{Then} \label{eq-2}
+\end{equation}
+%
+\begin{equation}
+\Delta g(K) = \Delta s^*\ , \quad \text{uta.} \label{eq-3}
+\end{equation}
+%
+\(\Delta g(K)\) and \(\Delta s^*\) respectively will be called "capital acceleration" and "thrift change," either of which may be positive or negative or zero. Division of Eq. \eqref{eq-3} by capital acceleration, with rearrangement, gives
+%
+\begin{equation}
+\frac{\Delta s^*}{\Delta g(K)} = \frac{\Delta g(K)}{\Delta g(K)} = 1\ , \quad \text{uta}. \label{eq-4}
+\end{equation}
+%
+
+The argument has continued from growth in Eq. \eqref{eq-2} to acceleration in Eqs. \eqref{eq-3} and \eqref{eq-4} on the reasoning that causal relationships among variables, in this case between thrift and capital growth rate, tend to be revealed most reliably in their concurrent changes. \footnote{The ratio \frac{\Delta A}{\Delta B}, that is, compares changes in A to concurrent changes in B, and so suggests a causal relationship between A and B insofar as that ratio holds constant. This is the principle on which the concepts of correlation, covariance and regression are founded.} Eq. \eqref{eq-4} was derived from Eq. \eqref{eq-3} so that success of predictions from growth assumptions can be measured against a standard of unity. For notational convenience, then, we define the "thrift index" \(\theta\) by \(\theta = \frac{\Delta s^*}{\Delta g(K)}\), and restate Eq. \eqref{eq-4} as
+%
+\begin{equation}
+\theta = 1\ , \quad \text{uta}\quad \text{where} \ \theta = \frac{\Delta s^*}{\Delta g(K)}\ . \label{eq-5}
+\end{equation}
+%
+
+This inference from thrift assumptions can be tested directly through the argument above from data for net saving, and indirectly from an argument from consumption to net saving in Section 3. \(\theta_s\) and \(\theta_c\) will show the expressions for testing the prediction \(\theta = 1\) from data for net saving and consumption respectively. Then \(\theta_s\) becomes \(\frac{\Delta s^*}{\Delta g(K)}\), from Eq. \eqref{eq-5}, while \(\theta^*_s\) and \(\theta^*_c\), when \(theta_c\) is defined, give test results for those predictions.
+
+Test Eq. \eqref{eq-2}, however, which predicts \(\frac{s^*}{g(K)} = 1\), uta, as a step in the argument to Eq. \eqref{eq-4}, will be taken first. Fig. [1] shows \(\frac{s^*}{g(K)} = .481\) as average over all years and countries, GDP-weighted. Regression of \(s^*\) on \(g(K)\) shows as 0.1857 in Table [1].
+
+Tests of the prediction \(\theta^*_s = 1\) in Eq. \eqref{eq-4} should give a clearer picture, again, as it tests in accelerations. Fig. [2] shows findings for \(\theta^*_s\) at 0.064 over the same period and countries. Table [3] shows regression of \(\Delta s^*\) on \(\Delta g(K)\) at 0.1000.
+
+Discussion of these findings, and of ways to predict them other than by thrift theory, will follow tests of the prediction for \(\theta\), from data for concurrent rather than net saving.
+
+
+
+
+
+
+
+
+
+
+

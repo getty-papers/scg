@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  5 SEP 2024 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  13 SEP 2024 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -911,77 +911,77 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 23
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./latex_styles/thumbnails/cas-email.jpeg>] [2]
-<./figure-pdf/fig-s_c_theta_plots-1.pdf, id=83, 361.35pt x 361.35pt>
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./latex_styles/thumbnails/cas-email.jpeg>] [2] [3]
+<./figure-pdf/fig-s_c_theta_plots-1.pdf, id=102, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-s_c_theta_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-s_c_theta_plots-1.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-s_c_theta_plots-1.pdf  used on input line 414.
+Package pdftex.def Info: ./figure-pdf/fig-s_c_theta_plots-1.pdf  used on input line 450.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
  (./tables/tbl-4.tex
 Underfull \hbox (badness 10000) in alignment at lines 18--18
 [][][]
  []
 
-[3]) (./tables/tbl-5.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [4 <./figure-pdf/fig-s_c_theta_plots-1.pdf>] [5]
-<./figure-pdf/fig-si_plots-1.pdf, id=136, 361.35pt x 361.35pt>
+) [4 <./figure-pdf/fig-s_c_theta_plots-1.pdf>] (./tables/tbl-5.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [5] [6]
+<./figure-pdf/fig-si_plots-1.pdf, id=143, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-si_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-si_plots-1.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-si_plots-1.pdf  used on input line 491.
+Package pdftex.def Info: ./figure-pdf/fig-si_plots-1.pdf  used on input line 487.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
-<./figure-pdf/fig-si_plots-2.pdf, id=137, 361.35pt x 361.35pt>
+<./figure-pdf/fig-si_plots-2.pdf, id=144, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-si_plots-2.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-si_plots-2.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-si_plots-2.pdf  used on input line 496.
+Package pdftex.def Info: ./figure-pdf/fig-si_plots-2.pdf  used on input line 492.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
  (./tables/tbl-wid_si_table.tex
 Underfull \hbox (badness 10000) in alignment at lines 18--18
 [][][] 
  []
 
+) [7
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [6
-
- <./figure-pdf/fig-si_plots-1.pdf> <./figure-pdf/fig-si_plots-2.pdf>] [7] (./tables/tbl-indicator_table.tex) [8] [9]
-<./figure-pdf/fig-c_plots-1.pdf, id=234, 361.35pt x 361.35pt>
+ <./figure-pdf/fig-si_plots-1.pdf> <./figure-pdf/fig-si_plots-2.pdf>]
+<./figure-pdf/fig-c_plots-1.pdf, id=193, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-c_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-c_plots-1.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-c_plots-1.pdf  used on input line 618.
+Package pdftex.def Info: ./figure-pdf/fig-c_plots-1.pdf  used on input line 557.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
-<./figure-pdf/fig-c_plots-2.pdf, id=235, 361.35pt x 361.35pt>
+<./figure-pdf/fig-c_plots-2.pdf, id=194, 361.35pt x 361.35pt>
 File: ./figure-pdf/fig-c_plots-2.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-c_plots-2.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-c_plots-2.pdf  used on input line 623.
+Package pdftex.def Info: ./figure-pdf/fig-c_plots-2.pdf  used on input line 562.
 (pdftex.def)             Requested size: 210.74814pt x 210.74655pt.
- (./tables/tbl-wid_c_table.tex
+ [8] (./tables/tbl-wid_c_table.tex
 Underfull \hbox (badness 10000) in alignment at lines 18--18
 [][][] 
  []
 
-) [10
+) (./tables/tbl-indicator_table.tex) [9 <./figure-pdf/fig-c_plots-1.pdf> <./figure-pdf/fig-c_plots-2.pdf>] [10] [11
 
- <./figure-pdf/fig-c_plots-1.pdf> <./figure-pdf/fig-c_plots-2.pdf>] [11] [12] [13] (./main.bbl [14]) [15] (./main.aux)
+] [12] [13] (./main.bbl [14]) [15] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20798 strings out of 476025
- 329905 string characters out of 5790018
+ 20776 strings out of 476025
+ 329635 string characters out of 5790018
  1892388 words of memory out of 5000000
- 40734 multiletter control sequences out of 15000+600000
+ 40722 multiletter control sequences out of 15000+600000
  623937 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,90p,1044b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,90p,1044b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb>
-Output written on main.pdf (15 pages, 792651 bytes).
+Output written on main.pdf (15 pages, 787092 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 115 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

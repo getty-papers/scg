@@ -1337,10 +1337,6 @@ INPUT ./tables/tbl-wid_si_table.tex
 INPUT ./tables/tbl-wid_si_table.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecss0800.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecss0800.tfm
-INPUT ./tables/tbl-indicator_table.tex
-INPUT ./tables/tbl-indicator_table.tex
-INPUT ./tables/tbl-indicator_table.tex
-INPUT ./tables/tbl-indicator_table.tex
 INPUT ./figure-pdf/fig-c_plots-1.pdf
 INPUT ./figure-pdf/fig-c_plots-1.pdf
 INPUT ./figure-pdf/fig-c_plots-1.pdf
@@ -1355,6 +1351,10 @@ INPUT ./tables/tbl-wid_c_table.tex
 INPUT tables/tbl-wid_c_table.tex
 INPUT ./tables/tbl-wid_c_table.tex
 INPUT tables/tbl-wid_c_table.tex
+INPUT ./tables/tbl-indicator_table.tex
+INPUT ./tables/tbl-indicator_table.tex
+INPUT ./tables/tbl-indicator_table.tex
+INPUT ./tables/tbl-indicator_table.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/stix/stix-mathrm.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/stix/stix-mathit.tfm
