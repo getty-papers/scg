@@ -1,44 +1,80 @@
-Thrift theory will mean the combined ideas that all net saving \(S_{net}\) is realized in equal growth of capital \(K\), if \(S_{net}\) holds within the warranted rate, and that there is no other source of capital growth except market noise regressing to zero. "Thrift assumptions" will mean those two plus the assumptions that current \(S_{net}\) holds within the warranted rate. The acronym uta will mean "under thrift assumptions." Then 
+Thrift theory and most teaching reason that saving is drawn from potential consumption, in that skimping on replacement saving would have afforded more consumption, and that net saving, after replacement saving has offset depreciation, is drawn from actual consumption as its only possible source. Both conclusions follow from definitions. Then \(\Delta S_{net} = - \Delta C\). Divide by capital, and define \(c^*=\frac{C}{K}\), to find
 %
 \begin{equation}
-    \Delta K = S_{net}\ ,\quad \text{uta}. \label{eq-1}
+\Delta s^* = - \Delta c^*\ ,\quad \text{where } c^*=\frac{C}{K}\ , \label{eq-6}
 \end{equation}
 %
-Define "thrift" \(s^*\) by \(s^* = \frac{S_{net}}{K}\), and divide Eq. \eqref{eq-1} by capital to predict capital growth rate \(g(K)\) as
+independently of thrift assumptions.\footnote{The asterisk, again, distinguishes \(c^* = \frac{C}{K}\) from the Keynesean \(c = \frac{C}{Y}\).} Divide by capital acceleration to see
 %
 \begin{equation}
-g(K) = s^* \ , \quad \text{uta}, \text{where} s^* = \frac{S_{net}}{K}. \text{Then} \label{eq-2}
+\frac{\Delta s^*}{\Delta g(K)} = -\frac{\Delta c^*}{\Delta g(K)}\ , \label{eq-7}
+\end{equation}
+%
+again without dependence on assumptions. Substitution of this in Eq. \eqref{eq-5} shows
+%
+\begin{equation}
+\theta = 1\ \quad \text{uta}, \quad \text{where } \theta = - \frac{\Delta c ^*}{\Delta g(K)}\ . \label{eq-8}
+\end{equation}
+%
+Then let \(\theta_c\), the value of \(\theta\) reasoned from effects of changes on consumption, show as \(\theta_c = - \frac{\Delta c ^*}{\Delta g(K)}\), and let \(\theta_c^*\) mean values of \(\theta_c\) found in tests.
+
+Test results appear in Fig. \eqref{fig-3}. \(\theta^*_c\), predicted to find \(\theta_c^* = 1\), under thrift assumptions, shows at -0.142. As it tests of \(\theta_s\), findings were averaged over all years and countries weighted to GDP. Table \ref{tbl-4} shows regression of \(-\Delta c^*\) on \(\Delta g(K)\) as -0.3760.
+
+
+
+
+
+
+\section{Interpretation of test results}
+
+Any sustainable theory of capital growth must account for test results, including those found in Sections 2 and 3. A search for explanations other than thrift theory can begin with study of implications of the view of Rae and Mill, and of Solow in part as shown.
+
+Free growth theory expects that capital growth is explained by a gain in productivity of capital and labor already present, with no help from net saving, but with the proviso that replacement saving offsets depreciation first. A shortfall in replacement saving is called dissaving, or negative net investment. Let "free growth" Q show whatever part of capital growth is explained by productivity gain after allowance for that exception for dissaving. Then free growth theory predicts
+%
+\begin{equation}
+\Delta K = Q \ , \quad \text{if } S_{net} \geq 0 \ . \label{eq-9}
+\end{equation}
+%
+Let Eq. \eqref{eq-8} define "free growth assumptions," and let ufga mean "under free growth assumptions."
+
+Let "free growth rate" \(g\) be defined by \(g = \frac{Q}{K}\). Now divide Eq. \eqref{eq-8} by capital, as before, to get
+%
+\begin{equation}
+g(K) = q\ ,\quad \text{ufga,} \quad \text{where } q = \frac{Q}{K}\ .\ \text{Then} \label{eq-10}
 \end{equation}
 %
 \begin{equation}
-\Delta g(K) = \Delta s^*\ , \quad \text{uta.} \label{eq-3}
+\Delta g(K) = \Delta q \quad \text{ufga.} \label{eq-11}
 \end{equation}
 %
-\(\Delta g(K)\) and \(\Delta s^*\) respectively will be called "capital acceleration" and "thrift change," either of which may be positive or negative or zero. Division of Eq. \eqref{eq-3} by capital acceleration, with rearrangement, gives
+\(\Delta q\) is "productivity change," which may be positive or negative. Divide by capital acceleration and rearrange, again, to arrive at 
 %
 \begin{equation}
-\frac{\Delta s^*}{\Delta g(K)} = \frac{\Delta g(K)}{\Delta g(K)} = 1\ , \quad \text{uta}. \label{eq-4}
+\frac{\Delta q}{\Delta g(K)} = 1 \ ,\quad \text{ufga}\ .\label{eq-12}
 \end{equation}
 %
-
-The argument has continued from growth in Eq. \eqref{eq-2} to acceleration in Eqs. \eqref{eq-3} and \eqref{eq-4} on the reasoning that causal relationships among variables, in this case between thrift and capital growth rate, tend to be revealed most reliably in their concurrent changes. \footnote{The ratio \frac{\Delta A}{\Delta B}, that is, compares changes in A to concurrent changes in B, and so suggests a causal relationship between A and B insofar as that ratio holds constant. This is the principle on which the concepts of correlation, covariance and regression are founded.} Eq. \eqref{eq-4} was derived from Eq. \eqref{eq-3} so that success of predictions from growth assumptions can be measured against a standard of unity. For notational convenience, then, we define the "thrift index" \(\theta\) by \(\theta = \frac{\Delta s^*}{\Delta g(K)}\), and restate Eq. \eqref{eq-4} as
+"Free growth index" \(\varphi\) will be defined by \(\varphi = \frac{\Delta}{\Delta g(K)}\). Then Eq. \eqref{eq-12} may also show as
 %
 \begin{equation}
-\theta = 1\ , \quad \text{uta}\quad \text{where} \ \theta = \frac{\Delta s^*}{\Delta g(K)}\ . \label{eq-5}
+\varphi = 1\ ,\quad \text{utfa}\ ,\quad \text{where } \varphi = \frac{\Delta q}{\Delta g(K)}\ .\label{eq-13}
 \end{equation}
 %
 
-This inference from thrift assumptions can be tested directly through the argument above from data for net saving, and indirectly from an argument from consumption to net saving in Section 3. \(\theta_s\) and \(\theta_c\) will show the expressions for testing the prediction \(\theta = 1\) from data for net saving and consumption respectively. Then \(\theta_s\) becomes \(\frac{\Delta s^*}{\Delta g(K)}\), from Eq. \eqref{eq-5}, while \(\theta^*_s\) and \(\theta^*_c\), when \(theta_c\) is defined, give test results for those predictions.
+We know no way to measure \(q\) or \(\Delta q\) or \(\varphi\) directly, but can test these predictions of free theory, to a point, from results in tests of thrift theory. First came the finding \(\frac{s^*}{g(K)} = 0.481\), with regression of \(s^*\) on \(g(K)\) found at 0.1857.
+Free growth theory makes no prediction as to proportions between \(s^*\) and \(g(K)\) when \(s^* \geq 0\). 
+The regression 0.1857 suggests causal relationship between \(s^*\) and \(g(K)\), but does not reveal the direction of causality. It may be that income growth brought by capital growth \(g(K)\) motivates households to save more, and conversely as \(g(K)\) drops, in order to keep consumption steady, as expected in the permanent income hypothesis (\cite{}). A given household may not know the effect of its saving on net saving of all households together, so that combined saving or dissaving of all together, so that combined saving or dissaving of all together might or might not push the total into net saving or dissaving over the whole economy. This effect might explain the observed regression of \(s^*\) on \(g(K)\) at 0.1857.
 
-Test Eq. \eqref{eq-2}, however, which predicts \(\frac{s^*}{g(K)} = 1\), uta, as a step in the argument to Eq. \eqref{eq-4}, will be taken first. Fig. [1] shows \(\frac{s^*}{g(K)} = .481\) as average over all years and countries, GDP-weighted. Regression of \(s^*\) on \(g(K)\) shows as 0.1857 in Table [1].
+\(\frac{\Delta s^*}{\Delta g(K)}\) appeared at 0.064, with regression of \(\Delta s^*\) on \(\Delta g(K)\) shown as 0.1000. Both are measures of causal relatedness. Free growth theory, in Eq. \eqref{eq-10}, expects positive or negative productivity change \(\Delta q\) to explain positive or negative \(\Delta g(K)\) if \(S_{net}\) is positive. A fall of \(S_{net}\) from positive to negative, with a shortfall in replacement investment, at the collective scale, is most probable in recessions or depressions. In a Keynesian interpretation, a drop in investment through misjudgment, rather than compelled by events,\footnote{Firms and households held rainy day funds in cash, rather than spending on new goods and services.} was a chief cause of the slump, and deficit investment will boring part of the recovery to norms. This interpretation would fit thrift theory. Other views might see the cause as overestimated, as thought in the Austrian school, or an unrelated disruption as in ways or trade wars or unlucky bets, so that drops in income and saving would be effects.
 
-Tests of the prediction \(\theta^*_s = 1\) in Eq. \eqref{eq-4} should give a clearer picture, again, as it tests in accelerations. Fig. [2] shows findings for \(\theta^*_s\) at 0.064 over the same period and countries. Table [3] shows regression of \(\Delta s^*\) on \(\Delta g(K)\) at 0.1000.
+The possibilities that growth may be caused by thrift, and that thrift may be caused by growth, may be called "thrift causality" and "growth causality." Then as much as 48.1% of \(g(K)\) might be explained by thrift causality from data for \(\frac{s^*}{g(K)}\), although other results suggest less. All these data for net saving might be explained by growth causality, pending analysis of tests from consumption. 
 
-Discussion of these findings, and of ways to predict them other than by thrift theory, will follow tests of the prediction for \(\theta\), from data for concurrent rather than net saving.
+The finding for \(\theta_c\) is particularly informative in that the equations \(\Delta s^* = -\Delta c^*\) and \(\frac{\Delta s^*}{\Delta g(K)} = - \frac{\Delta c^*}{\Delta g(K)}\) were not derived from any assumptions, and because causal connections show most reliably in accelerations. Measurements of \(-\frac{\Delta c^*}{\Delta g(K)}\), that is, should give the causal relatedness between \(s^*\) and \(g(K)\) exactly if data were exact, and with high confidence if mismeasurements  tend to offset.
 
+The result \(\theta_c^* = - \frac{\Delta c^*}{\Delta g(K)} = \frac{\Delta s^*}{\Delta g(K)} = -0.142\), or equivalently \(\frac{\Delta c^*}{\Delta g(K)} = 0.142\), shows significant positive causal connection between \(c^*\) and \(g(K)\) in that they tend to vary in the same direction, and so discourages an expectation that all or any net saving is recovered in capital growth.\footnote{Any part so recovered would add the same fraction to \(\theta_c\).}
 
+Free growth theory, which expects productivity change \(\Delta q\) to explain and equal capital acceleration \(\Delta g(K)\), could explain the finding \(\frac{\Delta c^*}{\Delta g(K)} = 0.142\) in the reasoning that capital added by \(\Delta q\) would imply output added, in proportion to the output/capital ratio, and consumption added in proportion to the consumption/capital ratio.
 
-
+While tests of \(\frac{s^*}{g(K)}\) and \(\theta_s\) allowed some recovery of net saving in capital growth, test results for these and \(\theta_c\) together are easiest to reconcile with free growth theory, where all capital growth is explained by productivity gain. Pending further study, we will proceed on this interpretation.
 
 
 

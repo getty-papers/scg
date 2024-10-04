@@ -66,9 +66,9 @@ si_theta_plot <- scg_data %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(mydata=., y = 'θs') +
     labs(
-        y = TeX("$\\theta_s$"),
+        y = TeX("$\\theta_s^*$"),
         x = "Year",
-        title = TeX("$\\theta_s$ 1980:2022 across countries")
+        title = TeX("$\\theta_s^*$ 1980:2022 across countries")
     )
 
 
@@ -78,8 +78,8 @@ si_phi_plot <- scg_data %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(., y ='𝝋s') +
     labs(
-        y = TeX("$\\varphi_s$"), x = "Year",
-        title = TeX("$\\varphi_s$ 1980:2022 across countries")
+        y = TeX("$\\varphi_s^*$"), x = "Year",
+        title = TeX("$\\varphi_s^*$ 1980:2022 across countries")
     )
 
 # C theta
@@ -110,10 +110,10 @@ c_phi_plot <- scg_data %>%
     make_plot(., y ='θ*s') +
     labs(
         # y = TeX("$\\theta^*_s$"),
-        y = TeX("$\\theta^*$"),
+        y = TeX("$\\frac{s^*}{g(K)}$"),
         x = "Year",
         # title = TeX("$\\theta^*_s$ 1980:2022 across countries")
-        title = TeX("$\\theta^*$ 1980:2022 across countries")
+        title = TeX("$\\frac{s^*}{g(K)}$ 1980:2022 across countries")
     )
 
 `c_theta*_plot` <- scg_data %>%

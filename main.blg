@@ -4,48 +4,49 @@ The top-level auxiliary file: main.aux
 The style file: cas-model2-names.bst
 Database file #1: cas-refs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty journal in friedman1957permanent
 Warning--empty journal in malthusEnquiryNatureProgress1815
 Warning--empty journal in ricardoEssayProfitsVol1815
 Warning--empty journal in schultzInvestmentHumanCapital1961
-You've used 15 entries,
+You've used 16 entries,
             2990 wiz_defined-function locations,
-            843 strings with 9180 characters,
-and the built_in function-call counts, 7605 in all, are:
-= -- 582
-> -- 166
-< -- 16
-+ -- 80
-- -- 51
-* -- 667
-:= -- 1138
-add.period$ -- 46
-call.type$ -- 15
-change.case$ -- 90
-chr.to.int$ -- 15
-cite$ -- 18
-duplicate$ -- 637
-empty$ -- 673
-format.name$ -- 74
-if$ -- 1448
+            849 strings with 9316 characters,
+and the built_in function-call counts, 8112 in all, are:
+= -- 621
+> -- 176
+< -- 17
++ -- 86
+- -- 54
+* -- 711
+:= -- 1212
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 96
+chr.to.int$ -- 16
+cite$ -- 20
+duplicate$ -- 679
+empty$ -- 718
+format.name$ -- 78
+if$ -- 1542
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 114
-newline$ -- 91
-num.names$ -- 60
-pop$ -- 250
+missing$ -- 121
+newline$ -- 95
+num.names$ -- 64
+pop$ -- 269
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 82
 quote$ -- 0
-skip$ -- 230
+skip$ -- 245
 stack$ -- 0
-substring$ -- 316
-swap$ -- 351
+substring$ -- 348
+swap$ -- 372
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 117
-warning$ -- 3
-while$ -- 55
+type$ -- 126
+warning$ -- 4
+while$ -- 60
 width$ -- 0
-write$ -- 221
-(There were 3 warnings)
+write$ -- 232
+(There were 4 warnings)

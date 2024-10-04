@@ -86,7 +86,7 @@ theta_table <- scg_data %>%
     imap(~ kable(.x %>% select(-split), "latex",
         booktabs = TRUE,
         col.names = c("Country", "Period",
-                      "$\\overline{\\theta^*}$"
+                      "$\\frac{s^*}{g(K)}$"
                      # "$\\overline{\\theta^*_{c,i}}$"
                       ),
         escape = FALSE
@@ -153,7 +153,7 @@ tex_wid_si_table <- reg_table(
 write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
 
 `tex_wid_s*_c*_table` <- reg_table(
-    "Regression of \\(s^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) \\cong s^*\\) \\& \\(\\overline{\\theta^*} \\cong 1\\).",
+    "Regression of \\(s^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
     label = "tbl-4"
 )
@@ -178,7 +178,7 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
-\\caption{Average \\(\\theta^*\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -195,7 +195,7 @@ tex_tbl5 <- paste(
 }
 }
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\theta^*} \\cong 1\\). Free growth theory makes no prediction for these data.
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\frac{s^*}{g(K)}\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
 \\end{table}"
 )
