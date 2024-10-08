@@ -25,36 +25,40 @@ make_plot <- function(mydata, x, y) {
             method = "loess",
             span = 0.7
         ) +
-        geom_smooth(
-            method = "loess", span = 0.7,
-            #  formula = y ~ x + I(x^2),
-            show.legend = FALSE,
-            aes(group = NULL),
-            color = "#ef3b2c",
-            se = FALSE,
-            size = 1.5
-        ) +
+        # geom_smooth(
+        #     method = "loess", span = 0.7,
+        #     #  formula = y ~ x + I(x^2),
+        #     show.legend = FALSE,
+        #     aes(group = NULL),
+        #     color = "#ef3b2c",
+        #     se = FALSE,
+        #     size = 1.5
+        # ) +
         coord_cartesian(ylim = c(-3, 3), ) +
         scale_y_continuous(breaks = seq(-3, 3, 1)) +
+        scale_x_continuous(breaks = seq(1980, 2022, 1)) +
         theme_Publication() +
         scale_colour_Publication() +
-        theme(panel.grid.major = element_blank()) +
+        theme(panel.grid.major = element_blank(),
+                axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
+    ) +
         labs(
-            subtitle = '<span style="color:#ef3b2c;"><strong>smooth loess</strong></span>, <span style="color:#386cb0;"><strong>weighted to GDP</strong></span>,<br> span: 0.7, screen: > 0.01',
+            subtitle = '<span style="color:#386cb0;"><strong>smooth loess</strong></span>,<br> span: 0.7, screen: > 0.01',
             caption = "Data from World Inequality Database"
         ) +
         annotate("text", x = 1980, y = -2,
-                 label = "Averages:", hjust = "left", size = 16/.pt) +
-        annotate("text",
-                 label = round(pull(means, "mean"),3),
-                 color = "red",
-                 hjust = "left",
-                 x = 1991, y = -2.3, size = 16/.pt) +
-        annotate("text",
-                 label = round(pull(means, "wt_mean"),3),
-                 color = "blue",
-                 hjust = "left",
-                 x = 1991, y = -1.7, size = 16/.pt)
+                 label = paste("Average:", round(pull(means, "wt_mean"),3)), hjust = "left", size = 16/.pt) 
+        # annotate("text",
+        #          label = round(pull(means, "mean"),3),
+        #          color = "red",
+        #          hjust = "left",
+        #          x = 1991, y = -2.3, size = 16/.pt) +
+        # annotate("text",
+        #          label = round(pull(means, "wt_mean"),3),
+        #          color = "blue",
+        #          hjust = "left",
+        #          x = 1991, y = -1.7, size = 16/.pt)
+
         return(out)
 }
 
@@ -68,7 +72,7 @@ si_theta_plot <- scg_data %>%
     labs(
         y = TeX("$\\theta_s^*$"),
         x = "Year",
-        title = TeX("$\\theta_s^*$ 1980:2022 across countries")
+        # title = TeX("$\\theta_s^*$ 1980:2022 across countries, weighted to GDP")
     )
 
 
@@ -79,7 +83,7 @@ si_phi_plot <- scg_data %>%
     make_plot(., y ='𝝋s') +
     labs(
         y = TeX("$\\varphi_s^*$"), x = "Year",
-        title = TeX("$\\varphi_s^*$ 1980:2022 across countries")
+        title = TeX("$\\varphi_s^*$ 1980:2022 across countries, weighted to GDP")
     )
 
 # C theta
@@ -89,7 +93,7 @@ c_theta_plot <- scg_data %>%
     make_plot(., y ='θc') +
     labs(
         y = TeX("$\\theta_c$"), x = "Year",
-        title = TeX("$\\theta_c$ 1980:2022 across countries")
+        title = TeX("$\\theta_c$ 1980:2022 across countries, weighted to GDP")
     )
 
 
@@ -100,7 +104,7 @@ c_phi_plot <- scg_data %>%
     make_plot(., y ='𝝋c') +
     labs(
         y = TeX("$\\varphi_c$"), x = "Year",
-        title = TeX("$\\varphi_c$ 1980:2022 across countries")
+        title = TeX("$\\varphi_c$ 1980:2022 across countries, weighted to GDP")
     )
 
 # new s and c plots
@@ -113,7 +117,7 @@ c_phi_plot <- scg_data %>%
         y = TeX("$\\frac{s^*}{g(K)}$"),
         x = "Year",
         # title = TeX("$\\theta^*_s$ 1980:2022 across countries")
-        title = TeX("$\\frac{s^*}{g(K)}$ 1980:2022 across countries")
+        # title = TeX("$\\frac{s^*}{g(K)}$ 1980:2022 across countries, weighted to GDP")
     )
 
 `c_theta*_plot` <- scg_data %>%
@@ -122,30 +126,30 @@ c_phi_plot <- scg_data %>%
     make_plot(., y ='θ*c') +
     labs(
         y = TeX("$\\theta^*_c$"), x = "Year",
-        title = TeX("$\\theta^*_c$ 1980:2022 across countries")
+        title = TeX("$\\theta^*_c$ 1980:2022 across countries, weighted to GDP")
     ) 
     # coord_cartesian(ylim = NULL) +
     # scale_y_continuous(breaks = seq(-50, 50, 10))
 
 
-square_save <- function(filename, plot) {
+save_plot <- function(filename, plot) {
     ggsave(
         filename = filename,
         plot = plot,
         path = "./figure-pdf/",
         device = "pdf",
-        width = 5, height = 5,
+        width = 10, height = 5,
         units = "in",
         dpi = 300
     )
 }
 
 
-square_save(filename = "fig-si_plots-1.pdf", plot = si_theta_plot)
-square_save(filename = "fig-si_plots-2.pdf", plot = si_phi_plot)
+save_plot(filename = "fig-si_plots-1.pdf", plot = si_theta_plot)
+save_plot(filename = "fig-si_plots-2.pdf", plot = si_phi_plot)
 
-square_save(filename = "fig-c_plots-1.pdf", plot = c_theta_plot)
-square_save(filename = "fig-c_plots-2.pdf", plot = c_phi_plot)
+save_plot(filename = "fig-c_plots-1.pdf", plot = c_theta_plot)
+save_plot(filename = "fig-c_plots-2.pdf", plot = c_phi_plot)
 
-square_save(filename = "fig-s_c_theta_plots-1.pdf", plot = `s_theta*_plot`)
-square_save(filename = "fig-s_c_theta_plots-2.pdf", plot = `c_theta*_plot`)
+save_plot(filename = "fig-s_c_theta_plots-1.pdf", plot = `s_theta*_plot`)
+save_plot(filename = "fig-s_c_theta_plots-2.pdf", plot = `c_theta*_plot`)

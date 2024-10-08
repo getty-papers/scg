@@ -14,27 +14,31 @@ setFixest_dict(c(
 wid_si_table <- scg_data %>%
     filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
-    fixest::feols(c(I(`𝚫s*`), I(`𝚫qs`)) ~ `𝚫g(K)` | year + country,
+    fixest::feols(c(I(`𝚫s*`)) ~ `𝚫g(K)` | year + country,
+        weights = ~weight,
         vcov = "HC1"
     ) %>%
     etable(
         tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
-        headers = list("$\\Delta s^*$" = 1, "$\\Delta q_s$" = 1)
+        headers = list("$\\Delta s^*$" = 1)
     )
 
-wid_c_table <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
-    filter(abs(`𝚫g(K)`) > 0.01) %>%
-    fixest::feols(c(-I(`𝚫c*`), I(`𝚫qc`)) ~ `𝚫g(K)` | year + country, vcov = "HC1") %>%
-    etable(
-        tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
-        headers = list("$-\\Delta c^*$" = 1, "$\\Delta q_c$" = 1)
-    )
+# wid_c_table <- scg_data %>%
+#     filter(year %in% 1980:2022) %>%
+#     filter(abs(`𝚫g(K)`) > 0.01) %>%
+#     fixest::feols(c(-I(`𝚫c*`), I(`𝚫qc`)) ~ `𝚫g(K)` | year + country,
+#     weight = weight,
+#         vcov = "HC1") %>%
+#     etable(
+#         tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
+#         headers = list("$-\\Delta c^*$" = 1, "$\\Delta q_c$" = 1)
+#     )
 
 `wid_s*_c*_table` <- scg_data %>%
     filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     fixest::feols(I(`s*`) ~ `g(K)` | year + country,
+        weights = ~weight,
         vcov = "HC1"
     ) %>%
     etable(
@@ -45,20 +49,19 @@ wid_c_table <- scg_data %>%
     )
 
 
-phi_table <- scg_data %>%
+thetas_table <- scg_data %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     group_by(country) %>%
-    drop_na(𝝋c, 𝝋s) %>%
+    drop_na(θs) %>%
     reframe(
         years = paste0(min(year), " - ", max(year), " (", length(year), ")"),
-        𝝋s = round(mean(𝝋s, na.rm = TRUE), 2),
-        𝝋c = round(mean(𝝋c, na.rm = TRUE), 2),
+        θs = round(mean(θs, na.rm = TRUE), 2),
     ) %>%
     mutate(split = row_number() <= max(row_number() / 2)) %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
         booktabs = TRUE,
-        col.names = c("Country", "Period", "$\\overline{\\varphi_{s,i}}$", "$\\overline{\\varphi_{c,i}}$"), escape = FALSE
+        col.names = c("Country", "Period", "$\\overline{\\theta_s^*}$"), escape = FALSE
     ))
 
 
@@ -98,11 +101,11 @@ get_content <- function(table) {
     return(table[start:end])
 }
 
-phi_table$`TRUE` |>
+thetas_table$`TRUE` |>
     strsplit("\n") |>
     pluck(1) |>
     get_content()
-phi_table$`FALSE` |>
+thetas_table$`FALSE` |>
     strsplit("\n") |>
     pluck(1) |>
     get_content()
@@ -136,16 +139,16 @@ reg_table <- function(caption, content, label) {
 # Define the caption and label
 caption <- "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (Screen = 0.01). $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$"
 
-tex_wid_c_table <- reg_table(
-    "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (Screen = 0.01). $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$",
-    paste(get_content(wid_c_table)[-3], collapse = "\n"),
-    label = "tbl-wid_c_table"
-)
-
-write_file(tex_wid_c_table, "tables/tbl-wid_c_table.tex")
+# tex_wid_c_table <- reg_table(
+#     "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (Screen = 0.01). $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$",
+#     paste(get_content(wid_c_table)[-3], collapse = "\n"),
+#     label = "tbl-wid_c_table"
+# )
+#
+# write_file(tex_wid_c_table, "tables/tbl-wid_c_table.tex")
 
 tex_wid_si_table <- reg_table(
-    "Regression of $\\Delta s^*$ and $\\Delta q_s$ on $\\Delta g(K)$ (Screen = 0.01). $H_0\\ \\text{per thrift theory:} \\ \\Delta g(K) \\cong \\Delta s^* \\ \\& \\ \\Delta q_s \\cong 0$",
+    "Regression of $\\Delta s^*$ on $\\Delta g(K)$, GDP-weighted (Screen = 0.01). $H_0\\ \\text{per thrift theory:} \\ \\Delta g(K) \\cong \\Delta s^*",
     paste(get_content(wid_si_table)[-3], collapse = "\n"),
     label = "tbl-wid_si_table"
 )
@@ -153,7 +156,7 @@ tex_wid_si_table <- reg_table(
 write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
 
 `tex_wid_s*_c*_table` <- reg_table(
-    "Regression of \\(s^*\\) on \\(g(K)\\) (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
+    "Regression of \\(s^*\\) on \\(g(K)\\), GDP-weighted (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
     label = "tbl-4"
 )
@@ -203,20 +206,20 @@ tex_tbl5 <- paste(
 write_file(tex_tbl5, "tables/tbl-5.tex")
 
 
-right_part_tbl_indicator_table <- phi_table$`TRUE` |>
+right_part_tbl_indicator_table <- thetas_table$`TRUE` |>
     strsplit("\n") |>
     pluck(1) |>
     get_content() |>
     paste(collapse = "\n")
 
-left_part_tbl_indicator_table <- phi_table$`FALSE` |>
+left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
     strsplit("\n") |>
     pluck(1) |>
     get_content() |>
     paste(collapse = "\n")
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
-\\caption{Average \\(\\varphi_{s,i}\\) and \\(\\varphi_{c,i}\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}%
+\\caption{Average \\(\\theta_s^*\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}%
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -237,7 +240,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\varphi_{s,i}} \\cong \\overline{\\varphi_{c,i}} \\cong 0\\). Free growth theory predicts \\(\\overline{\\varphi_{s,i}} \\cong \\overline{\\varphi_{c,i}} \\cong 1\\).
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\theta_s^*} = \\overline{\\theta_c^*} = 1\\).
 \\end{flushleft}
 \\end{table}",
     sep = "\n"

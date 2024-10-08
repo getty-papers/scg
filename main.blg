@@ -6,47 +6,48 @@ Database file #1: cas-refs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty journal in friedman1957permanent
 Warning--empty journal in malthusEnquiryNatureProgress1815
+Warning--empty journal in modigliani1954utility
 Warning--empty journal in ricardoEssayProfitsVol1815
 Warning--empty journal in schultzInvestmentHumanCapital1961
-You've used 16 entries,
+You've used 17 entries,
             2990 wiz_defined-function locations,
-            849 strings with 9316 characters,
-and the built_in function-call counts, 8112 in all, are:
-= -- 621
-> -- 176
-< -- 17
-+ -- 86
-- -- 54
-* -- 711
-:= -- 1212
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 96
-chr.to.int$ -- 16
-cite$ -- 20
-duplicate$ -- 679
-empty$ -- 718
-format.name$ -- 78
-if$ -- 1542
+            854 strings with 9494 characters,
+and the built_in function-call counts, 8533 in all, are:
+= -- 651
+> -- 186
+< -- 18
++ -- 90
+- -- 57
+* -- 743
+:= -- 1279
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 102
+chr.to.int$ -- 17
+cite$ -- 22
+duplicate$ -- 718
+empty$ -- 755
+format.name$ -- 82
+if$ -- 1620
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 121
-newline$ -- 95
-num.names$ -- 64
-pop$ -- 269
+missing$ -- 127
+newline$ -- 99
+num.names$ -- 68
+pop$ -- 289
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 87
 quote$ -- 0
-skip$ -- 245
+skip$ -- 260
 stack$ -- 0
-substring$ -- 348
-swap$ -- 372
+substring$ -- 359
+swap$ -- 387
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
-warning$ -- 4
-while$ -- 60
+type$ -- 135
+warning$ -- 5
+while$ -- 63
 width$ -- 0
-write$ -- 232
-(There were 4 warnings)
+write$ -- 243
+(There were 5 warnings)
