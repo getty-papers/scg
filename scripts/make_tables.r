@@ -17,11 +17,12 @@ wid_si_table <- scg_data %>%
     fixest::feols(c(I(`𝚫s*`)) ~ `𝚫g(K)` | year + country,
         weights = ~weight,
         vcov = "HC1"
-    ) %>%
-    etable(
-        tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
-        headers = list("$\\Delta s^*$" = 1)
-    )
+    ) 
+    
+    # etable(
+    #     tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
+    #     headers = list("$\\Delta s^*$" = 1)
+    # )
 
 # wid_c_table <- scg_data %>%
 #     filter(year %in% 1980:2022) %>%
@@ -40,13 +41,16 @@ wid_si_table <- scg_data %>%
     fixest::feols(I(`s*`) ~ `g(K)` | year + country,
         weights = ~weight,
         vcov = "HC1"
-    ) %>%
-    etable(
-        tex = TRUE,
-        depvar = FALSE,
-        style.tex = style.tex("aer"),
-        headers = c("$s^*$")
-    )
+    ) 
+    # etable(
+    #     tex = TRUE,
+    #     depvar = FALSE,
+    #     style.tex = style.tex("aer"),
+    #     headers = c("$s^*$")
+    #  )
+    
+reg_s <- etable(`wid_s*_c*_table`, wid_si_table, tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"), headers = c("$s^*$", "$\\Delta s^*$"))
+
 
 
 thetas_table <- scg_data %>%
@@ -61,7 +65,7 @@ thetas_table <- scg_data %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
         booktabs = TRUE,
-        col.names = c("Country", "Period", "$\\overline{\\theta_s^*}$"), escape = FALSE
+        col.names = c("Country", "Period", "$\\theta_s^*$"), escape = FALSE
     ))
 
 
@@ -90,7 +94,7 @@ theta_table <- scg_data %>%
         booktabs = TRUE,
         col.names = c("Country", "Period",
                       "$\\frac{s^*}{g(K)}$"
-                     # "$\\overline{\\theta^*_{c,i}}$"
+                     # "$\\theta^*_{c,i}$"
                       ),
         escape = FALSE
     ))
@@ -147,21 +151,29 @@ caption <- "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (S
 #
 # write_file(tex_wid_c_table, "tables/tbl-wid_c_table.tex")
 
-tex_wid_si_table <- reg_table(
-    "Regression of $\\Delta s^*$ on $\\Delta g(K)$, GDP-weighted (Screen = 0.01). $H_0\\ \\text{per thrift theory:} \\ \\Delta g(K) \\cong \\Delta s^*",
-    paste(get_content(wid_si_table)[-3], collapse = "\n"),
-    label = "tbl-wid_si_table"
+# tex_wid_si_table <- reg_table(
+#     "Regression of $\\Delta s^*$ on $\\Delta g(K)$, GDP-weighted. Screen = 0.01. $H_0\\ \\text{per thrift theory:} \\ \\Delta g(K) = \\Delta s^* & \\theta_s = 1.",
+#     paste(get_content(wid_si_table)[-3], collapse = "\n"),
+#     label = "tbl-wid_si_table"
+# )
+# 
+# write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
+# 
+# `tex_wid_s*_c*_table` <- reg_table(
+#     "Regression of \\(s^*\\) on \\(g(K)\\), GDP-weighted. Screen = 0.01. \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
+#     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
+#     label = "tbl-4"
+# )
+# 
+# write_file(`tex_wid_s*_c*_table`, "tables/tbl-4.tex")
+
+tex_reg_s <- reg_table(
+    "Regression of \\(s^*\\) on \\(g(K)\\) and \\(\\Delta s^*\\) on \\(\\Delta g(K)\\), GDP-weighted. Screen = 0.01. \\(H_0\\) per thrift theory: \\(\\frac{s^*}{g(K)} = \\frac{\\Delta s^*}{\\Delta g(K)} = 1\\).",
+    paste(get_content(`reg_s`)[-3], collapse = "\n"),
+    label = "tbl-reg_s"
 )
 
-write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
-
-`tex_wid_s*_c*_table` <- reg_table(
-    "Regression of \\(s^*\\) on \\(g(K)\\), GDP-weighted (Screen = 0.01). \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
-    paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
-    label = "tbl-4"
-)
-
-write_file(`tex_wid_s*_c*_table`, "tables/tbl-4.tex")
+write_file(tex_reg_s, "tables/tbl-reg_s.tex")
 
 
 ### v" big template
@@ -240,7 +252,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\overline{\\theta_s^*} = \\overline{\\theta_c^*} = 1\\).
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\theta_s^* = \\theta_c^* = 1\\).
 \\end{flushleft}
 \\end{table}",
     sep = "\n"

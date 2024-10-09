@@ -15,7 +15,7 @@ make_plot <- function(mydata, x, y) {
         out <- ggplot(data = mydata,
                       aes(x=year, y=y, group = country)
                       ) +
-        geom_point(color = "lightgrey", show.legend = F, alpha = 0.3) +
+        geom_point(color = "lightgrey", show.legend = F, alpha = 0.5) +
         geom_hline(yintercept = 0, color = "black", size = 1) +
         geom_hline(yintercept = 1, color = "black", size = 1) +
         geom_smooth(aes(weight = weight, group = NA),
@@ -153,3 +153,17 @@ save_plot(filename = "fig-c_plots-2.pdf", plot = c_phi_plot)
 
 save_plot(filename = "fig-s_c_theta_plots-1.pdf", plot = `s_theta*_plot`)
 save_plot(filename = "fig-s_c_theta_plots-2.pdf", plot = `c_theta*_plot`)
+
+
+# scg_data %>% 
+#     mutate(cs = `C`/`Snet`) %>%
+#     filter(between(year, 1980, 2022)) %>%
+# #    filter(country == "USA") %>%
+#     select(cs, `C`, `Snet`, country, year) %>%
+#     ggplot(aes(x = year, y = cs)) +
+#     geom_point(alpha = 0.5, color = "lightgrey") +
+#     geom_smooth(se = FALSE, linewidth = 2) +
+#     theme_minimal(base_size = 18) + 
+#     coord_cartesian(ylim = c(-30,30)) +
+#     labs(y = "C / Snet", x = "Year")
+# 
