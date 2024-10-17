@@ -5,7 +5,7 @@ scg_data <- read_csv("./data/scg_data.csv")
 setFixest_dict(c(
     # "I(`𝚫s*`)" = "$\\theta_s$",
     # "I(`𝚫qs`)" = "$\\varphi_s$",
-    "`𝚫g(K)`" = "Regression of value shown on $\\Delta g(K)$",
+    "`𝚫g(K)`" = "Regression of $\\Delta s^*$ on $\\Delta g(K)$",
     "`g(K)`" = "Regression of $s^*$ on \\(g(K)\\)",
     "-I(`𝚫c*`)" = "$\\theta_c$",
     "I(`𝚫qc`)" = "$\\varphi_c$"
@@ -17,12 +17,11 @@ wid_si_table <- scg_data %>%
     fixest::feols(c(I(`𝚫s*`)) ~ `𝚫g(K)` | year + country,
         weights = ~weight,
         vcov = "HC1"
-    ) 
-    
-    # etable(
-    #     tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
-    #     headers = list("$\\Delta s^*$" = 1)
-    # )
+    ) %>%
+etable(
+    tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"),
+    headers = list("$\\Delta s^*$" = 1)
+)
 
 # wid_c_table <- scg_data %>%
 #     filter(year %in% 1980:2022) %>%
@@ -41,15 +40,14 @@ wid_si_table <- scg_data %>%
     fixest::feols(I(`s*`) ~ `g(K)` | year + country,
         weights = ~weight,
         vcov = "HC1"
-    ) 
-    # etable(
-    #     tex = TRUE,
-    #     depvar = FALSE,
-    #     style.tex = style.tex("aer"),
-    #     headers = c("$s^*$")
-    #  )
+    ) %>%
+     etable(
+         tex = TRUE,
+         depvar = FALSE,
+         style.tex = style.tex("aer"),
+         headers = c("$s^*$")
+      )
     
-reg_s <- etable(`wid_s*_c*_table`, wid_si_table, tex = TRUE, depvar = FALSE, style.tex = style.tex("aer"), headers = c("$s^*$", "$\\Delta s^*$"))
 
 
 
@@ -100,8 +98,8 @@ theta_table <- scg_data %>%
     ))
 
 get_content <- function(table) {
-    start <- str_which(table, "\\\\toprule")
-    end <- str_which(table, "\\\\bottomrule")
+    start <- str_which(table, "\\\\midrule") + 1
+    end <- str_which(table, "\\\\bottomrule") - 1
     return(table[start:end])
 }
 
@@ -125,16 +123,13 @@ theta_table$`FALSE` |>
 
 
 # Define the template for the table
-reg_table <- function(caption, content, label) {
+reg_table <- function(content, label) {
     paste0(
-        "\\begin{table}[pos=h]
-\\caption{", caption, "}\n",
-        "\\centering
+         "\\centering
 \\begin{tabularx}{\\columnwidth}{lcc}\n",
         content, "\n",
         "\\end{tabularx}
-   \\label{", label, "}\n",
-        "\\end{table}"
+   \\label{", label, "}\n"
     ) |>
     str_replace("year", "Year") |>
     str_replace("country", "Country")
@@ -151,33 +146,19 @@ caption <- "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (S
 #
 # write_file(tex_wid_c_table, "tables/tbl-wid_c_table.tex")
 
-# tex_wid_si_table <- reg_table(
-#     "Regression of $\\Delta s^*$ on $\\Delta g(K)$, GDP-weighted. Screen = 0.01. $H_0\\ \\text{per thrift theory:} \\ \\Delta g(K) = \\Delta s^* & \\theta_s = 1.",
-#     paste(get_content(wid_si_table)[-3], collapse = "\n"),
-#     label = "tbl-wid_si_table"
-# )
-# 
-# write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
-# 
-# `tex_wid_s*_c*_table` <- reg_table(
-#     "Regression of \\(s^*\\) on \\(g(K)\\), GDP-weighted. Screen = 0.01. \\(H_0\\) per thrift theory: \\(g(K) = s^*\\) \\& \\(\\frac{s^*}{g(K)} = 1\\).",
-#     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
-#     label = "tbl-4"
-# )
-# 
-# write_file(`tex_wid_s*_c*_table`, "tables/tbl-4.tex")
-
-tex_reg_s <- reg_table(
-    "Regression of \\(s^*\\) on \\(g(K)\\) and \\(\\Delta s^*\\) on \\(\\Delta g(K)\\), GDP-weighted. Screen = 0.01. \\(H_0\\) per thrift theory: \\(\\frac{s^*}{g(K)} = \\frac{\\Delta s^*}{\\Delta g(K)} = 1\\).",
-    paste(get_content(`reg_s`)[-3], collapse = "\n"),
-    label = "tbl-reg_s"
-)
-
-write_file(tex_reg_s, "tables/tbl-reg_s.tex")
-
-
-### v" big template
-
+ tex_wid_si_table <- reg_table(
+     paste(get_content(wid_si_table)[-3], collapse = "\n"),
+     label = "tbl-wid_si_table"
+ )
+ 
+ write_file(tex_wid_si_table, "tables/tbl-wid_si_table.tex")
+ 
+ `tex_wid_s*_c*_table` <- reg_table(
+     paste(get_content(`wid_s*_c*_table`)[-3], collapse = "\n"),
+     label = "tbl-4"
+ )
+ 
+ write_file(`tex_wid_s*_c*_table`, "tables/tbl-4.tex")
 
 right_part_tbl5 <- theta_table$`TRUE` |>
     strsplit("\n") |>
@@ -193,11 +174,13 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
-\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\toprule
 \\makebox[\\textwidth][c]{%
 {\\centering
 
 \\begin{tabular}{llrr}",
+    
     left_part_tbl5,
     "\\end{tabular}
 }
@@ -209,8 +192,9 @@ tex_tbl5 <- paste(
 
 }
 }
+\\bottomrule
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\frac{s^*}{g(K)}\\). Free growth theory makes no prediction for these data.
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\frac{s^*}{g(K)} = 1\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
 \\end{table}"
 )
@@ -231,7 +215,8 @@ left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
     paste(collapse = "\n")
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
-\\caption{Average \\(\\theta_s^*\\) in 86 countries (screen = 0.01). Number of years clearing screen shown in ()}%
+\\caption{Average \\(\\theta_s^*\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}%
+\\toprule
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -248,11 +233,10 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 }
 
 }
-
-
+\\bottomrule
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\theta_s^* = \\theta_c^* = 1\\).
+\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\theta_s^* = 1\\).
 \\end{flushleft}
 \\end{table}",
     sep = "\n"
