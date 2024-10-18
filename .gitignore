@@ -4,5 +4,6 @@ tmp/
 .Rhistory
 arxiv.zip
 main.bbl
+.RData
 
 

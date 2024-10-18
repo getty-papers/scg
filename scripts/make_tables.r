@@ -175,7 +175,7 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
 \\caption{Average \\(\\frac{s^*}{g(K)}\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
-\\toprule
+\\hline
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -192,7 +192,7 @@ tex_tbl5 <- paste(
 
 }
 }
-\\bottomrule
+\\hline
 \\begin{flushleft}
 \\footnotesize \\emph{Note:} Thrift theory predicts \\(\\frac{s^*}{g(K)} = 1\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
@@ -216,7 +216,7 @@ left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
 \\caption{Average \\(\\theta_s^*\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}%
-\\toprule
+\\hline
 \\makebox[\\textwidth][c]{%
 {\\centering
 
@@ -233,7 +233,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 }
 
 }
-\\bottomrule
+\\hline
 \\label{tbl-indicator_table}
 \\begin{flushleft}
 \\footnotesize \\emph{Note:} Thrift theory predicts \\(\\theta_s^* = 1\\).
