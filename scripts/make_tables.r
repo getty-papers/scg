@@ -197,7 +197,7 @@ tex_tbl5 <- paste(
 }
 \\hrule
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\frac{s^*}{g(K)} = 1\\). Free growth theory makes no prediction for these data.
+\\footnotesize \\emph{Note:} \\(s^*\\) is defined as \\(\\frac{S_{net}}{K}\\). Thrift theory predicts \\(\\frac{s^*}{g(K)} = 1\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
 \\end{table}"
 )
@@ -218,7 +218,7 @@ left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
     paste(collapse = "\n")
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
-\\caption{Average \\(\\theta_s^*\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}%
+\\caption{Average \\(\\theta\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}%
 \\hrule
 \\makebox[\\textwidth][c]{%
 {\\centering
@@ -239,7 +239,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 \\hrule
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} Thrift theory predicts \\(\\theta_s^* = 1\\).
+\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta = 1\\).
 \\end{flushleft}
 \\end{table}",
     sep = "\n"

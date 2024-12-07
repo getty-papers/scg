@@ -389,6 +389,7 @@ INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdis
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/stix-mathtt.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/t1-stixgeneral.tfm
+INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/tex/latex/base/t1cmss.fd
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/tex/latex/base/t1cmss.fd
@@ -401,11 +402,6 @@ INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdis
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/vf/public/stix/t1-stixgeneralsc.vf
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/jknappen/ec/ecss1000.tfm
-INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
-INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
-INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
-INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
-INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/jknappen/ec/ecsx0900.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/stix-mathrm.tfm
 INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/stix-mathit.tfm
@@ -427,6 +423,11 @@ INPUT ./tables/tbl-4.tex
 INPUT ./tables/tbl-wid_si_table.tex
 INPUT ./tables/tbl-wid_si_table.tex
 INPUT ./tables/tbl-wid_si_table.tex
+INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
+INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
+INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
+INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
+INPUT ./figure-pdf/fig-s_c_theta_plots-1.pdf
 INPUT ./figure-pdf/fig-si_plots-1.pdf
 INPUT ./figure-pdf/fig-si_plots-1.pdf
 INPUT ./figure-pdf/fig-si_plots-1.pdf
@@ -440,6 +441,7 @@ INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdis
 INPUT ./tables/tbl-indicator_table.tex
 INPUT ./tables/tbl-indicator_table.tex
 INPUT ./tables/tbl-indicator_table.tex
+INPUT /nix/store/hymdka6m8g1msh1pf4ncsbclnw0g7fi5-texlive-combined-2023-texmfdist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
