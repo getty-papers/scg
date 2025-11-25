@@ -1,47 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2023/nixos.org)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-You've used 7 entries,
-            0 wiz_defined-function locations,
-            97 strings with 908 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+The style file: cas-model2-names.bst
+Database file #1: cas-refs.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty journal in friedman1957permanent
+Warning--empty journal in malthusEnquiryNatureProgress1815
+Warning--empty journal in modigliani1954utility
+Warning--empty journal in ricardoEssayProfitsVol1815
+Warning--empty journal in schultzInvestmentHumanCapital1961
+You've used 19 entries,
+            2990 wiz_defined-function locations,
+            869 strings with 9748 characters,
+and the built_in function-call counts, 9563 in all, are:
+= -- 730
+> -- 206
+< -- 20
++ -- 100
+- -- 63
+* -- 836
+:= -- 1430
+add.period$ -- 57
+call.type$ -- 19
+change.case$ -- 113
+chr.to.int$ -- 19
+cite$ -- 24
+duplicate$ -- 804
+empty$ -- 850
+format.name$ -- 90
+if$ -- 1818
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 143
+newline$ -- 110
+num.names$ -- 76
+pop$ -- 320
+preamble$ -- 1
+purify$ -- 97
 quote$ -- 0
-skip$ -- 0
+skip$ -- 290
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 408
+swap$ -- 438
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 150
+warning$ -- 5
+while$ -- 71
 width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+write$ -- 272
+(There were 5 warnings)
