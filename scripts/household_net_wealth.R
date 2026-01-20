@@ -1,4 +1,5 @@
-indicators = indicators = c(
+library(tidyverse)
+indicators = c(
   # Nation Level
   mnweal = "Market-value national wealth",
   mnwboo = "Book-value national wealth",
@@ -57,7 +58,10 @@ indicators = indicators = c(
   mgwpen = "Pension funds & life insurance (Gov)",
   mgwdeb = "Liabilities (Gov)",
   mgwdec = "Consolidated government debt",
-  mgwfie = "Financial assets except currency & deposits (Gov)"
+  mgwfie = "Financial assets except currency & deposits (Gov)",
+  
+  
+  msavin = "Net National Saving"
 ) 
 
 
@@ -209,7 +213,34 @@ clean_data %>%
        subtitle = "Book = Solid, Market = Dashed")
   
   
-  
+clean_data %>%
+  filter(
+    country == "USA"
+  ) %>%
+  select(year,
+ "Book-value national wealth",
+ "Net National Saving"
+         ) %>%
+  mutate(
+   `Book-value Change` = `Book-value national wealth` - lag(`Book-value national wealth`, 1),
+   .keep="unused"
+  ) %>%
+  drop_na()%>%
+  pivot_longer(-year) %>%
+  ggplot(aes(x=year, y=value, color = name)) +
+  geom_line(linewidth = 2) +
+  theme_minimal(base_size = 18) +
+  labs(
+   x = NULL,
+   y = NULL,
+   title = "Book National Wealth\nand Net National Saving for the USA"
+  ) +
+  scale_y_continuous(
+    labels = scales::dollar_format(scale =10^-12, prefix = "T")) +
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom"
+  )
   
 
 # household_wid %>%
@@ -224,4 +255,29 @@ clean_data %>%
 #   filter(country == "US")  %>%
 #    filter(year == 2024) %>% View()
 
+  
+
+## Topin's Q
+clean_data %>%
+  filter(
+    country == "USA"
+  ) %>%
+  select(
+    year,
+ "Market-value national wealth",
+ "Book-value national wealth",
+  ) %>%
+  mutate(value = `Market-value national wealth`/`Book-value national wealth`) %>%
+  drop_na() %>%
+  ggplot(aes(x = year, y = value)) + 
+  geom_line(linewidth = 3) +
+  # scale_y_continuous(labels = scales::dollar_format(scale = 1/10^12, suffix = "T"), n.breaks = 6) +
+  scale_x_continuous(n.breaks = 9) +
+  # directlabels::geom_dl(aes(label = name), method = "smart.grid") +
+  theme_minimal(base_size = 24) +
+  theme(legend.position = "none") +
+  labs(y = NULL, x = NULL,
+       title = "USA Market/Book National Value",
+       subtitle = "Tobin Q")
+  
   

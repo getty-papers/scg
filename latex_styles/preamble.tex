@@ -26,7 +26,16 @@
 
 \usepackage{subfigure}
 \usepackage{letltxmacro}
-\usepackage{hyperref}
+% hyperref is already loaded by cas-sc.cls, so we just configure it
+\hypersetup{
+  colorlinks=false,
+  hidelinks=false,
+  pdfborder={0 0 0},
+  pdfstartview={FitH}
+}
+% Redefine href to underline the link text
+\LetLtxMacro\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\uline{#2}}}
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{longtable}

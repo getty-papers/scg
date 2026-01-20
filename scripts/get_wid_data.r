@@ -6,7 +6,8 @@ raw_wid_data <- download_wid(
     indicators = c(
         "final_consumption" = "mcongo", "collective_consumption" = "mcolgo",
         "individual_consumption" = "mindgo", "labor_share" = "wlabsh",
-        "net_national_savings" = "msavin", "market_wealth" = "mnweal",
+        "net_national_savings" = "msavin",
+        "market_wealth" = "mnweal",
         "book_wealth" = "mnwboo", "household_expenditure" = "mconhn",
         "gdp" = "mgdpro", "loc_usd_ppp" = "xlcusp"
     ),

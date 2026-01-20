@@ -239,7 +239,8 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 \\hrule
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta = 1\\).
+\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta = 1\\). See Section \\ref{interpretation-of-test-results} for predictions of free growth theory. 
+
 \\end{flushleft}
 \\end{table}",
     sep = "\n"
