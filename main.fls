@@ -2,7 +2,7 @@ PWD /Users/nikitoshina/work/Getty/SCG
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/nikitoshina/work/Getty/SCG/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT ./latex_styles/cas-sc.cls
 INPUT ./latex_styles/cas-sc.cls

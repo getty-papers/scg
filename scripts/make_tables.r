@@ -197,7 +197,7 @@ tex_tbl5 <- paste(
 }
 \\hrule
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} \\(s^*\\) is defined as \\(\\frac{S_{net}}{K}\\). Thrift theory predicts \\(\\frac{s^*}{g(K)} = 1\\). Free growth theory makes no prediction for these data.
+\\footnotesize \\emph{Note:} \\(s^*\\) is defined as \\(\\frac{S_{net}}{K}\\). Thrift theory predicts \\(\\frac{s^*}{g(K)} \\cong 1\\). Free growth theory makes no prediction for these data.
 \\end{flushleft}
 \\end{table}"
 )
@@ -239,7 +239,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 \\hrule
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta = 1\\). See Section \\ref{interpretation-of-test-results} for predictions of free growth theory. 
+\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta \\cong 1\\). See Section \\ref{interpretation-of-test-results} for predictions of free growth theory. 
 
 \\end{flushleft}
 \\end{table}",

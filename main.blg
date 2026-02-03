@@ -3,51 +3,53 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: cas-model2-names.bst
 Database file #1: cas-refs.bib
+Warning--I'm ignoring modigliani1954utility's extra "author" field
+--line 216 of file cas-refs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty journal in friedman1957permanent
 Warning--empty journal in malthusEnquiryNatureProgress1815
 Warning--empty journal in modigliani1954utility
 Warning--empty journal in ricardoEssayProfitsVol1815
 Warning--empty journal in schultzInvestmentHumanCapital1961
-You've used 19 entries,
+You've used 21 entries,
             2990 wiz_defined-function locations,
-            869 strings with 9748 characters,
-and the built_in function-call counts, 9563 in all, are:
-= -- 730
-> -- 206
-< -- 20
-+ -- 100
-- -- 63
-* -- 836
-:= -- 1430
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 113
-chr.to.int$ -- 19
-cite$ -- 24
-duplicate$ -- 804
-empty$ -- 850
-format.name$ -- 90
-if$ -- 1818
+            884 strings with 10014 characters,
+and the built_in function-call counts, 10779 in all, are:
+= -- 837
+> -- 234
+< -- 22
++ -- 113
+- -- 72
+* -- 962
+:= -- 1605
+add.period$ -- 65
+call.type$ -- 21
+change.case$ -- 126
+chr.to.int$ -- 21
+cite$ -- 26
+duplicate$ -- 898
+empty$ -- 946
+format.name$ -- 105
+if$ -- 2049
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 143
-newline$ -- 110
-num.names$ -- 76
-pop$ -- 320
+missing$ -- 160
+newline$ -- 122
+num.names$ -- 84
+pop$ -- 345
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 108
 quote$ -- 0
-skip$ -- 290
+skip$ -- 319
 stack$ -- 0
-substring$ -- 408
-swap$ -- 438
+substring$ -- 473
+swap$ -- 503
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
+type$ -- 168
 warning$ -- 5
-while$ -- 71
+while$ -- 81
 width$ -- 0
-write$ -- 272
-(There were 5 warnings)
+write$ -- 305
+(There were 6 warnings)

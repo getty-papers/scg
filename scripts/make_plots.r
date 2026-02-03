@@ -64,7 +64,7 @@ si_theta_plot <- scg_data %>%
         y = TeX("$\\theta_s^*$"),
         x = "Year",
         # title = TeX("$\\theta_s^*$ 1980:2022 across countries, weighted to GDP"),
-subtitle = 'span: 0.7, screen: > 0.01',
+subtitle = 'span: 0.7, screen: = 0.01',
 )
 
     
@@ -109,7 +109,7 @@ c_phi_plot <- scg_data %>%
         # y = TeX("$\\theta^*_s$"),
         y = TeX("$\\frac{s^*}{g(K)}$"),
         x = "Year",
-subtitle = 'span: 0.7, screen: > 0.01'
+subtitle = 'span: 0.7, screen: = 0.01'
         # title = TeX("$\\theta^*_s$ 1980:2022 across countries")
         # title = TeX("$\\frac{s^*}{g(K)}$ 1980:2022 across countries, weighted to GDP")
     )
