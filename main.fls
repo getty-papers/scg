@@ -1347,6 +1347,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb

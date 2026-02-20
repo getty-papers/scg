@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1770102319 "main.aux" "main.bbl" "main" 1770102638 0
+["bibtex main"] 1771527804 "main.aux" "main.bbl" "main" 1771527806 0
   "./cas-refs.bib" 1769465730 9733 d6ebebfbdaffdc8401704be57fe04aad ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/els-cas-templates/cas-model2-names.bst" 1620849479 31800 50c9da7327ed431cce3c915c6982e987 ""
-  "main.aux" 1770102638 10730 52b4418264f389dec86472284e2bf8ef "pdflatex"
+  "main.aux" 1771527805 11190 89121ed7fde3843bf37d2dad71bc16bd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1770102637 "main.tex" "main.pdf" "main" 1770102638 0
+["pdflatex"] 1771527804 "main.tex" "main.pdf" "main" 1771527806 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc" 1388795362 7013 c55cc8669071ac14036c4a0c96c16202 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -49,6 +49,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb" 1388795362 250376 86937501504e07e9745bc88e006094b2 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb" 1388795362 221139 7b7742dd20e0010cb85b7f92956bac16 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb" 1388795362 547522 a9135ac84940b576091fbefc78a79500 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb" 1388795362 63697 54c53ee8b8c43f52d0718f669ed6fb5e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb" 1388795362 41474 772656494141d29334d3e80c9a859c10 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb" 1388795362 40662 35fc2ef7e5426524c472184c87cb4d57 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb" 1388795362 33345 eed8935644a2e407434be96adf5ada36 ""
@@ -177,21 +178,21 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1709950068 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1709950046 7883457 ab12c86b1ad5e87fa8c8940bc74549db ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "figure-pdf/fig-s_c_theta_plots-1.pdf" 1769719006 8859 a7851955826df02a83567381b9ad0860 ""
-  "figure-pdf/fig-si_plots-1.pdf" 1769719006 8633 64e0d7f38d39c51d12ffd9c0dbe05d99 ""
+  "figure-pdf/fig-s_c_theta_plots-1.pdf" 1771527737 8859 e43a98882eb5bb13dfd503f696f39cd2 ""
+  "figure-pdf/fig-si_plots-1.pdf" 1771527737 8633 2870c27404586c288fb9207359c6a5f9 ""
   "latex_styles/cas-common.sty" 1716750812 76754 89c2988d2f1f16eea9968e7098df8d79 ""
   "latex_styles/cas-sc.cls" 1717086073 4452 d9cd5c0131f7da8bfca10ca9a7936b5f ""
   "latex_styles/preamble.tex" 1768796399 2288 6d501b73cb0f44d80a1a95a6cb60619d ""
   "latex_styles/thumbnails/cas-email.jpeg" 1716774796 8764 ae276cc9956197082d008c18ae4cbb28 ""
-  "main.abs" 1770102638 267 2f60beefc1aaa6579386629286b0b441 "pdflatex"
-  "main.aux" 1770102638 10730 52b4418264f389dec86472284e2bf8ef "pdflatex"
-  "main.bbl" 1770102319 7188 88e750431b0ed15ab7988504350061d5 "bibtex main"
-  "main.out" 1770102638 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1770102635 45770 864654ac164395ba2074dff17294cc38 ""
-  "tables/tbl-4.tex" 1769719007 463 bc5181e55c7734fe7e4dfe6cf7e7105d ""
-  "tables/tbl-5.tex" 1769719007 4157 22fb566f88b9502585713ba1428ece6b ""
-  "tables/tbl-indicator_table.tex" 1769719007 4198 1c6e44cf25d798eb92b152071eb25112 ""
-  "tables/tbl-wid_si_table.tex" 1769719007 558 1ecef8b95255e8b12f9da58f0d8a2d70 ""
+  "main.abs" 1771527805 267 2f60beefc1aaa6579386629286b0b441 "pdflatex"
+  "main.aux" 1771527805 11190 89121ed7fde3843bf37d2dad71bc16bd "pdflatex"
+  "main.bbl" 1771527804 7188 88e750431b0ed15ab7988504350061d5 "bibtex main"
+  "main.out" 1771527805 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1771527796 50020 b41fda31a8358ab11f5fabd509cffc33 ""
+  "tables/tbl-4.tex" 1771527738 463 bc5181e55c7734fe7e4dfe6cf7e7105d ""
+  "tables/tbl-5.tex" 1771527738 4175 cdab09251b647f4a75029715ddc19408 ""
+  "tables/tbl-indicator_table.tex" 1771527738 4216 dc459e4cfae0be306ef4c62e3ec23e68 ""
+  "tables/tbl-wid_si_table.tex" 1771527738 558 1ecef8b95255e8b12f9da58f0d8a2d70 ""
   (generated)
   "main.abs"
   "main.aux"

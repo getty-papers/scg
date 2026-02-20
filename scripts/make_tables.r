@@ -139,7 +139,7 @@ reg_table <- function(content, label) {
 }
 
 # Define the caption and label
-caption <- "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (Screen = 0.01). $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$"
+caption <- "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$. Screen = 0.01. $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$"
 
 # tex_wid_c_table <- reg_table(
 #     "Regression of $- \\Delta c^*$ and $\\Delta q_c$ on $\\Delta g(K)$ (Screen = 0.01). $H_0 \\text{ per thrift theory: } \\Delta g(K) \\cong -\\Delta c^* \\& \\Delta q_c \\cong 0$",
@@ -177,7 +177,7 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
-\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 92 countries over periods shown. Screen = 0.01. Number of years clearing screen shown in ()}\\label{tbl-5}%
 \\hrule
 \\makebox[\\textwidth][c]{%
 {\\centering
@@ -218,7 +218,7 @@ left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
     paste(collapse = "\n")
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
-\\caption{Average \\(\\theta\\) in 92 countries (screen = 0.01). Number of years clearing screen shown in ()}%
+\\caption{Average \\(\\theta\\) in 92 countries over periods shown. Screen = 0.01. Number of years clearing screen shown in ()}%
 \\hrule
 \\makebox[\\textwidth][c]{%
 {\\centering
