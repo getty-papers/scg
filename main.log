@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  19 FEB 2026 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.8)  13 MAR 2026 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -924,14 +924,26 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 Package hyperref Warning: Ignoring empty anchor on input line 166.
 
 
-LaTeX Warning: Hyper reference `appendix-D' on page 1 undefined on input line 217.
+LaTeX Warning: Hyper reference `appendix-E' on page 1 undefined on input line 207.
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 220.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 217.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./latex_styles/thumbnails/cas-email.jpeg>] [2] (./tables/tbl-4.tex
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./latex_styles/thumbnails/cas-email.jpeg>]
+
+LaTeX Warning: Hyper reference `appendix-D' on page 2 undefined on input line 219.
+
+[2]
+
+LaTeX Warning: Hyper reference `appendix-E' on page 3 undefined on input line 308.
+
+[3]
+
+LaTeX Warning: Hyper reference `appendix-D' on page 4 undefined on input line 366.
+
+[4] (./tables/tbl-4.tex
 Underfull \hbox (badness 10000) in alignment at lines 11--11
 [][][]
  []
@@ -942,44 +954,58 @@ Underfull \hbox (badness 10000) in alignment at lines 11--11
  []
 
 )
-<./figure-pdf/fig-s_c_theta_plots-1.pdf, id=93, 722.7pt x 252.945pt>
+<./figure-pdf/fig-s_c_theta_plots-1.pdf, id=155, 722.7pt x 252.945pt>
 File: ./figure-pdf/fig-s_c_theta_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-s_c_theta_plots-1.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-s_c_theta_plots-1.pdf  used on input line 349.
-(pdftex.def)             Requested size: 468.3324pt x 163.91826pt.
- [3]
-<./figure-pdf/fig-si_plots-1.pdf, id=109, 722.7pt x 252.945pt>
+Package pdftex.def Info: ./figure-pdf/fig-s_c_theta_plots-1.pdf  used on input line 403.
+(pdftex.def)             Requested size: 421.49629pt x 147.52258pt.
+<./figure-pdf/fig-si_plots-1.pdf, id=156, 722.7pt x 252.945pt>
 File: ./figure-pdf/fig-si_plots-1.pdf Graphic file (type pdf)
 <use ./figure-pdf/fig-si_plots-1.pdf>
-Package pdftex.def Info: ./figure-pdf/fig-si_plots-1.pdf  used on input line 367.
-(pdftex.def)             Requested size: 468.3324pt x 163.91826pt.
+Package pdftex.def Info: ./figure-pdf/fig-si_plots-1.pdf  used on input line 421.
+(pdftex.def)             Requested size: 421.49629pt x 147.52258pt.
  (./tables/tbl-5.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [4 <./figure-pdf/fig-s_c_theta_plots-1.pdf> <./figure-pdf/fig-si_plots-1.pdf>] [5] (./tables/tbl-indicator_table.tex) [6]
-
-LaTeX Warning: Hyper reference `appendix-D' on page 7 undefined on input line 433.
-
-[7
+) [5 <./figure-pdf/fig-s_c_theta_plots-1.pdf> <./figure-pdf/fig-si_plots-1.pdf>] [6] (./tables/tbl-indicator_table.tex) [7] [8
 
 
-] [8] [9] [10] [11]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.1}) has been already used, duplicate ignored
+]
+
+LaTeX Warning: Hyper reference `appendix-D' on page 9 undefined on input line 504.
+
+Runaway argument?
+./main.tex:546: Paragraph ended before \hyper@link@ was complete.
 <to be read again> 
-                   \relax 
-l.701 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.2}) has been already used, duplicate ignored
+                   \par 
+l.546 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[9] [10] [11]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.709 \begin{equation}
                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.714 \begin{equation}
+                      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.715 \begin{equation}
-                       (./main.bbl [12]) [13] (./main.aux)
+l.723 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.Alph0.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.729 \begin{equation}
+                       [12] (./main.bbl [13]) [14] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -987,18 +1013,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20723 strings out of 476025
- 328476 string characters out of 5790018
- 1882388 words of memory out of 5000000
- 40682 multiletter control sequences out of 15000+600000
- 603175 words of font info for 152 fonts, out of 8000000 for 9000
+ 20767 strings out of 476025
+ 329207 string characters out of 5790018
+ 1883388 words of memory out of 5000000
+ 40719 multiletter control sequences out of 15000+600000
+ 622419 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,90p,1387b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,90p,1041b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb>
-Output written on main.pdf (13 pages, 330596 bytes).
+Output written on main.pdf (14 pages, 335739 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 116 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

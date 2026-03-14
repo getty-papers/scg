@@ -161,3 +161,13 @@ save_plot(filename = "fig-s_c_theta_plots-2.pdf", plot = `c_theta*_plot`)
 #     coord_cartesian(ylim = c(-30,30)) +
 #     labs(y = "C / Snet", x = "Year")
 # 
+
+# scg_data %>%
+#     filter(year %in% 1980:2022) %>%
+#     filter(abs(`g(K)`) > 0.01) %>%
+#     filter(`Snet` < 0) %>% 
+#     select(year, country, `Snet`, `s*`) %>%
+#     slice_sample(n = 10) %>%
+#     kable() %>%
+#     clipr::write_clip()
+

@@ -1,5 +1,5 @@
 library(tidyverse)
-indicators = c(
+indicators <- c(
   # Nation Level
   mnweal = "Market-value national wealth",
   mnwboo = "Book-value national wealth",
@@ -60,8 +60,11 @@ indicators = c(
   mgwdec = "Consolidated government debt",
   mgwfie = "Financial assets except currency & deposits (Gov)",
   
-  
-  msavin = "Net National Saving"
+
+  msavin = "Net National Saving",
+  msavgo = "Government net saving",
+  mgdpro = "gdp",
+  xlcusp = "loc_usd_ppp"
 ) 
 
 
@@ -90,7 +93,12 @@ clean_data <- household_wid %>%
         .default = country
     )) %>%  # recode country names
     drop_na(country) |>
-    arrange(country, year) 
+    arrange(country, year) %>%
+    mutate(
+        pp_conv = last(loc_usd_ppp),
+        .by = country
+    ) %>%
+    mutate(gdp = gdp / pp_conv) 
 
 values <- clean_data %>%
   filter(country == "USA", year == 2024) %>% 
@@ -258,6 +266,9 @@ clean_data %>%
   
 
 ## Topin's Q
+
+
+
 clean_data %>%
   filter(
     country == "USA"
@@ -281,3 +292,89 @@ clean_data %>%
        subtitle = "Tobin Q")
   
   
+# Request for gov vs all capital
+
+
+timely_data <- clean_data %>%
+  mutate( 
+    share_wealth = `Government net wealth` / `Market-value national wealth`,
+    share_assets = `Government non-financial assets` / (`Household non-financial assets` + `NPISH non-financial assets` + `Government non-financial assets`),
+    share_savings = `Government net saving` / `Net National Saving`
+  ) %>%
+  select(year, country, gdp, share_wealth, share_assets, share_savings) %>%
+  drop_na() %>%
+  group_by(year) %>%
+  filter(!(country %in% which_to_drop$country & year %in% which_to_drop$year)) %>%
+  summarise(
+    w_share_wealth = weighted.mean(share_wealth, gdp, na.rm = TRUE),
+    w_share_assets = weighted.mean(share_assets, gdp, na.rm = TRUE),
+    w_share_savings = weighted.mean(share_savings, gdp, na.rm = TRUE)
+  ) %>%
+  select(year, 
+  w_share_wealth, w_share_assets,
+  w_share_savings
+  ) %>%
+  filter(year > 1980)
+
+  # select(year, weight, `Government net wealth`, `Market-value national wealth`, share_wealth) %>%
+  # # select(year, w_share_wealth, w_share_assets) %>%
+  # drop_na()
+  
+timely_data %>%
+  select(year, w_share_wealth, w_share_assets) %>%
+  pivot_longer(-year) %>%
+  ggplot(aes(x = year, y = value, color = name)) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 1) +
+  geom_line(linewidth = 3) +
+  scale_y_continuous(labels = scales::percent_format(scale = 100), n.breaks = 8) +
+  scale_x_continuous(n.breaks = 9) +
+  theme_minimal(base_size = 24) +
+  theme(
+  legend.position = "none",
+  plot.title.position = "plot") +
+  labs(
+    x = NULL,
+    y = "Government share (GDP-weighted)",
+    title = "Government share of national wealth and non-financial assets",
+    subtitle = "(blue) Wealth = gov net wealth / national wealth;
+(red) Assets = gov non-financial assets / total non-financial assets",
+    caption = "GDP-weighted."
+  )
+
+
+  
+timely_data %>%
+  select(year, w_share_savings) %>%
+  pivot_longer(-year) %>%
+  ggplot(aes(x = year, y = value, color = name)) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 1) +
+  geom_line(linewidth = 3) +
+  scale_y_continuous(labels = scales::percent_format(scale = 100), n.breaks = 8) +
+  scale_x_continuous(n.breaks = 9) +
+  theme_minimal(base_size = 24) +
+  theme(
+  legend.position = "none",
+  plot.title.position = "plot") +
+  labs(
+    x = NULL,
+    y = "Government share (GDP-weighted)",
+    title = "Government share of national saving",
+    subtitle = "Saving = gov net saving / net national saving",
+    caption = "GDP-weighted."
+  )
+
+which_to_drop <- clean_data %>%
+  mutate( 
+    share_wealth = `Government net wealth` / `Market-value national wealth`,
+    share_assets = `Government non-financial assets` / (`Household non-financial assets` + `NPISH non-financial assets` + `Government non-financial assets`),
+    share_savings = `Government net saving` / `Net National Saving`
+  ) %>%
+  select(year, country, gdp, share_wealth, share_assets, share_savings) %>%
+  drop_na() %>%
+  filter(abs(share_savings) > 10) 
+
+
+scg_data_experimental <- scg_data %>%
+  filter(Snet > 0)
+
+write_csv(scg_data_experimental, "./data/scg_data_experimental.csv")
