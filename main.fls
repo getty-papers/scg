@@ -2,7 +2,7 @@ PWD /Users/nikitoshina/work/Getty/SCG
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /Users/nikitoshina/work/Getty/SCG/main.tex
 OUTPUT main.log
 INPUT ./latex_styles/cas-sc.cls
 INPUT ./latex_styles/cas-sc.cls
@@ -1132,6 +1132,10 @@ INPUT ./main.out
 INPUT ./main.out
 OUTPUT main.out
 OUTPUT main.pdf
+INPUT ./tables/scg_year_span.tex
+INPUT ./tables/scg_year_span.tex
+INPUT ./tables/scg_year_span.tex
+INPUT ./tables/scg_year_span.tex
 OUTPUT main.abs
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm

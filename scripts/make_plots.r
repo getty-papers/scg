@@ -1,7 +1,11 @@
 source("./scripts/load_libraries.r")
 source("./scripts/plot_themes.r")
 
+# scg_data.csv is the analysis sample; change SCG_ANALYSIS_YEARS in get_wid_data.r to switch periods.
+# Full history: data/scg_data_long.csv — \scgYearRange in main.tex follows scg_data.csv after get_wid_data.r
 scg_data <- read_csv("./data/scg_data.csv")
+scg_yr <- range(scg_data$year, na.rm = TRUE)
+scg_yr_txt <- paste(scg_yr[1], scg_yr[2], sep = "--")
 
 ### Make line plots here
 make_plot <- function(mydata, x, y) {
@@ -18,8 +22,10 @@ make_plot <- function(mydata, x, y) {
                   wt_mean = weighted.mean(y, weight, na.rm = TRUE))
     
     print(mean_years)
-        #
-        out <- ggplot(data = mydata,
+
+    x_breaks <- pretty(range(mydata$year, na.rm = TRUE), n = 9)
+
+    out <- ggplot(data = mydata,
                       aes(x=year, y=y, group = country)
                       ) +
         # geom_point(color = "lightgrey", show.legend = F, alpha = 1) +
@@ -38,18 +44,28 @@ make_plot <- function(mydata, x, y) {
         )  +
         coord_cartesian(ylim = c(-1, 2), ) +
         scale_y_continuous(breaks = seq(-1, 2, 1)) +
-        scale_x_continuous(breaks = seq(1980, 2022, 1)) +
+        scale_x_continuous(
+            breaks = x_breaks,
+            labels = scales::label_number(accuracy = 1)
+        ) +
         theme_Publication() +
         scale_colour_Publication() +
-        theme(panel.grid.major = element_blank(),
-                axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
-    ) +
-    labs(x = NULL) +
+        theme(
+            panel.grid.major = element_blank(),
+            axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+        ) +
+    labs(x = "Year") +
         # labs( caption = "Data from World Inequality Database") +
     annotate("text", x = Inf, y = Inf, hjust = "right", vjust = "top", size = 12/.pt, color = "grey",
         label = "Data from World Inequality Database") +
-        annotate("text", x = 1980, y = 1.5,
-                 label = paste("Average:", round(pull(means, "wt_mean"),3)), hjust = "left", size = 16/.pt) 
+        annotate(
+            "text",
+            x = min(mydata$year, na.rm = TRUE),
+            y = 1.5,
+            label = paste("Average:", round(pull(means, "wt_mean"), 3)),
+            hjust = "left",
+            size = 16 / .pt
+        )
         return(out)
 }
 
@@ -57,71 +73,60 @@ make_plot <- function(mydata, x, y) {
 
 # Snet theta
 si_theta_plot <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(mydata=., y = 'θs') +
     labs(
         y = TeX("$\\theta_s^*$"),
-        x = "Year",
-        # title = TeX("$\\theta_s^*$ 1980:2022 across countries, weighted to GDP"),
-subtitle = 'span: 0.7, screen: = 0.01',
-)
+        # title = TeX(sprintf("$\\theta_s^*$ (%s) across countries, weighted to GDP", scg_yr_txt)),
+        subtitle = "span: 0.7, screen: = 0.01"
+    )
 
     
 
 # Snet phi
 si_phi_plot <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(., y ='𝝋s') +
     labs(
-        y = TeX("$\\varphi_s^*$"), x = "Year",
-        title = TeX("$\\varphi_s^*$ 1980:2022 across countries, weighted to GDP"),
-)
+        y = TeX("$\\varphi_s^*$"),
+        title = TeX(sprintf("$\\varphi_s^*$ (%s) across countries, weighted to GDP", scg_yr_txt))
+    )
 
 # C theta
 c_theta_plot <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(., y ='θc') +
     labs(
-        y = TeX("$\\theta_c$"), x = "Year",
-        title = TeX("$\\theta_c$ 1980:2022 across countries, weighted to GDP")
+        y = TeX("$\\theta_c$"),
+        title = TeX(sprintf("$\\theta_c$ (%s) across countries, weighted to GDP", scg_yr_txt))
     )
 
 
 # C phi
 c_phi_plot <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     make_plot(., y ='𝝋c') +
     labs(
-        y = TeX("$\\varphi_c$"), x = "Year",
-        title = TeX("$\\varphi_c$ 1980:2022 across countries, weighted to GDP")
+        y = TeX("$\\varphi_c$"),
+        title = TeX(sprintf("$\\varphi_c$ (%s) across countries, weighted to GDP", scg_yr_txt))
     )
 
 # new s and c plots
 `s_theta*_plot` <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     make_plot(., y ='θ*s') +
     labs(
-        # y = TeX("$\\theta^*_s$"),
         y = TeX("$\\frac{s^*}{g(K)}$"),
-        x = "Year",
-subtitle = 'span: 0.7, screen: = 0.01'
-        # title = TeX("$\\theta^*_s$ 1980:2022 across countries")
-        # title = TeX("$\\frac{s^*}{g(K)}$ 1980:2022 across countries, weighted to GDP")
+        subtitle = "span: 0.7, screen: = 0.01"
     )
 
 `c_theta*_plot` <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     make_plot(., y ='θ*c') +
     labs(
-        y = TeX("$\\theta^*_c$"), x = "Year",
-        title = TeX("$\\theta^*_c$ 1980:2022 across countries, weighted to GDP")
-    ) 
+        y = TeX("$\\theta^*_c$"),
+        title = TeX(sprintf("$\\theta^*_c$ (%s) across countries, weighted to GDP", scg_yr_txt))
+    )
     # coord_cartesian(ylim = NULL) +
     # scale_y_continuous(breaks = seq(-50, 50, 10))
 

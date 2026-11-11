@@ -14,6 +14,7 @@ box::use(
 #' @export
 ui <- function(id, scg_data) {
     ns <- NS(id)
+    yr <- range(scg_data$year, na.rm = TRUE)
     div(
         sliderInput(ns("filter"),
             "Screens",
@@ -23,10 +24,10 @@ ui <- function(id, scg_data) {
         ),
         sliderInput(ns("years"),
             "Period",
-            min = 1870,
-            max = 2022,
+            min = yr[1],
+            max = yr[2],
             step = 1,
-            value = c(1980, 2022),
+            value = c(yr[1], yr[2]),
             sep = ""
         ),
         uiOutput(ns("country_selector")),

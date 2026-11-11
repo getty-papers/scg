@@ -3,6 +3,7 @@ source("./scripts/load_libraries.r")
 # library("tidyverse")
 # library("fixest")
 
+# Same sample as scg_data.csv; toggle SCG_ANALYSIS_YEARS in get_wid_data.r. Full panel: scg_data_long.csv
 scg_data <- read_csv("./data/scg_data.csv")
 
 setFixest_dict(c(
@@ -15,7 +16,6 @@ setFixest_dict(c(
 ))
 
 wid_si_table <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     fixest::feols(c(I(`𝚫s*`)) ~ `𝚫g(K)` | year + country,
         weights = ~weight,
@@ -38,7 +38,6 @@ etable(
 #     )
 
 `wid_s*_c*_table` <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     fixest::feols(I(`s*`) ~ `g(K)` | year + country,
         weights = ~weight,
@@ -79,7 +78,6 @@ countries_to_keep <- scg_data %>%
     unique()
 
 theta_table <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     filter(country %in% countries_to_keep) %>%
     group_by(country) %>%
