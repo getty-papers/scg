@@ -2,54 +2,48 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: cas-model2-names.bst
+I found no \citation commands---while reading file main.aux
 Database file #1: cas-refs.bib
-Warning--I'm ignoring modigliani1954utility's extra "author" field
---line 216 of file cas-refs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--empty journal in friedman1957permanent
-Warning--empty journal in malthusEnquiryNatureProgress1815
-Warning--empty journal in modigliani1954utility
-Warning--empty journal in ricardoEssayProfitsVol1815
-Warning--empty journal in schultzInvestmentHumanCapital1961
-You've used 21 entries,
+You've used 0 entries,
             2990 wiz_defined-function locations,
-            884 strings with 10014 characters,
-and the built_in function-call counts, 10779 in all, are:
-= -- 837
-> -- 234
-< -- 22
-+ -- 113
-- -- 72
-* -- 962
-:= -- 1605
-add.period$ -- 65
-call.type$ -- 21
-change.case$ -- 126
-chr.to.int$ -- 21
-cite$ -- 26
-duplicate$ -- 898
-empty$ -- 946
-format.name$ -- 105
-if$ -- 2049
+            733 strings with 6252 characters,
+and the built_in function-call counts, 49 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 12
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 160
-newline$ -- 122
-num.names$ -- 84
-pop$ -- 345
+missing$ -- 0
+newline$ -- 15
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 0
 quote$ -- 0
-skip$ -- 319
+skip$ -- 1
 stack$ -- 0
-substring$ -- 473
-swap$ -- 503
-text.length$ -- 1
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 168
-warning$ -- 5
-while$ -- 81
+type$ -- 0
+warning$ -- 0
+while$ -- 0
 width$ -- 0
-write$ -- 305
-(There were 6 warnings)
+write$ -- 14
+(There was 1 error message)

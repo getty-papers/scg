@@ -3,7 +3,10 @@ source("./scripts/load_libraries.r")
 # library("tidyverse")
 # library("fixest")
 
+# Same sample as scg_data.csv; toggle SCG_ANALYSIS_YEARS in get_wid_data.r. Full panel: scg_data_long.csv
 scg_data <- read_csv("./data/scg_data.csv")
+clean_wid_data <- read_csv("./data/clean_wid_data.csv") %>%
+    mutate(final_consumption = final_consumption + household_expenditure)
 
 setFixest_dict(c(
     # "I(`𝚫s*`)" = "$\\theta_s$",
@@ -15,7 +18,6 @@ setFixest_dict(c(
 ))
 
 wid_si_table <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`𝚫g(K)`) > 0.01) %>%
     fixest::feols(c(I(`𝚫s*`)) ~ `𝚫g(K)` | year + country,
         weights = ~weight,
@@ -38,7 +40,6 @@ etable(
 #     )
 
 `wid_s*_c*_table` <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     fixest::feols(I(`s*`) ~ `g(K)` | year + country,
         weights = ~weight,
@@ -49,9 +50,77 @@ etable(
          depvar = FALSE,
          style.tex = style.tex("aer"),
          headers = c("$s^*$")
-      )
+     )
     
 
+focus_countries <- c("USA", "United Kingdom", "France", "Germany")
+coverage_series <- c(
+    "Consumption" = "final_consumption",
+    "Savings" = "savings",
+    "Capital" = "market",
+    "GDP" = "gdp"
+)
+
+country_series_coverage <- bind_rows(lapply(names(coverage_series), function(series_label) {
+    series_col <- coverage_series[[series_label]]
+    clean_wid_data %>%
+        filter(country %in% focus_countries) %>%
+        group_by(country) %>%
+        summarize(
+            series = series_label,
+            first_year = ifelse(
+                any(!is.na(.data[[series_col]])),
+                min(year[!is.na(.data[[series_col]])]),
+                NA_real_
+            ),
+            last_year = ifelse(
+                any(!is.na(.data[[series_col]])),
+                max(year[!is.na(.data[[series_col]])]),
+                NA_real_
+            ),
+            observations = sum(!is.na(.data[[series_col]])),
+            .groups = "drop"
+        )
+})) %>%
+    mutate(period = paste0(first_year, " - ", last_year, " (", observations, ")")) %>%
+    select(country, series, period) %>%
+    pivot_wider(names_from = series, values_from = period) %>%
+    mutate(country = factor(country, levels = focus_countries)) %>%
+    arrange(country) %>%
+    mutate(country = as.character(country))
+
+
+ratio_coverage <- scg_data %>%
+    group_by(country) %>%
+    summarize(
+        first_year = ifelse(
+            any(is.finite(`θ*s`)),
+            min(year[is.finite(`θ*s`)]),
+            NA_real_
+        ),
+        last_year = ifelse(
+            any(is.finite(`θ*s`)),
+            max(year[is.finite(`θ*s`)]),
+            NA_real_
+        ),
+        .groups = "drop"
+    )
+
+indicator_coverage <- scg_data %>%
+    group_by(country) %>%
+    summarize(
+        first_year = ifelse(
+            any(is.finite(θs)),
+            min(year[is.finite(θs)]),
+            NA_real_
+        ),
+        last_year = ifelse(
+            any(is.finite(θs)),
+            max(year[is.finite(θs)]),
+            NA_real_
+        ),
+        .groups = "drop"
+    )
 
 
 thetas_table <- scg_data %>%
@@ -59,9 +128,12 @@ thetas_table <- scg_data %>%
     group_by(country) %>%
     drop_na(θs) %>%
     reframe(
-        years = paste0(min(year), " - ", max(year), " (", length(year), ")"),
+        retained_years = length(year),
         θs = round(mean(θs, na.rm = TRUE), 2),
     ) %>%
+    left_join(indicator_coverage, by = "country") %>%
+    mutate(years = paste0(first_year, " - ", last_year, " (", retained_years, ")")) %>%
+    select(country, years, θs) %>%
     mutate(split = row_number() <= max(row_number() / 2)) %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
@@ -79,16 +151,18 @@ countries_to_keep <- scg_data %>%
     unique()
 
 theta_table <- scg_data %>%
-    filter(year %in% 1980:2022) %>%
     filter(abs(`g(K)`) > 0.01) %>%
     filter(country %in% countries_to_keep) %>%
     group_by(country) %>%
     drop_na(`g(K)`, `θ*s`, `θ*c`) %>%
     reframe(
-        years = paste0(min(year), " - ", max(year), " (", length(year), ")"),
+        retained_years = length(year),
         `θ*s` = round(mean(`θ*s`, na.rm = TRUE), 2),
 #        `θ*c` = round(mean(`θ*c`, na.rm = TRUE), 2),
     ) %>%
+    left_join(ratio_coverage, by = "country") %>%
+    mutate(years = paste0(first_year, " - ", last_year, " (", retained_years, ")")) %>%
+    select(country, years, `θ*s`) %>%
     mutate(split = row_number() >= max(row_number() / 2) + 1) %>%
     split(.$split) %>%
     imap(~ kable(.x %>% select(-split), "latex",
@@ -177,7 +251,7 @@ left_part_tbl5 <- theta_table$`FALSE` |>
 
 tex_tbl5 <- paste(
     "\\begin{table}[pos=h]
-\\caption{Average \\(\\frac{s^*}{g(K)}\\) in 92 countries over periods shown. Screen = 0.01. Number of years clearing screen shown in ()}\\label{tbl-5}%
+\\caption{Country-level summary of $\\frac{s^*}{g(K)}$ in the current draft sample. Screen = 0.01. Period reports unscreened country coverage in the analysis file; number of years clearing screen shown in ()}\\label{tbl-5}%
 \\hrule
 \\makebox[\\textwidth][c]{%
 {\\centering
@@ -197,12 +271,36 @@ tex_tbl5 <- paste(
 }
 \\hrule
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} \\(s^*\\) is defined as \\(\\frac{S_{net}}{K}\\). Thrift theory predicts \\(\\frac{s^*}{g(K)} \\cong 1\\). Free growth theory makes no prediction for these data.
+\\footnotesize \\emph{Note:} This table is based on observations with $|g(K)| > 0.01$ in the current analysis file.
 \\end{flushleft}
 \\end{table}"
 )
 
 write_file(tex_tbl5, "tables/tbl-5.tex")
+
+tex_country_series_coverage <- paste(
+    "\\begin{table}[H]
+\\caption{Coverage of the underlying series for France, Germany, the United Kingdom, and the USA in the raw cleaned WID file before the analysis-sample filter. This table is not screened. Each entry reports first year, last year, and number of non-missing observations.}\\label{tbl-country-series-coverage}
+\\hrule
+\\centering
+\\begin{tabularx}{\\textwidth}{lXXXX}",
+    paste(
+        c(
+            "\\toprule",
+            "Country & Consumption & Savings & Capital & GDP\\\\",
+            "\\midrule",
+            apply(country_series_coverage, 1, function(row) paste0(paste(row, collapse = " & "), "\\\\")),
+            "\\bottomrule"
+        ),
+        collapse = "\n"
+    ),
+    "\\end{tabularx}
+\\hrule
+\\end{table}",
+    sep = "\n"
+)
+
+write_file(tex_country_series_coverage, "tables/tbl-country_series_coverage.tex")
 
 
 right_part_tbl_indicator_table <- thetas_table$`TRUE` |>
@@ -218,7 +316,7 @@ left_part_tbl_indicator_table <- thetas_table$`FALSE` |>
     paste(collapse = "\n")
 
 tex_tbl_indicator_table <- paste("\\begin{table}[H]
-\\caption{Average \\(\\theta\\) in 92 countries over periods shown. Screen = 0.01. Number of years clearing screen shown in ()}%
+\\caption{Country-level summary of $\\theta_s^*$ in the current draft sample. Screen = 0.01. Period reports unscreened country coverage in the analysis file; number of years clearing screen shown in ()}%
 \\hrule
 \\makebox[\\textwidth][c]{%
 {\\centering
@@ -239,7 +337,7 @@ tex_tbl_indicator_table <- paste("\\begin{table}[H]
 \\hrule
 \\label{tbl-indicator_table}
 \\begin{flushleft}
-\\footnotesize \\emph{Note:} \\(\\theta\\) is defined as \\(\\frac{\\Delta s^*}{\\Delta g(K)}\\). Thrift theory predicts \\(\\theta \\cong 1\\). See Section \\ref{interpretation-of-test-results} for predictions of free growth theory. 
+\\footnotesize \\emph{Note:} This table is based on observations with $|\\Delta g(K)| > 0.01$ in the current analysis file.
 
 \\end{flushleft}
 \\end{table}",

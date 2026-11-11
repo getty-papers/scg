@@ -77,3 +77,5 @@ clean_wid_data %>%
     ) %>%
     ggplot(aes(x = year, y = value, color = name)) +
     geom_line()
+
+
